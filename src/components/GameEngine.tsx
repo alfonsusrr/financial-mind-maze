@@ -235,7 +235,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
               totalReturnPercentage: prev.playerStats.totalReturnPercentage
           };
 
-          const earnedIncome = newStats.income * ageChange; // Assumes income is per year and ageChange is in years
+          // const earnedIncome = newStats.income * ageChange; // Assumes income is per year and ageChange is in years
 
           // Helper function to parse change value (number or percentage string)
           const parseChange = (changeValue: number | string | undefined, currentValue: number): number => {
@@ -304,8 +304,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
           }
 
           // Store the initial portfolio value before any changes
-          const initialPortfolioValue = newStats.portfolioValue;
-          const initialInvestedAmount = newStats.portfolioInvestedAmount;
+          // const initialPortfolioValue = newStats.portfolioValue;
+          // const initialInvestedAmount = newStats.portfolioInvestedAmount;
 
           // Apply cash changes - handle special portfolioValueChange case when portfolio is liquidated
           if (update.cashChange !== undefined) {
@@ -639,6 +639,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
                 // Use a function expression instead of resetGame to avoid circular reference
                 const { scenes: resetLevelScenes, initialStats: resetInitialStats } = getLevelData(1);
                 setGameState(prevState => ({
+                  ...prevState,
                   currentLevel: 1,
                   currentSceneId: getInitialSceneId(resetLevelScenes) || '',
                   playerStats: initializePlayerStats(resetInitialStats),

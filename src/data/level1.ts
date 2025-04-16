@@ -1,4 +1,4 @@
-import { GameScene, DecisionScene, OutcomeScene, InsightScene, EndingScene, EventScene, LevelInitialStats } from "../types/games";
+import { GameScene, DecisionScene, OutcomeScene, InsightScene, EndingScene, LevelInitialStats } from "../types/games";
 
 // Initial stats for Level 1 - Fresh graduate with minimal savings
 export const initialStats: LevelInitialStats = {

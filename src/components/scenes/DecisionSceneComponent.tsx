@@ -16,24 +16,24 @@ const DecisionSceneComponent: React.FC<DecisionSceneProps> = ({ scene, onChoice 
   const [showChoices, setShowChoices] = useState(false);
   const [showComparison, setShowComparison] = useState(false);
 
-  const renderImpactLabel = (value: string | undefined) => {
-    if (!value) return null;
+  // const renderImpactLabel = (value: string | undefined) => {
+  //   if (!value) return null;
     
-    const impactColors = {
-      negative: 'text-red-400',
-      limited: 'text-orange-400',
-      low: 'text-orange-400',
-      neutral: 'text-gray-400',
-      moderate: 'text-yellow-400',
-      positive: 'text-green-400',
-      high: 'text-green-400',
-      advancing: 'text-blue-400',
-      excellent: 'text-purple-400',
-      'very positive': 'text-purple-400'
-    };
+  //   const impactColors = {
+  //     negative: 'text-red-400',
+  //     limited: 'text-orange-400',
+  //     low: 'text-orange-400',
+  //     neutral: 'text-gray-400',
+  //     moderate: 'text-yellow-400',
+  //     positive: 'text-green-400',
+  //     high: 'text-green-400',
+  //     advancing: 'text-blue-400',
+  //     excellent: 'text-purple-400',
+  //     'very positive': 'text-purple-400'
+  //   };
     
-    return <span className={impactColors[value as keyof typeof impactColors] || 'text-white'}>{value}</span>;
-  };
+  //   return <span className={impactColors[value as keyof typeof impactColors] || 'text-white'}>{value}</span>;
+  // };
 
   return (
     <SceneContainer 

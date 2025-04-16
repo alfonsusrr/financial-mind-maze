@@ -62,7 +62,7 @@ export function Introduction() {
           }}
         >
           <p className="mb-6 text-xl text-yellow-100 font-game leading-relaxed">
-            <span className="text-yellow-400 font-bold">Welcome, Adventurer!</span> Embark on a thrilling journey through the complex world of financial decision-making. This isn't just a game - it's a quest to uncover hidden psychological traps that can sabotage your financial future.
+            <span className="text-yellow-400 font-bold">Welcome, Adventurer!</span> Embark on a thrilling journey through the complex world of financial decision-making. This isn&apos;t just a game - it&apos;s a quest to uncover hidden psychological traps that can sabotage your financial future.
           </p>
           <p className="text-xl text-yellow-100 font-game leading-relaxed">
             Navigate challenging scenarios, confront your biases, and discover powerful strategies to master your money mindset. Will you conquer the maze and emerge financially wiser?

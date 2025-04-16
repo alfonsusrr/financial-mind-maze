@@ -5,7 +5,6 @@ import GameButton from '../ui/GameButton';
 import { BsArrowRight, BsStars } from 'react-icons/bs';
 import { FaChartLine, FaRegSmile, FaBrain } from 'react-icons/fa';
 import { BiMoney } from 'react-icons/bi';
-import { HiOutlineEmojiSad } from 'react-icons/hi';
 
 interface OutcomeSceneProps {
   scene: OutcomeScene;

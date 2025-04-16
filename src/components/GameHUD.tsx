@@ -105,18 +105,6 @@ const getScoreColor = (score: number): string => {
   return 'text-red-400'; // Very Poor
 };
 
-// Helper function to get the score label
-const getScoreLabel = (score: number): string => {
-  if (score >= 90) return 'Excellent';
-  if (score >= 80) return 'Great';
-  if (score >= 70) return 'Good';
-  if (score >= 60) return 'Satisfactory';
-  if (score >= 50) return 'Average';
-  if (score >= 40) return 'Below Average';
-  if (score >= 30) return 'Poor';
-  return 'Struggling';
-};
-
 // Helper to safely format percentages
 const safeFormatPercentage = (value: number | undefined): string => {
   if (value === undefined || isNaN(value)) return '0.0%';
@@ -151,9 +139,6 @@ export function GameHUD({
   
   const [prevPortfolioValue, setPrevPortfolioValue] = useState(playerStats.portfolioValue);
   const [isPortfolioValueChanging, setIsPortfolioValueChanging] = useState(false);
-  
-  const [prevPortfolioContribution, setPrevPortfolioContribution] = useState(playerStats.portfolioContribution);
-  const [isPortfolioContributionChanging, setIsPortfolioContributionChanging] = useState(false);
   
   const [prevScore, setPrevScore] = useState(gameState.averageScore);
   const [isScoreChanging, setIsScoreChanging] = useState(false);
@@ -192,14 +177,6 @@ export function GameHUD({
       return () => clearTimeout(timer);
     }
     
-    // Portfolio contribution changes
-    if (playerStats.portfolioContribution !== prevPortfolioContribution) {
-      setIsPortfolioContributionChanging(true);
-      const timer = setTimeout(() => setIsPortfolioContributionChanging(false), 1000);
-      setPrevPortfolioContribution(playerStats.portfolioContribution);
-      return () => clearTimeout(timer);
-    }
-    
     // Score changes
     if (gameState.averageScore !== prevScore) {
       setIsScoreChanging(true);
@@ -212,7 +189,6 @@ export function GameHUD({
     playerStats.netWorth, prevNetWorth,
     playerStats.income, prevIncome,
     playerStats.portfolioValue, prevPortfolioValue,
-    playerStats.portfolioContribution, prevPortfolioContribution,
     gameState.averageScore, prevScore
   ]);
 

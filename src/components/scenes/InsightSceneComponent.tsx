@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { InsightScene } from '../../types/games';
 import SceneContainer from '../ui/SceneContainer';
 import GameButton from '../ui/GameButton';
-import { BsArrowRight, BsStars, BsLightbulb } from 'react-icons/bs';
-import { FaBrain, FaLightbulb, FaBookOpen } from 'react-icons/fa';
-import { RiMentalHealthLine } from 'react-icons/ri';
+import { BsArrowRight, BsLightbulb } from 'react-icons/bs';
+import { FaBrain, FaBookOpen } from 'react-icons/fa';
 
 interface InsightSceneProps {
   scene: InsightScene;

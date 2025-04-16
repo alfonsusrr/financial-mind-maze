@@ -9,7 +9,7 @@ export function GameComplete() {
     <div className="game-complete text-center py-12">
       <h1 className="text-4xl font-bold mb-6">Congratulations!</h1>
       <p className="mb-8">
-        You've completed the Financial Mind Maze! You've experienced various 
+        You&apos;ve completed the Financial Mind Maze! You&apos;ve experienced various 
         financial scenarios and learned about the psychological biases that
         can impact your decision-making.
       </p>

@@ -74,9 +74,9 @@ interface LevelCardProps {
 export default function LevelSelect() {
   const { startGame, resetGame } = useGame();
   
-  const startLevel = (levelId: number) => {
-    startGame(levelId);
-  };
+  // const startLevel = (levelId: number) => {
+  //   startGame(levelId);
+  // };
   
   const availableLevels = LEVELS;
 

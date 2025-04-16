@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { EndingScene } from '../../types/games';
 import SceneContainer from '../ui/SceneContainer';
 import GameButton from '../ui/GameButton';
-import { BsArrowRight, BsStars, BsTrophy } from 'react-icons/bs';
+import { BsArrowRight, BsTrophy } from 'react-icons/bs';
 import { FaChartLine, FaRegSmile, FaBrain } from 'react-icons/fa';
-import { BiMoney } from 'react-icons/bi';
 import { useGame } from '../GameEngine';
 
 interface EndingSceneProps {

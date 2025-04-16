@@ -17,15 +17,15 @@ export const initialStats: LevelInitialStats = {
 };
 
 const level5Data: GameScene[] = [
-  // Initial explanation of key concepts
+  // Comprehensive introduction to crypto concepts and biases
   {
     id: 'l5_s0_intro',
     type: 'insight',
-    title: '💡 Crypto Investing Basics',
-    description: "Before we begin, let's understand cryptocurrency fundamentals. **Cryptocurrencies** are digital assets that use cryptography for security and operate on decentralized networks called blockchains. Unlike traditional investments, crypto markets operate 24/7, experience extreme volatility, and are influenced heavily by sentiment, technology developments, and regulatory news.",
+    title: '💡 Crypto Investing: Fundamentals & Psychology',
+    description: "**Cryptocurrencies** are digital assets that use cryptography for security and operate on decentralized networks called blockchains. Unlike traditional investments, crypto markets operate 24/7, experience extreme volatility, and are heavily influenced by sentiment, technology developments, and regulatory news. Understanding both the technology and the psychological biases that affect crypto investors is crucial for navigating this frontier market.",
     background: 'level5/intro_concepts.png',
-    realWorldExample: "Bitcoin, the first cryptocurrency, went from under $1,000 in early 2017 to nearly $20,000 by December 2017, then crashed to around $3,000 in 2018, before climbing to over $60,000 in 2021 and then dropping significantly again. This extreme volatility is common in crypto markets and presents both opportunities and dangers.",
-    summary: "Crypto investments can offer high rewards but come with significant risks: extreme price volatility, regulatory uncertainty, technological vulnerabilities, and market manipulation. Understanding these risks and your own psychological biases is crucial before investing.",
+    realWorldExample: "Bitcoin went from under $1,000 in early 2017 to nearly $20,000 by December 2017, crashed to around $3,000 in 2018, then climbed to over $60,000 in 2021 before dropping significantly again. During the 2017 bull run, FOMO (Fear Of Missing Out) drove many inexperienced investors to buy at peak prices using borrowed money. When the market crashed in 2018, many of these investors lost 80% or more of their investments. This cycle of greed and fear continues to dominate crypto market psychology.",
+    summary: "Key concepts to understand before investing in crypto: 1) **Blockchain technology** creates trust without central authorities but has technical complexities and vulnerabilities; 2) **Market psychology** is dominated by FOMO, overconfidence, and herd mentality that drive extreme price swings; 3) **Investment risks** include volatility, regulatory uncertainty, and potential scams; 4) **Emotional discipline** is perhaps the most important skill in this market where sentiment drives prices more than fundamentals.",
     outcome: {
       wellBeingChange: 1,
       ageChange: 0.1
@@ -45,40 +45,8 @@ const level5Data: GameScene[] = [
       qualitativeNote: "Your friend's excitement has planted the seed of FOMO (Fear Of Missing Out) in your mind. Suddenly your traditional investments seem boring compared to these explosive returns.",
       ageChange: 0.5
     },
-    nextSceneId: 'l5_s1_insight_fomo',
-  } as OutcomeScene,
-
-  // FOMO Insight
-  {
-    id: 'l5_s1_insight_fomo',
-    type: 'insight',
-    title: '🧠 Bias Alert: FOMO in Crypto Markets',
-    description: "What you're feeling is **FOMO (Fear Of Missing Out)** - a powerful psychological bias that drives people to make investment decisions based on the fear that others are profiting while they aren't. In crypto markets, FOMO is particularly intense due to stories of overnight millionaires and dramatic price surges.",
-    background: 'level5/insight_fomo.png',
-    realWorldExample: "During the 2017 crypto bull run, a Coinbase survey found that 18% of students used student loan money to buy cryptocurrency. The New York Times reported stories of people taking out mortgages to buy Bitcoin near its peak. When the market crashed in 2018, many of these FOMO-driven investors lost 80% or more of their investment, with devastating financial consequences.",
-    summary: "FOMO can lead to buying at market peaks, taking excessive risks, and abandoning sound financial principles. The antidote is having a rational investment strategy based on research and personal financial goals rather than emotional reactions to others' claimed successes.",
-    outcome: {
-      wellBeingChange: 1,
-      ageChange: 0.1
-    },
-    nextSceneId: 'l5_s1_insight_blockchain',
-  } as InsightScene,
-  
-  // Add a new insight scene about blockchain technology fundamentals after fomo insight
-  {
-    id: 'l5_s1_insight_blockchain',
-    type: 'insight',
-    title: '🔗 Understanding Blockchain: Beyond the Hype',
-    description: "**Blockchain technology** is the foundation of cryptocurrencies. It's a distributed ledger system where transactions are recorded across multiple computers, making it resistant to data modification. This creates trust without requiring a central authority like a bank. Understanding blockchain helps evaluate whether a crypto project has genuine technological value or is merely exploiting buzzwords.",
-    background: 'level5/insight_blockchain.png',
-    realWorldExample: "Ethereum revolutionized blockchain by introducing 'smart contracts' - self-executing code that automatically enforces agreements. This enabled decentralized finance (DeFi) applications that now manage over $100 billion in assets. However, technical understanding is crucial - in 2016, a smart contract vulnerability in 'The DAO' project led to the theft of $50 million in Ethereum. And in 2021, the Poly Network was hacked for over $600 million due to a technical vulnerability, though the funds were eventually returned. These cases demonstrate why technical fundamentals matter when investing in crypto projects.",
-    summary: "While you don't need to be a computer scientist to invest in cryptocurrency, understanding basic blockchain concepts helps distinguish between projects with genuine innovation and those riding on hype. Key questions to consider: What problem does the blockchain solve that couldn't be solved with traditional technology? How decentralized is it really? What is the security model? These fundamentals often separate successful long-term projects from short-lived speculation.",
-    outcome: {
-      wellBeingChange: 1,
-      ageChange: 0.1
-    },
     nextSceneId: 'l5_s1_decision_entry',
-  } as InsightScene,
+  } as OutcomeScene,
 
   // Initial crypto investment decision
   {
@@ -159,7 +127,7 @@ const level5Data: GameScene[] = [
       ageChange: 1.0,
       qualitativeNote: "You've entered the crypto market with a balanced approach, limiting your exposure while still participating in the potential upside."
     },
-    nextSceneId: 'l5_s2_insight_volatility',
+    nextSceneId: 'l5_s2_event_bull_market',
   } as OutcomeScene,
   
   {
@@ -176,24 +144,8 @@ const level5Data: GameScene[] = [
       ageChange: 1.0,
       qualitativeNote: "You've taken a high-risk, high-reward approach to crypto investing. Your portfolio is now heavily weighted toward speculative assets."
     },
-    nextSceneId: 'l5_s2_insight_volatility',
-  } as OutcomeScene,
-
-  // Volatility Insight
-  {
-    id: 'l5_s2_insight_volatility',
-    type: 'insight',
-    title: '📊 Crypto Volatility: A Double-Edged Sword',
-    description: "**Volatility** in crypto markets is extreme compared to traditional investments. While Bitcoin has averaged over 100% annual returns since inception, this comes with drawdowns (peak-to-trough declines) that can exceed 80%. This volatility is both what creates opportunity for gains and risk of devastating losses.",
-    background: 'level5/insight_volatility.png',
-    realWorldExample: "In 2021, Ethereum rose from around $730 to over $4,800 (a 550% gain), only to fall to around $900 in 2022 (an 80% drop). Even in a single day, 10-20% price swings are not uncommon. During the May 2021 crash, Bitcoin plunged 30% in a day before recovering much of the loss within hours. Such volatility is psychologically challenging even for experienced investors.",
-    summary: "Crypto volatility requires strong psychological resilience. Many investors who can't handle the extreme ups and downs end up buying high and selling low - exactly the opposite of successful investing. Having an investment thesis and sticking to it is crucial for navigating these volatile markets.",
-    outcome: {
-      wellBeingChange: 1,
-      ageChange: 0.1
-    },
     nextSceneId: 'l5_s2_event_bull_market',
-  } as InsightScene,
+  } as OutcomeScene,
 
   // Bull Market Event
   {
@@ -209,8 +161,24 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "The crypto market is in euphoria! Your investment has performed exceptionally well, creating both excitement and the temptation to invest more."
     },
-    nextSceneId: 'l5_s3_insight_cycle',
+    nextSceneId: 'l5_s2_insight_market_dynamics',
   } as EventScene,
+
+  // Combined Market Dynamics Insight
+  {
+    id: 'l5_s2_insight_market_dynamics',
+    type: 'insight',
+    title: '📊 Crypto Market Dynamics: Volatility and Cycles',
+    description: "Two critical aspects of crypto markets are their **extreme volatility** and **cyclical nature**. Price swings of 10-20% in a single day are common, and the markets move through dramatic boom-and-bust cycles that test investors' psychological resilience.",
+    background: 'level5/insight_market_dynamics.png',
+    realWorldExample: "Bitcoin has experienced multiple dramatic cycles. In 2017, it rose from $1,000 to nearly $20,000 before crashing to $3,200 in 2018 (an 84% drop). Similarly, Ethereum rose from $730 to over $4,800 in 2021 (a 550% gain), only to fall below $1,000 in 2022 (an 80% drop). During the May 2021 crash, Bitcoin plunged 30% in a single day. Those who bought during euphoric phases typically sold at losses during crashes, while those who understood market cycles and maintained emotional discipline were often rewarded when prices recovered in subsequent cycles.",
+    summary: "Successful crypto investors develop strategies to navigate both volatility and market cycles. They understand that extreme emotions - both FOMO during bull markets and despair during bear markets - are contrary indicators. The most successful tend to be contrarians: taking some profits during periods of market euphoria and accumulating during bear markets when others are fearful. This requires going against powerful emotional and social pulls, but has historically been rewarded.",
+    outcome: {
+      wellBeingChange: 1,
+      ageChange: 0.1
+    },
+    nextSceneId: 'l5_s3_decision_leverage',
+  } as InsightScene,
 
   // Market Cycle Insight
   {
@@ -249,7 +217,7 @@ const level5Data: GameScene[] = [
     id: 'l5_s3_decision_leverage',
     type: 'decision',
     title: '⚠️ The Leverage Temptation',
-    description: "As the bull market continues, you start hearing about traders using leverage to amplify their gains. Crypto exchanges offer up to 100x leverage, meaning you could control $100,000 worth of Bitcoin with just $1,000. Your friend shares screenshots of making $20,000 in a day from a leveraged position. 'It's free money in this market!' they claim. Leverage allows for much larger gains but also magnifies losses and can result in complete liquidation of your position.",
+    description: "As the bull market continues, you start hearing about traders using leverage to amplify their gains. **Leverage** allows you to control a larger position than your capital would normally allow by borrowing funds from an exchange. For example, with 10x leverage, $1,000 can control $10,000 worth of crypto. This magnifies both potential profits and losses and can result in complete liquidation of your position. Your friend shares screenshots of making $20,000 in a day from a leveraged position. 'It's free money in this market!' they claim.",
     background: 'level5/s3_leverage_tempt.mp4',
     choices: [
       {
@@ -306,7 +274,7 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "Your disciplined approach keeps you safe from one of the most common ways crypto investors lose everything. Slow and steady often wins the race."
     },
-    nextSceneId: 'l5_s3_insight_leverage_risk',
+    nextSceneId: 'l5_s3_event_ico',
   } as OutcomeScene,
   
   {
@@ -321,7 +289,7 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "You've gained firsthand experience with leverage without catastrophic damage. The emotional impact was significant despite the limited financial exposure."
     },
-    nextSceneId: 'l5_s3_insight_leverage_risk',
+    nextSceneId: 'l5_s3_event_ico',
   } as OutcomeScene,
   
   {
@@ -336,7 +304,7 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "A painful and expensive lesson in the dangers of leverage. A mere 10% adverse move was enough to wipe out 25% of your crypto due to 10x leverage. The certainty of long-term assets was traded for the possibility of short-term gains, with devastating results."
     },
-    nextSceneId: 'l5_s3_insight_leverage_risk',
+    nextSceneId: 'l5_s3_event_ico',
   } as OutcomeScene,
 
   // UPDATED: Leverage Risk Insight
@@ -432,7 +400,7 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "Your skepticism about unproven projects saved you from a total loss. Sometimes the best investments are the ones you don't make."
     },
-    nextSceneId: 'l5_s3_insight_ico',
+    nextSceneId: 'l5_s3_insight_crypto_risks',
   } as OutcomeScene,
   
   {
@@ -447,7 +415,7 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "A painful lesson in the dangers of FOMO-driven investing. The crypto space is filled with projects that promise revolution but deliver disappointment."
     },
-    nextSceneId: 'l5_s3_insight_ico',
+    nextSceneId: 'l5_s3_insight_crypto_risks',
   } as OutcomeScene,
   
   {
@@ -461,18 +429,18 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "Your thorough research protected you from a likely scam. The skills you've developed in evaluating crypto projects will serve you well in future investment decisions."
     },
-    nextSceneId: 'l5_s3_insight_ico',
+    nextSceneId: 'l5_s3_insight_crypto_risks',
   } as OutcomeScene,
 
-  // ICO Insight
+  // Combined Crypto Risks Insight (merging regulatory and ICO insights)
   {
-    id: 'l5_s3_insight_ico',
+    id: 'l5_s3_insight_crypto_risks',
     type: 'insight',
-    title: '🧠 Evaluating Crypto Projects: Beyond the Hype',
-    description: "**Initial Coin Offerings (ICOs)** and new crypto projects require careful evaluation. While they can offer early access to innovative technology, the space is plagued with scams, failed projects, and exaggerated claims. Successful evaluation requires looking beyond marketing and social media hype.",
-    background: 'level5/insight_ico.png',
-    realWorldExample: "A 2018 study by the Satis Group found that approximately 78% of ICOs were identified as scams, with another 9% failing or abandoned. A famous example is BitConnect, which raised billions before being exposed as a Ponzi scheme in 2018, resulting in total losses for investors. In contrast, legitimate projects like Ethereum (which itself started as an ICO in 2014) provided early investors with returns exceeding 100,000% by focusing on actual technology development rather than marketing hype.",
-    summary: "When evaluating any crypto project, focus on: 1) Team credentials (verifiable backgrounds), 2) Technical feasibility (realistic claims), 3) Tokenomics (fair distribution), 4) Transparency (open-source code, clear roadmap), 5) Community (genuine engagement vs. paid promotion), and 6) Unique value proposition (solving a real problem). Remember that extraordinary claims require extraordinary evidence.",
+    title: '⚠️ Navigating Crypto Risks: Scams and Regulations',
+    description: "Beyond market volatility, crypto investors face two major risk categories: **project/scam risk** (especially with new tokens and ICOs) and **regulatory risk** as governments worldwide develop frameworks for this emerging asset class.",
+    background: 'level5/insight_crypto_risks.png',
+    realWorldExample: "Project risk is highlighted by statistics showing approximately 78% of ICOs in 2018 were identified as scams. BitConnect, which raised billions before being exposed as a Ponzi scheme, resulted in total losses for investors. Regulatory risk was demonstrated when China's 2021 crackdown on crypto mining caused Bitcoin to drop over 40%, and when the SEC's lawsuit against Ripple Labs regarding XRP tokens caused its price to plummet 60% with multiple exchanges delisting it. Conversely, El Salvador's adoption of Bitcoin as legal tender temporarily boosted prices, showing how regulation can create opportunities as well as threats.",
+    summary: "To navigate these risks: 1) For project evaluation, focus on team credentials, technical feasibility, tokenomics, transparency, community authenticity, and unique value proposition; 2) For regulatory risk, stay informed about developments globally, diversify across jurisdictions, and avoid projects with obvious compliance issues. Remember that extraordinary claims require extraordinary evidence, and that regulatory evolution is an expected part of any emerging asset class becoming mainstream.",
     outcome: {
       wellBeingChange: 1,
       ageChange: 0.1
@@ -561,7 +529,7 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "You've experienced the full crypto cycle - from excitement to despair. The financial loss is significant, but the educational value considerable."
     },
-    nextSceneId: 'l5_s4_insight_emotion',
+    nextSceneId: 'l5_s4_insight_crypto_psychology',
   } as OutcomeScene,
   
   {
@@ -575,7 +543,7 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "Your patience is being tested, but history suggests that those who can endure crypto winters eventually see spring return."
     },
-    nextSceneId: 'l5_s4_insight_emotion',
+    nextSceneId: 'l5_s4_insight_crypto_psychology',
   } as OutcomeScene,
   
   {
@@ -591,23 +559,23 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "Your contrarian approach is both intimidating and potentially rewarding. By investing when others are fearful, you've positioned yourself well if the cycle turns again."
     },
-    nextSceneId: 'l5_s4_insight_emotion',
+    nextSceneId: 'l5_s4_insight_crypto_psychology',
   } as OutcomeScene,
 
-  // Emotional Investing Insight
+  // Combined Crypto Psychology Insight
   {
-    id: 'l5_s4_insight_emotion',
+    id: 'l5_s4_insight_crypto_psychology',
     type: 'insight',
-    title: '🧠 The Emotional Rollercoaster of Crypto Investing',
-    description: "Crypto investing is as much a psychological challenge as a financial one. The extreme volatility triggers powerful emotions that can lead to poor decisions. Understanding and managing these emotions is often the difference between success and failure in this market.",
-    background: 'level5/insight_emotion.png',
-    realWorldExample: "A study by Dalbar found that while Bitcoin returned approximately 900% from 2015-2020, the average Bitcoin investor earned only about 200% due to emotional trading - buying high during euphoria and selling low during crashes. One documented case involved a Reddit user who posted about investing $30,000 in Bitcoin at $17,500 in December 2017, panic-selling at $7,000 in May 2018, then emotionally buying back at $16,000 in November 2020, effectively turning what could have been gains into significant losses through emotional decision-making.",
-    summary: "The most successful crypto investors develop emotional discipline, focusing on fundamentals rather than price fluctuations and sentiment. They understand that extreme emotions - both FOMO during bull markets and despair during bear markets - are contrary indicators that often signal potential market turning points. Having a well-thought-out investment thesis and sticking to it regardless of market emotions is crucial.",
+    title: '🧠 The Psychology of Crypto Markets: Emotions and Communities',
+    description: "Crypto investing is as much a psychological challenge as a financial one. Two critical psychological factors are **emotional discipline** during extreme volatility and awareness of **community dynamics** that influence markets through social sentiment and tribal behavior.",
+    background: 'level5/insight_crypto_psychology.png',
+    realWorldExample: "The emotional impact of volatility is reflected in a Dalbar study showing that while Bitcoin returned approximately 900% from 2015-2020, the average Bitcoin investor earned only about 200% due to emotional trading - buying high during euphoria and selling low during crashes. Community influence was dramatically demonstrated when Reddit's WallStreetBets group and Elon Musk's tweets drove Dogecoin from less than $0.01 to over $0.70 in 2021 - a 7,000% increase for a cryptocurrency created as a joke. Similarly, during the 'Bitcoin vs. Bitcoin Cash' fork in 2017, community tribalism led to coordinated campaigns and wild price swings as each side claimed to represent the 'true Bitcoin'.",
+    summary: "Successful crypto investors recognize and manage both individual psychology and community dynamics. They develop emotional discipline to avoid buying during euphoria and selling during despair, focusing on fundamentals rather than price fluctuations. They also remain objective about projects they support, recognizing when community enthusiasm crosses into irrational exuberance and maintaining healthy skepticism even toward their favored investments. Both skills require going against powerful psychological and social currents.",
     outcome: {
       wellBeingChange: 2,
       ageChange: 0.1
     },
-    nextSceneId: 'l5_s4_insight_community',
+    nextSceneId: 'l5_s5_event_recovery',
   } as InsightScene,
 
   // Recovery Event
@@ -778,38 +746,6 @@ const level5Data: GameScene[] = [
     scoreThreshold: 0,
     qualitativeSummary: "Conservative approach that prioritized capital preservation over speculative gains. Missed potential opportunities but also avoided significant risks in an emerging and volatile asset class.",
   } as EndingScene,
-
-  // Add a new insight scene about regulatory risks in crypto between the leverage insight and ICO event
-  {
-    id: 'l5_s3_insight_regulation',
-    type: 'insight',
-    title: '⚖️ Navigating Crypto\'s Regulatory Uncertainty',
-    description: "**Regulatory risk** is a significant concern in cryptocurrency investing. The legal status of crypto assets varies widely by country and is constantly evolving. Regulations can impact everything from taxation to the legality of certain tokens or trading activities, and regulatory announcements often cause significant market volatility.",
-    background: 'level5/insight_regulation.png',
-    realWorldExample: "In May 2021, China announced a crackdown on Bitcoin mining and cryptocurrency transactions, causing Bitcoin to drop over 40% in value. Another striking example occurred in 2020 when the SEC filed a lawsuit against Ripple Labs regarding XRP tokens, causing the price to plummet over 60% and multiple exchanges to delist it. Meanwhile, El Salvador's 2021 adoption of Bitcoin as legal tender demonstrated the opposite regulatory approach, boosting prices temporarily. These events demonstrate how regulatory developments can create both catastrophic risks and unique opportunities.",
-    summary: "Successful crypto investors stay informed about regulatory developments globally, diversify across jurisdictions to mitigate regulatory risk, and avoid projects with obvious compliance issues. While challenging to navigate, regulatory evolution is an expected part of any emerging asset class becoming mainstream and often creates asymmetric opportunities for knowledgeable investors who can adapt quickly to changing requirements.",
-    outcome: {
-      wellBeingChange: 1,
-      ageChange: 0.1
-    },
-    nextSceneId: 'l5_s3_event_ico',
-  } as InsightScene,
-
-  // Add an insight scene about crypto communities and social dynamics
-  {
-    id: 'l5_s4_insight_community',
-    type: 'insight',
-    title: '👥 Crypto Communities: Echo Chambers & Tribal Psychology',
-    description: "**Tribalism** is a powerful force in crypto markets. Different cryptocurrency projects develop passionate communities that function as both support networks and echo chambers. These communities can significantly influence price action through coordinated buying, marketing efforts, and social media campaigns.",
-    background: 'level5/insight_community.png',
-    realWorldExample: "During the 2021 bull market, Reddit's WallStreetBets community briefly shifted focus to Dogecoin, a cryptocurrency created as a joke in 2013. Their coordinated buying and social media campaign, amplified by Elon Musk's tweets, drove Dogecoin from less than $0.01 to over $0.70 - a 7,000% increase in months. Similarly, during the 'Bitcoin vs. Bitcoin Cash' fork in 2017, community tribalism led to vicious online battles, coordinated marketing campaigns, and wild price swings as each side tried to claim the 'true Bitcoin' title. Psychologist Dr. Daniel Kahneman notes that such tribal dynamics activate the same brain regions involved in religious and political affiliation.",
-    summary: "While community support can be valuable for projects, excessive tribalism often leads to emotional decision-making and blindness to legitimate criticism. Successful crypto investors learn to evaluate technical merits and use cases objectively, regardless of community enthusiasm. They recognize when enthusiasm crosses into irrational exuberance and maintain a healthy skepticism even toward projects they support.",
-    outcome: {
-      wellBeingChange: 1,
-      ageChange: 0.1
-    },
-    nextSceneId: 'l5_s5_event_recovery',
-  } as InsightScene,
 ];
 
 export default level5Data; 

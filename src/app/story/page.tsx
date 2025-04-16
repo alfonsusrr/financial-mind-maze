@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import * as dagre from 'dagre'; // Import dagre
 import level1Data from '../../data/level1';
 import level2Data from '../../data/level2';
@@ -165,7 +165,7 @@ function ScenarioFlowchart({ data }: { data: GameScene[] }) {
     const positions: Record<string, {x: number, y: number}> = {};
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
 
-    g.nodes().forEach(nodeId => {
+    g.nodes().forEach((nodeId: string) => {
       const node = g.node(nodeId);
       if (node) {
         positions[nodeId] = { x: node.x, y: node.y };
@@ -181,13 +181,6 @@ function ScenarioFlowchart({ data }: { data: GameScene[] }) {
 
     setNodePositions(positions);
     setGraphDimensions({ width: graphWidth, height: graphHeight });
-
-    // Center the initial view (optional)
-    // You might need to adjust this based on container size
-    const initialPanX = (graphWidth - (containerRef.current?.clientWidth || 0) / zoom) / 2;
-    const initialPanY = (graphHeight - (containerRef.current?.clientHeight || 0) / zoom) / 2;
-    // setPan({ x: initialPanX > 0 ? initialPanX : 0, y: initialPanY > 0 ? initialPanY : 0 });
-    // Reset pan to 0,0 for consistency, let user pan initially
     setPan({ x: 0, y: 0 });
   }, [data]);
   

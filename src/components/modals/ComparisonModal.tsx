@@ -5,7 +5,7 @@ import { FaBalanceScale, FaRegLightbulb, FaCheck, FaTimes, FaClock, FaExclamatio
 import { IoMdTime } from 'react-icons/io';
 import { TbArrowBack } from 'react-icons/tb';
 import { MdCompareArrows, MdOutlineCheckCircle } from 'react-icons/md';
-import { BsLightningChargeFill, BsStars } from 'react-icons/bs';
+import { BsLightningChargeFill } from 'react-icons/bs';
 
 interface ComparisonModalProps {
   scene: DecisionScene;

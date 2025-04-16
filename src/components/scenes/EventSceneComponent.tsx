@@ -3,7 +3,7 @@ import { EventScene } from '../../types/games';
 import SceneContainer from '../ui/SceneContainer';
 import GameButton from '../ui/GameButton';
 import { BsArrowRightCircle, BsGraphDown, BsGraphUp } from 'react-icons/bs';
-import { FaChartLine, FaChartBar, FaRegSmile, FaRegSadTear } from 'react-icons/fa';
+import { FaChartLine, FaRegSmile, FaRegSadTear } from 'react-icons/fa';
 
 interface EventSceneProps {
   scene: EventScene;
