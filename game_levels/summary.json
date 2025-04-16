@@ -1,0 +1,382 @@
+{
+    "game_flow": {
+      "introduction": {
+        "level_name": "Introduction: Financial Crossroads",
+        "theme": "Initial career and financial path choice after graduation.",
+        "objectives": [
+          "Choose between immediate employment or pursuing an MBA.",
+          "Understand the short-term and long-term financial implications of the choice.",
+          "Establish starting financial position for the game."
+        ],
+        "decision_point": {
+          "description": "Choose your path after graduation: Enter the workforce immediately or pursue an MBA.",
+          "choices": [
+            {
+              "name": "Enter Workforce",
+              "description": "Start earning immediately, gain practical experience.",
+              "outcome": {
+                "balance_change_percent": null,
+                "narrative": "Initial balance +$4,500 (signing bonus). Accumulated wealth after 5 years: $105,000."
+              },
+              "next_level": "level1"
+            },
+            {
+              "name": "Pursue MBA",
+              "description": "Invest in advanced education for potentially higher future earnings.",
+              "outcome": {
+                "balance_change_percent": null,
+                "narrative": "Initial balance -$80,000 (debt). Accumulated wealth after 5 years (2 study, 3 work): $100,000."
+              },
+              "next_level": "level1"
+            }
+          ]
+        }
+      },
+      "level1": {
+        "level_name": "Level 1: The New Opportunity Challenge",
+        "theme": "Concentration vs. Diversification when investing a $10,000 bonus.",
+        "objectives": [
+          "Understand risk-reward of concentration vs. diversification.",
+          "Recognize overconfidence bias.",
+          "Evaluate opportunities objectively."
+        ],
+        "decision_point": {
+          "description": "How to invest a $10,000 performance bonus?",
+          "choices": [
+            {
+              "name": "Focused Investment (Concentrated Risk)",
+              "description": "Allocate 80% of bonus to a single promising tech stock (TechNova).",
+              "outcome": {
+                "balance_change_percent": -28,
+                "narrative": "High volatility leads to a loss after 12 months. Final balance: $7,200."
+              },
+              "next_level": "level2"
+            },
+            {
+              "name": "Varied Portfolio (Diversified Approach)",
+              "description": "Allocate bonus across TechNova (30%), established tech leaders (30%), and broad market ETFs (40%).",
+              "outcome": {
+                "balance_change_percent": 15,
+                "narrative": "Balanced approach yields moderate gains after 12 months. Final balance: $11,500."
+              },
+              "next_level": "level2"
+            },
+            {
+              "name": "Expert Consultation (Delegated Diversification)",
+              "description": "Consult a financial advisor for professional portfolio construction.",
+              "outcome": {
+                "balance_change_percent": 28,
+                "narrative": "Professionally managed portfolio provides strong returns after 12 months. Final balance: $12,800."
+              },
+              "next_level": "level2"
+            }
+          ]
+        }
+      },
+      "level2": {
+        "level_name": "Level 2: The High-Stakes Leverage Gamble",
+        "theme": "Using leverage in volatile markets (Cryptocurrency).",
+        "objectives": [
+          "Understand mechanics and risks of leverage.",
+          "Recognize representativeness bias.",
+          "Learn impact of amplified gains/losses."
+        ],
+        "decision_point": {
+          "description": "Choose a strategy for investing $10,000 in a booming cryptocurrency market.",
+          "choices": [
+            {
+              "name": "All-In Leverage (5x)",
+              "description": "Maximum leverage on the entire investment.",
+              "outcome": {
+                "balance_change_percent": -100,
+                "narrative": "Market correction triggers margin call, resulting in complete loss. Final balance: $0."
+              },
+              "next_level": "level3"
+            },
+            {
+              "name": "Diversified Leverage (3x)",
+              "description": "Moderate leverage spread across multiple cryptocurrencies.",
+              "outcome": {
+                "balance_change_percent": 10,
+                "narrative": "Partial liquidations during crash, but modest overall gains. Final balance: $11,000."
+              },
+              "next_level": "level3"
+            },
+            {
+              "name": "Conservative Direct Investment (1x)",
+              "description": "Direct investment without leverage.",
+              "outcome": {
+                "balance_change_percent": 15,
+                "narrative": "Experiences significant paper losses during crash but recovers well. Final balance: $11,500."
+              },
+              "next_level": "level3"
+            },
+            {
+              "name": "Contrarian Short Position (3x)",
+              "description": "Leveraged bet against the market momentum.",
+              "outcome": {
+                "balance_change_percent": 0,
+                "narrative": "Experiences painful losses initially, then vindication during crash, ending break-even. Final balance: $10,000."
+              },
+              "next_level": "level3"
+            },
+            {
+              "name": "Wait and See (Cash)",
+              "description": "Hold cash and monitor the market.",
+              "outcome": {
+                "balance_change_percent": 0,
+                "narrative": "Preserves capital, avoids crash, has opportunity to invest later. Final balance: $10,000."
+              },
+              "next_level": "level3"
+            }
+          ]
+        }
+      },
+      "level3": {
+        "level_name": "Level 3: The Market Downturn Response",
+        "theme": "Reacting to a significant market decline (-22%).",
+        "objectives": [
+          "Understand loss aversion.",
+          "Manage emotional responses during downturns.",
+          "Compare different response strategies."
+        ],
+        "decision_point": {
+          "description": "Your $100,000 portfolio drops to $78,000 (-22%). How do you respond?",
+          "choices": [
+            {
+              "name": "Panic Sell",
+              "description": "Sell everything to stop further losses and hold cash.",
+              "outcome": {
+                "balance_change_percent": -22,
+                "narrative": "Avoids further immediate loss but misses the recovery over 18 months. Final balance relative to initial $100k: $78,000."
+              },
+              "next_level": "level4"
+            },
+            {
+              "name": "Strategic Hold & Buy",
+              "description": "Hold core positions and buy quality assets at discounts.",
+              "outcome": {
+                "balance_change_percent": -10.3,
+                "narrative": "Experiences further temporary losses but recovers strongly over 18 months. Final balance relative to initial $100k: $89,700."
+              },
+              "next_level": "level4"
+            },
+            {
+              "name": "Diversified Rebalancing",
+              "description": "Reduce highest risk exposures, maintain market participation.",
+              "outcome": {
+                "balance_change_percent": -14.2,
+                "narrative": "Reduces volatility and partially participates in recovery over 18 months. Final balance relative to initial $100k: $85,800."
+              },
+              "next_level": "level4"
+            }
+          ]
+        }
+      },
+      "level4": {
+        "level_name": "Level 4: The Hot IPO Decision",
+        "theme": "Resisting hype and FOMO during a popular IPO.",
+        "objectives": [
+          "Recognize social pressure and hype.",
+          "Understand IPO dynamics.",
+          "Manage FOMO."
+        ],
+        "decision_point": {
+          "description": "Decide on an investment strategy for the hyped 'QuickBite' IPO (priced at $45).",
+          "choices": [
+            {
+              "name": "Margin Play (High Risk/Reward)",
+              "description": "Invest heavily using margin at the open to capture momentum.",
+              "outcome": {
+                "balance_change_percent": null,
+                "narrative": "Outcome highly dependent on timing. Stock opens +50%, closes day 1 +40%, drops sharply (-35%) after first earnings report (final price $37.70, -16.2% from IPO price)."
+              },
+              "next_level": "level5"
+            },
+            {
+              "name": "Wait and See (Cautious)",
+              "description": "Skip initial trading, wait for post-IPO data and potentially lower entry points.",
+              "outcome": {
+                "balance_change_percent": 0,
+                "narrative": "Avoids initial volatility and post-earnings drop. Preserves capital, opportunity to buy later at $37.70."
+              },
+              "next_level": "level5"
+            },
+            {
+              "name": "Dollar-Cost Averaging (Balanced)",
+              "description": "Build position gradually over time (IPO day, post-earnings, etc.).",
+              "outcome": {
+                "balance_change_percent": null,
+                "narrative": "Averages cost basis, likely resulting in a loss after earnings, but less severe than buying all at peak. Specific % change depends on entry points."
+              },
+              "next_level": "level5"
+            }
+          ]
+        }
+      },
+      "level5": {
+        "level_name": "Level 5: The Real Estate Opportunity",
+        "theme": "Navigating social pressure and potential bubbles in a hot real estate market.",
+        "objectives": [
+          "Identify social contagion.",
+          "Analyze market fundamentals vs. speculation.",
+          "Maintain independent judgment."
+        ],
+        "decision_point": {
+          "description": "Choose whether to buy property in a rapidly appreciating neighborhood or continue renting.",
+          "choices": [
+            {
+              "name": "Luxury Stretch Purchase",
+              "description": "Buy an expensive property requiring 40% of income for payments.",
+              "outcome": {
+                "balance_change_percent": null,
+                "narrative": "After market shifts (rates rise), home equity drops (-5%), financial stress becomes high."
+              },
+              "next_level": "level6"
+            },
+            {
+              "name": "Balanced Purchase",
+              "description": "Buy a modest property requiring 25% of income for payments.",
+              "outcome": {
+                "balance_change_percent": null,
+                "narrative": "After market shifts, home equity drops slightly (-2%), financial stress remains low due to buffer."
+              },
+              "next_level": "level6"
+            },
+            {
+              "name": "Continue Renting",
+              "description": "Maintain flexibility and invest potential down payment elsewhere.",
+              "outcome": {
+                "balance_change_percent": 0,
+                "narrative": "Avoids housing correction, maintains maximum flexibility and low financial stress. Opportunity to buy later."
+              },
+              "next_level": "level6"
+            }
+          ]
+        }
+      },
+      "level6": {
+        "level_name": "Level 6: The Legacy Stock Dilemma",
+        "theme": "Dealing with emotional attachment to inherited investments (Endowment Effect).",
+        "objectives": [
+          "Recognize endowment effect.",
+          "Objectively evaluate inherited assets.",
+          "Balance sentiment with financial reality."
+        ],
+        "decision_point": {
+          "description": "Decide what to do with inherited shares of 'MidCentury Manufacturing', a company important to your family but now underperforming.",
+          "choices": [
+            {
+              "name": "Keep All Shares",
+              "description": "Hold onto the entire inherited stock position due to emotional attachment.",
+              "outcome": {
+                "balance_change_percent": -35,
+                "narrative": "Stock continues to decline over 5 years, significantly dragging down overall portfolio performance. Value of these shares drops 35%."
+              },
+              "next_level": "level7"
+            },
+            {
+              "name": "Partial Transition",
+              "description": "Keep a small symbolic portion (10%), reinvest the rest (90%), and find other ways to honor legacy.",
+              "outcome": {
+                "balance_change_percent": null,
+                "narrative": "Balanced outcome over 5 years. The 10% retained portion declines (-35%), but the reinvested 90% achieves market growth, leading to modest overall growth for the inherited value. Honors legacy and financial responsibility."
+              },
+              "next_level": "level7"
+            },
+            {
+              "name": "Complete Reallocation",
+              "description": "Sell all inherited shares and reinvest strategically in line with current financial goals.",
+              "outcome": {
+                "balance_change_percent": null, // Relative performance given
+                "narrative": "New investments significantly outperform the legacy stock over 5 years (e.g., +50% vs -35%, an 85% outperformance). Maximizes financial outcome but requires managing emotional/family aspects."
+              },
+              "next_level": "level7"
+            }
+          ]
+        }
+      },
+      "level7": {
+        "level_name": "Level 7: The Comprehensive Financial Plan",
+        "theme": "Integrating multiple biases into holistic financial planning at mid-life (age 40).",
+        "objectives": [
+          "Identify interacting biases.",
+          "Develop comprehensive planning approach.",
+          "Balance present desires vs. long-term security."
+        ],
+        "decision_point": {
+          "description": "Choose a comprehensive financial planning approach for the next 20 years, starting with a net worth of $425,000.",
+          "choices": [
+            {
+              "name": "Status Quo Bias Path",
+              "description": "Make minimal changes to current investment, protection, and tax strategies.",
+              "outcome": {
+                "balance_change_percent": 229,
+                "narrative": "Modest progress over 20 years, significant vulnerabilities remain. Projected Net Worth at Age 60: $1.4M."
+              },
+              "next_level": "level8"
+            },
+            {
+              "name": "Optimization Path",
+              "description": "Implement strategic rebalancing, phased protection planning, and advanced tax optimization.",
+              "outcome": {
+                "balance_change_percent": 512,
+                "narrative": "Enhanced security and strong growth over 20 years with moderate lifestyle adaptation. Projected Net Worth at Age 60: $2.6M."
+              },
+              "next_level": "level8"
+            },
+            {
+              "name": "Transformation Path",
+              "description": "Undertake significant financial restructuring, aggressive corrections, and maximum protection/wealth strategies.",
+              "outcome": {
+                "balance_change_percent": 653,
+                "narrative": "Maximizes long-term results over 20 years but requires significant short-term adjustments. Projected Net Worth at Age 60: $3.2M."
+              },
+              "next_level": "end" 
+            }
+          ]
+        }
+      },
+      "level8": {
+        "level_name": "Level 8: The Social Influence Network",
+        "theme": "Navigating social dynamics and group influence in investment decisions (Investment Club).",
+        "objectives": [
+          "Understand social influence on decisions.",
+          "Recognize authority bias, groupthink.",
+          "Maintain independent judgment."
+        ],
+        "decision_point": {
+          "description": "Choose how to engage and make decisions within an investment club over a 6-month period.",
+          "choices": [
+            {
+              "name": "Independent Thinker Path",
+              "description": "Rely on independent research and maintain conviction despite group pressure.",
+              "outcome": {
+                "balance_change_percent": null, 
+                "narrative": "Achieves above-average returns but may become socially isolated. Example decision: Contrarian value stock (Month 2) appreciates 30% if chosen."
+              },
+              "next_level": "end"
+            },
+            {
+              "name": "Social Navigator Path",
+              "description": "Prioritize building relationships and aligning with group consensus.",
+              "outcome": {
+                "balance_change_percent": null,
+                "narrative": "Well-liked and central to group, achieves average returns aligned with consensus."
+              },
+              "next_level": "end"
+            },
+            {
+              "name": "Selective Engagement Path",
+              "description": "Balance independent analysis with group interaction, verifying key claims.",
+              "outcome": {
+                "balance_change_percent": null,
+                "narrative": "Respected for thoughtful contributions, achieves balanced returns."
+              },
+              "next_level": "end"
+            }
+          ]
+        }
+      }
+    }
+  }

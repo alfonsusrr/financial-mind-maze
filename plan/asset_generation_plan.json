@@ -1,0 +1,278 @@
+{
+  "level_0": {
+    "scene_1": {
+      "visual_prompt": "Dynamic game cover art featuring a glowing financial maze with multiple paths. The maze is constructed from golden coins, stock charts, and currency symbols. A central figure (player avatar) stands at the entrance, holding a glowing compass labeled 'Financial Wisdom'. Paths branch out with different financial outcomes - some lead to prosperity (golden towers, happy families), others to pitfalls (debt traps, financial stress). The background shows a futuristic city skyline blending with abstract financial data visualizations. The title 'Financial Mind Maze' appears in bold, glowing text above the maze, with the tagline 'Navigate Your Path to Financial Mastery' below. The overall style is modern, vibrant, and slightly futuristic, with a color palette of gold, blue, and white, suggesting both opportunity and challenge."
+  },
+  "level_1": {
+    "scene_1": {
+      "visual_prompt": "Realistic modern office setting. A friendly manager in business casual attire is handing a tangible bonus check (clearly labeled '$10,000 Performance Bonus') to a younger employee (player character avatar) who looks pleased and slightly surprised. Bright, positive office lighting. Focus on the interaction and the check.",
+      "audio_prompt": "Subtle ambient office sounds: distant keyboard typing, soft hum of computers, muffled background chatter. A brief, clear sound of the manager saying 'Great work on the Q3 projects!'. A short, positive musical sting when the check is received."
+    },
+    "scene_2": {
+      "visual_prompt": "Cozy, modern coffee shop interior. Two colleagues are sitting at a small table. One colleague (the suggester) is casually showing a tablet screen displaying a news feed about 'TechNova' with product images and positive headlines. The player character avatar looks intrigued but thoughtful. Soft, warm lighting.",
+      "audio_prompt": "Ambient coffee shop sounds: soft background music, espresso machine hiss, low chatter. Clear dialogue of the colleague saying 'Have you seen what's happening with TechNova?'. Sound of tablet screen tap."
+    },
+    "scene_3": {
+      "visual_prompt": "Research environment depicted as a futuristic data analysis hub. Central screen shows TechNova company logo and key financial metrics (revenue growth, product images). Surrounding holographic displays show fluctuating stock charts, competitor logos (subtly faded), expert commentary snippets (text bubbles), and news headlines. Player avatar is interacting with the main screen, looking focused.",
+      "audio_prompt": "Subtle futuristic interface sounds: soft beeps, humming data streams, digital keyboard clicks. Neutral, low-volume ambient electronic music focused on concentration. Occasional short voice snippets of synthesized expert commentary."
+    },
+    "scene_4": {
+      "visual_prompt": "Decision point visualized as a clean, modern interface. Three distinct, clearly labeled options presented side-by-side: 1. 'Focused Investment' with an icon of a single upward stock chart. 2. 'Varied Portfolio' with a pie chart icon. 3. 'Expert Consultation' with an icon of two figures talking. A subtle background graphic implies a branching path.",
+      "audio_prompt": "Neutral, slightly anticipating background music loop. Subtle 'selection hover' sound effect as the player considers each option. A soft 'confirm' sound when a choice is made (to be triggered by player action)."
+    },
+    "scene_5": {
+      "visual_prompt": "Time-lapse sequence over 12 months. A dynamic line graph shows the performance of the chosen investment strategy. Key moments are highlighted with date markers and icons representing market events (e.g., product launch success, competitor news). Emotional state icons (e.g., happy face, concerned face) appear next to the graph at relevant points. Final balance is clearly displayed at the end.",
+      "audio_prompt": "Accelerated timeline sound effect (ticking clock or similar). Short musical cues corresponding to positive (upward sweep) or negative (downward tone) market movements. A final sound effect (positive chime or negative buzz) indicating the end result."
+    },
+    "scene_6": {
+      "visual_prompt": "Contemplative setting. Player avatar is sitting at a modern desk, looking thoughtfully at a large screen displaying a comparison chart of the three investment paths from Scene 4, showing their final percentage changes and balances. Key insights text appears subtly overlaid or on side panels.",
+      "audio_prompt": "Calm, reflective background music. Soft ambient room tone. A brief voiceover summarizing the key insight learned based on the outcome (e.g., 'Putting all eggs in one basket can be risky...')."
+    },
+    "scene_7": {
+      "visual_prompt": "Assessment scenario. Interface presents a new, hypothetical investment opportunity (e.g., 'BioGen Innovations IPO'). Options related to applying lessons learned from the level (e.g., 'Analyze Diversification', 'Assess Risk Tolerance', 'Research Fundamentals') are presented clearly. Background is a clean, neutral testing environment.",
+      "audio_prompt": "Neutral, slightly challenging background music. Interface sound effects for selecting assessment options. A final 'level complete' sound chime upon successful completion."
+    }
+  },
+  "level_2": {
+    "scene_1": {
+      "visual_prompt": "Immersive, futuristic digital environment representing the cryptocurrency ecosystem (Tron-like aesthetic). Dominant glowing green cryptocurrency price charts showing sharp upward trends. Floating panels display scrolling social media feeds with rocket emojis and hype messages ('To the moon!'). News headlines highlight institutional adoption. A global heat map shows intense trading activity. Small, easily missed warning text: 'Past patterns don't guarantee future results'.",
+      "audio_prompt": "Upbeat, driving electronic ambient music (synthwave). Intermittent sounds of digital trading 'pings', rapid notification alerts, and subtle data processing sounds. Background buzz of excited digital chatter."
+    },
+    "scene_2": {
+      "visual_prompt": "Multi-layered information environment. Center: Educational hub with tutorials on crypto and leverage. Left ('Bull Case Corridor'): Brightly lit path showing success stories, upward charts, scarcity narratives. Right ('Bear Case Chamber'): Dimly lit, smaller area showing historical crashes, volatility warnings, risk explanations. Player avatar navigates between these areas.",
+      "audio_prompt": "Neutral electronic background music in the central hub. Upbeat, optimistic music in the Bull Corridor. Tense, cautionary music in the Bear Chamber. Clear voiceovers from different expert archetypes (Optimistic Analyst, Technical Trader, Risk Manager, Behavioral Economist)."
+    },
+    "scene_3": {
+      "visual_prompt": "Futuristic decision laboratory interface. Central console shows risk-reward visualization dials. Five distinct strategy options are presented with clear icons and risk meters: 1. All-In Leverage (Glowing 5x Bitcoin, Extreme Risk). 2. Diversified Leverage (Crypto basket, 3x, High Risk). 3. Conservative Direct (Single Bitcoin, Moderate Risk). 4. Contrarian Short (Downward arrow, 3x, High Risk). 5. Wait and See (Cash stack, Low Risk). Flashing margin call alerts appear near option 1.",
+      "audio_prompt": "Anticipatory, slightly tense electronic music loop. Distinct sound effects associated with hovering over or selecting each strategy option (e.g., high-risk options have a more intense sound). Subtle background hum of the laboratory."
+    },
+    "scene_4": {
+      "visual_prompt": "Dynamic market simulation over two months. Main display shows realistic, volatile cryptocurrency price chart with sharp peaks and crashes. News event pop-ups trigger significant shifts (e.g., 'Regulatory Crackdown', 'Exchange Hack'). Portfolio value tracker updates frantically. Emotional impact visualization (e.g., stress meter, euphoria meter) changes based on portfolio fluctuations and chosen strategy (e.g., margin call alert, liquidation animation for All-In path).",
+      "audio_prompt": "Dynamic soundtrack that shifts intensity with market movements (e.g., exciting during run-up, tense during crash). Specific sound effects for news events, margin call alerts (urgent siren), and liquidation (crash sound). Emotional state sounds reflecting the player's simulated experience (e.g., celebratory sounds for gains, anxious heartbeat for losses)."
+    },
+    "scene_5": {
+      "visual_prompt": "Contemplative reflection chamber. Split screen showing the chosen decision path versus alternative outcomes. Emotional journey mapped as a line graph. Bias recognition interface highlights relevant biases (e.g., Representativeness, Overconfidence) with definitions. Key insights panel lists lessons learned.",
+      "audio_prompt": "Calm, analytical background music. Voiceovers from expert commentators summarizing key learnings related to leverage, market cycles, and psychology. Subtle sound effects for interacting with analysis tools."
+    },
+    "scene_6": {
+      "visual_prompt": "Knowledge synthesis environment. Abstract visualization of neural connections forming and strengthening. Icons representing updated investment philosophy, risk management framework, and psychological resilience appear. Practical application tools (calculators, checklists) are presented in a clean interface. Mastery Certification badges are displayed prominently.",
+      "audio_prompt": "Inspiring, synthesizing background music suggesting learning and growth. Positive reinforcement sound effects as new knowledge is integrated. A final 'achievement unlocked' sound for the Mastery Certification."
+    }
+  },
+  "level_3": {
+    "scene_1": {
+      "visual_prompt": "Immersive financial command center in crisis mode. Dominant visuals are red flashing stock tickers with dramatic downward arrows. Multiple screens show rapidly plummeting portfolio value ($100,000 dropping sharply to $78,000), alarming economic news headlines ('Recession Declared!'), and global market map entirely red. Mood is chaotic, urgent, high-stress.",
+      "audio_prompt": "Urgent, dramatic news anchor voice reporting market crash ('Markets in freefall!'). Tense, dissonant background music loop creating anxiety. Layered sounds of chaotic trading floor noise, frantic phone ringing, loud alert sirens, and a jarring market closing bell sound effect. A rising heartbeat sound effect."
+    },
+    "scene_2": {
+      "visual_prompt": "Neural response visualization environment. Abstract representation of a brain with emotional centers (amygdala) highly activated (glowing red). Loss aversion circuit is highlighted and pulsing. Long-term planning areas appear dim. Cognitive distortion labels (Catastrophizing, All-or-nothing) pop up near relevant brain areas.",
+      "audio_prompt": "Low, pulsating, unsettling electronic soundscape. Subtle, distorted sound effects representing cognitive distortions. A faint, rapid heartbeat sound in the background. Voiceover explaining the physiological impact of market panic."
+    },
+    "scene_3": {
+      "visual_prompt": "Critical choice environment. Three large, distinct doors stand before the player: 1. Red 'Panic Sell' door with EXIT sign. 2. Blue 'Strategic Hold & Buy' door with OPPORTUNITY sign. 3. Yellow 'Diversified Rebalancing' door with BALANCE sign. Background shows swirling, chaotic market data streams. A prominent decision timer counts down.",
+      "audio_prompt": "Intensifying heartbeat sound effect synchronized with the timer. Conflicting background noise: chaotic market sounds mixed with snippets of contradictory news commentary. Urgent notification sounds from a simulated brokerage account. Tense, driving music."
+    },
+    "scene_4": {
+      "visual_prompt": "Time-compressed simulation over 18 months, tailored to the chosen strategy. Animated timeline with key market events (e.g., 'False Rally', 'Recovery Begins'). Portfolio value tracked on a dynamic graph. Emotional state icons change along the timeline (e.g., Relief -> Regret for Panic Sell; Anxiety -> Hope -> Confidence for Hold & Buy). News headlines evolve from panic to recovery.",
+      "audio_prompt": "Dynamic soundtrack reflecting the emotional journey of the chosen path (e.g., somber turning to regretful for Panic Sell; tense turning to hopeful for Hold & Buy). Sound effects marking key timeline events. Short voiceover snippets reflecting the player's inner monologue at different stages."
+    },
+    "scene_5": {
+      "visual_prompt": "Comprehensive outcome analysis environment. Multi-dimensional comparison charts showing performance, volatility, and emotional journey for all three strategies. Psychological analysis section highlights specific biases (Loss Aversion, Herd Behavior) triggered during the simulation. Alternative scenario explorer allows 'what-if' analysis.",
+      "audio_prompt": "Analytical, neutral background music. Clear voiceover explaining the principles of emotional decision-making, market psychology, risk management, and behavioral biases, referencing the simulation results. Interface sound effects for interacting with analysis tools."
+    },
+    "scene_6": {
+      "visual_prompt": "Personal insight crystallization environment. Player avatar looks into a mirror, seeing their emotional state reflected (e.g., regretful, proud, balanced). Neural connections visualization shows wisdom integration. Key principles ('Market declines are temporary...') appear as text overlays. Future Application Tools (templates, protocols) are presented.",
+      "audio_prompt": "Reflective, slightly emotional background music. Voiceover dialogue: Player reflection ('The pain... felt overwhelming...') followed by mentor insight ('Loss aversion can be more dangerous...'). Sound of insights crystallizing (gentle chime or similar). Final 'Mastery Certification' sound."
+    }
+  },
+  "level_4": {
+    "scene_1": {
+      "visual_prompt": "Immersive, chaotic social media and news environment focused on 'QuickBite' IPO. Multiple screens bombard the viewer: flashing social media feeds (viral posts, influencer endorsements, friend messages like 'Got in pre-IPO!'), mobile notifications popping up, digital billboards advertising QuickBite, news channels hyping the IPO. Market sentiment heat map shows extreme excitement (red/orange).",
+      "audio_prompt": "High-energy, excited background buzz: overlapping chatter, frequent notification pings (different tones), upbeat, driving music. Snippets of enthusiastic dialogue from friends ('Sure thing!', 'Huge!'), influencers ('Next Amazon!'), and news anchors ('Most successful IPO!')."
+    },
+    "scene_2": {
+      "visual_prompt": "Split-screen analytical workspace. Left ('Bullish Narrative'): Brightly lit, showing impressive hockey-stick growth charts (revenue, users), positive testimonials, large market size graphics. Right ('Cautionary Fundamentals'): Dimmer, showing high cash burn rate chart, widening operating losses graph, competitor logos, profitability challenges text.",
+      "audio_prompt": "Neutral, analytical background sounds: keyboard typing, data processing beeps. Contrasting voiceovers: Bullish Analyst ('Compelling thesis!') versus Skeptical Analyst ('Path to profitability unclear!'). Sound effects for interacting with financial analysis tools."
+    },
+    "scene_3": {
+      "visual_prompt": "Decision environment showcasing three distinct strategy interfaces: 1. 'Margin Play' (Red theme, very high risk meter, leverage calculator). 2. 'Wait and See' (Yellow theme, low-moderate risk meter, calendar showing future dates). 3. 'Dollar-Cost Averaging' (Green theme, moderate risk meter, chart showing staged entries). Each interface previews potential emotional impact (e.g., stress for Margin Play, FOMO for Wait and See).",
+      "audio_prompt": "Slightly tense decision music. Distinct sound profiles for each strategy interface when selected (e.g., Red = risky sound, Yellow = patient sound, Green = balanced sound). Subtle background hum of the strategy laboratory."
+    },
+    "scene_4": {
+      "visual_prompt": "Real-time market simulation of QuickBite's chaotic first trading day. Dynamic stock ticker shows price action starting at $45 IPO, opening at $67.50, swinging wildly, then closing around $65. Order book visualization shows buy/sell pressure. High trading volume bar chart. News feed shows real-time commentary. Social sentiment tracker fluctuates.",
+      "audio_prompt": "Exciting, volatile trading floor atmosphere: rapid ticker sounds, crowd cheering/groaning with price swings, cash register sounds, intense, fast-paced music. News alerts for significant price moves. Broker voiceover commentary ('Volatile debut!'). Different background sounds depending on chosen strategy (e.g., higher stress sounds for Margin Play)."
+    },
+    "scene_5": {
+      "visual_prompt": "Financial review environment displaying QuickBite's first quarterly earnings report. Dashboard shows key metrics: Revenue/User Growth MISSING expectations (red indicators), Net Loss WIDENING, Margins DECLINING. After-hours price chart shows a sharp 35% drop. Analyst reactions compiled (downgrades). Social sentiment shifts to negative (panic emojis).",
+      "audio_prompt": "Sudden shift to somber, disappointing background music. Sound of paper rustling, disappointed murmurs. Alert sound effects (negative tone). Voiceover snippets of analyst commentary ('Costs killing them', 'Bubble bursting?'). Specific alert sound for Margin Call if applicable."
+    },
+    "scene_6": {
+      "visual_prompt": "Time-compressed simulation over six months. Interactive timeline highlights key events: 'Competitor Launch' (price dip), 'Lock-up Expiration' (price dip to $33), 'AI Breakthrough Announced' (price spikes to $55). Price chart shows volatile journey. Insider selling tracker visible. Market sentiment gauge evolves.",
+      "audio_prompt": "Dynamic soundtrack reflecting the six-month journey: periods of uncertainty, tension during dips, excitement during spike. Sound effects for key events (news alert for AI breakthrough). Voiceover commentary summarizing developments ('Patience needed...', 'AI changes everything!')."
+    },
+    "scene_7": {
+      "visual_prompt": "Educational classroom setting. Interactive whiteboard displays key IPO insights ('Retail pays premium', '60% trade below...', 'Narrative vs. Fundamentals'). Personalized insight summary for the player based on their chosen path. Historical IPO pattern library accessible on wall displays.",
+      "audio_prompt": "Calm, educational background music. Sound of writing on a chalkboard (or digital equivalent). Clear voiceover from a 'teacher' figure summarizing lessons learned ('Real lesson is managing FOMO...'). Gentle interface sounds."
+    },
+    "scene_8": {
+      "visual_prompt": "Reflective environment. Player avatar looks thoughtfully at their final portfolio statement for QuickBite. Neural pathway visualization shows new connections related to IPOs, FOMO, and social influence. Key wisdom points ('Popularity vs. Profitability...') crystallize as text overlays. Mastery Certification badges appear.",
+      "audio_prompt": "Calm, resolving background music. Player voiceover reflection ('That was intense!... learned about emotional energy...'). Mentor voiceover ('Best decisions come from managing emotions...'). Sound of wisdom crystallizing (positive chime). Final 'Mastery Certification' sound."
+    }
+  },
+  "level_5": {
+    "scene_1": {
+      "visual_prompt": "Vibrant neighborhood scene undergoing rapid gentrification. Split screen: Left side shows older, modest homes. Right side shows newly renovated, modern houses with 'For Sale' signs indicating high prices ($850k+). Background shows construction cranes and trendy cafes.",
+      "audio_prompt": "Upbeat, optimistic background music. Sounds of construction (hammering, saws) mixed with trendy cafe chatter and ambient street noise. Voiceover describing the neighborhood transformation and rising prices."
+    },
+    "scene_2": {
+      "visual_prompt": "Social gathering setting (BBQ or party). Player avatar is surrounded by friends excitedly discussing their recent home purchases in the booming neighborhood. Speech bubbles show comments like 'Got in just in time!', 'Prices will only go up!', 'You HAVE to buy here!'. Player looks thoughtful but pressured.",
+      "audio_prompt": "Lively party ambiance: background music, chatter, laughter. Overlapping enthusiastic dialogue from friends promoting the neighborhood. Subtle background track creating a sense of urgency and social pressure."
+    },
+    "scene_3": {
+      "visual_prompt": "Data analysis interface focused on the local real estate market. Charts show steep price appreciation (20% annually). Comparison data shows prices significantly above historical norms and income ratios. Expert commentary panels offer conflicting views (e.g., 'Sustainable Growth' vs. 'Bubble Warning').",
+      "audio_prompt": "Neutral, analytical background sounds. Interface sound effects. Voiceover snippets from conflicting experts. A subtle 'warning' sound when viewing data points indicating potential overvaluation."
+    },
+    "scene_4": {
+      "visual_prompt": "Split screen showing two contrasting property viewing experiences: 1. Overcrowded open house for an expensive, newly renovated home ($900k). Frenzied atmosphere, multiple offers being discussed. 2. Quiet viewing of a smaller, more affordable fixer-upper ($550k) in a less trendy area.",
+      "audio_prompt": "Contrast in audio: Left screen has loud chatter, excited realtor voices, multiple overlapping conversations creating frenzy. Right screen has quiet ambient sound, calm realtor voice describing potential, sounds of measuring tape."
+    },
+    "scene_5": {
+      "visual_prompt": "Decision point interface focused on financial commitment. Options presented: 1. 'Stretch Budget' showing a large mortgage payment eating up most of a budget pie chart (High Risk). 2. 'Comfortable Purchase' showing a smaller mortgage payment within affordability guidelines (Moderate Risk). Loan documents and interest rate scenarios are visible.",
+      "audio_prompt": "Tense decision music. Sound of signing documents. Calculator sounds. Voiceover explaining the long-term financial implications and risks of each choice, emphasizing the debt-to-income ratio."
+    },
+    "scene_6": {
+      "visual_prompt": "Market shift simulation. News headlines change from 'Booming Market' to 'Interest Rates Rise Sharply!', 'Housing Market Cools'. Visual shows house price chart flattening, then declining slightly. Stress indicators appear for the 'Stretch Budget' scenario (e.g., flashing budget alert).",
+      "audio_prompt": "Shift in music from optimistic to uncertain, slightly tense. News anchor voiceover announcing interest rate hikes and market cooling. Alert sounds for the high-risk scenario."
+    },
+    "scene_7": {
+      "visual_prompt": "Five-year outcome visualization. Split screen comparing the financial health of the player based on the decision: 1. 'Stretch Budget' path shows high stress, tight budget, minimal equity gain due to market correction. 2. 'Comfortable Purchase' path shows lower stress, financial flexibility, stable equity.",
+      "audio_prompt": "Contrasting background music reflecting the outcome: Slightly stressed/tense for Path 1, calm/stable for Path 2. Voiceover summarizing the five-year financial and emotional consequences of each choice."
+    },
+    "scene_8": {
+      "visual_prompt": "Behavioral insight analysis screen. Highlights 'Herd Mentality' and 'Social Proof' biases with definitions. Shows how following the crowd led to potential over-commitment. Compares decision against pre-stated risk tolerance.",
+      "audio_prompt": "Analytical background music. Clear voiceover explaining herd mentality and social proof in the context of the real estate scenario. Sound effects for highlighting key bias information."
+    },
+    "scene_9": {
+      "visual_prompt": "Knowledge integration environment. Key takeaways listed: Importance of affordability limits (28/36 rule), dangers of market timing, value of independent analysis over social trends. Tools for calculating affordability and simulating mortgage scenarios are presented.",
+      "audio_prompt": "Calm, educational music. Voiceover summarizing key learning points. Positive reinforcement sounds for interacting with the learning tools. Final 'Level Complete' chime."
+    }
+  },
+  "level_6": {
+    "scene_1": {
+      "visual_prompt": "Somber but formal setting, perhaps a lawyer's office or home study. Player avatar receives an official-looking document ('Inheritance Notification'). A faded, cherished photo of the player with their grandfather is subtly visible. Emotional context overlay suggests nostalgia and responsibility.",
+      "audio_prompt": "Quiet, slightly somber background music. Sound of opening an envelope, rustling paper. A gentle, nostalgic musical motif when the grandfather's photo is hinted at. Voiceover narration setting the emotional context of the inheritance."
+    },
+    "scene_2": {
+      "visual_prompt": "Interactive family history visualization. A branching timeline or mind map shows the grandfather's history with 'Legacy Corp', highlighting his founding role and emotional connection. Quotes from the grandfather about the company appear. Player avatar interacts with the visualization, looking engaged.",
+      "audio_prompt": "Reflective background music with a slightly historical feel. Voiceover snippets of the grandfather talking about the company (simulated). Interface sounds for interacting with the timeline. Music swells slightly when key emotional connection points are highlighted."
+    },
+    "scene_3": {
+      "visual_prompt": "Financial analytics lab interface. Main screen shows Legacy Corp's historical stock performance chart (long period of stagnation/decline after earlier success). Comparison charts show competitor performance (strong upward trends) and market sector trends.",
+      "audio_prompt": "Neutral, analytical electronic background music. Data processing sounds. Voiceover explaining the historical underperformance objectively. Sound effects highlighting key data points (stagnation vs. competitor growth)."
+    },
+    "scene_4": {
+      "visual_prompt": "Corporate analysis dashboard interface. Displays fundamental analysis of Legacy Corp: declining market share, weak financials (P/E ratio, revenue growth), outdated products, cautious future outlook. Contrasted with stronger metrics for competitors.",
+      "audio_prompt": "Continued neutral, analytical background music. Voiceover objectively presenting the current weak fundamentals and competitive position. Subtle negative sound alerts associated with weak metrics."
+    },
+    "scene_5": {
+      "visual_prompt": "Split-screen visualization representing internal conflict. Left side: Warm, nostalgic imagery related to grandfather and legacy (sepia tones, family photos). Right side: Cold, hard financial data showing underperformance and risk (blue tones, stark charts). Player avatar figure stands between the two, looking conflicted.",
+      "audio_prompt": "Contrasting audio tracks playing simultaneously but subtly: Left side has warm, emotional music and faint nostalgic sounds. Right side has cold, analytical electronic sounds and data noises. A subtle heartbeat sound indicating internal conflict."
+    },
+    "scene_6": {
+      "visual_prompt": "Virtual family meeting simulation. Player avatar sits at a table with holographic representations of family members expressing different views via dialogue bubbles: Uncle supporting keeping the stock ('Dad loved that company!'), Cousin urging diversification ('It's dragging down your portfolio!').",
+      "audio_prompt": "Ambient room sound. Distinct voice actors for different family members expressing their opinions clearly. Background music subtly shifts based on the prevailing argument (e.g., more emotional when Uncle speaks, more rational when Cousin speaks)."
+    },
+    "scene_7": {
+      "visual_prompt": "Contemplative decision laboratory. Interface presents clear options: 1. 'Hold Shares' (Emotional choice). 2. 'Sell All Shares' (Rational financial choice). 3. 'Phased Divestment' (Balanced approach). Decision support tools show projected outcomes and alignment with personal financial goals.",
+      "audio_prompt": "Calm, thoughtful background music encouraging careful consideration. Interface sounds for exploring options and using support tools. Voiceover prompting reflection on legacy vs. financial goals."
+    },
+    "scene_8": {
+      "visual_prompt": "Time progression sequence (e.g., 5 years). Animation shows the financial outcome based on the chosen path: 'Hold Shares' path shows continued stagnation or decline; 'Sell Shares' path shows portfolio growth through reinvestment in diversified assets.",
+      "audio_prompt": "Soundtrack reflects the outcome: Stagnant or slightly negative for holding, positive and growing for selling/reinvesting. Time-lapse sound effects. Voiceover narration describing the financial consequences over time."
+    },
+    "scene_9": {
+      "visual_prompt": "Reflective garden setting. Player avatar looks contemplative. Visualization shows the concept of 'legacy' redefined – either as honoring the past by holding, or building a new future through prudent financial stewardship. Key insight text appears.",
+      "audio_prompt": "Peaceful, reflective background music (strings or piano). Nature sounds (birds, gentle breeze). Voiceover exploring the different interpretations of honoring a legacy in financial terms."
+    },
+    "scene_10": {
+      "visual_prompt": "Neural pathway visualization. Highlights 'Endowment Effect' and 'Emotional Gap' biases. Shows how attachment influenced the decision process. Presents debiasing techniques (e.g., 'Would I buy this stock today?', seeking objective advice).",
+      "audio_prompt": "Synthesizing, learning-focused background music. Clear voiceover explaining the Endowment Effect and emotional decision-making. Sound effects reinforcing the debiasing techniques presented. Final 'Mastery Certification' sound."
+    }
+  },
+  "level_7": {
+    "scene_1": {
+      "visual_prompt": "Transitional scene: Starts with a warm, festive 40th birthday celebration visual (cake, friends), then fades into a more contemplative setting. Player avatar looks thoughtful. An interactive timeline appears, showing past financial milestones, current position, and future goals (retirement, kids' education).",
+      "audio_prompt": "Starts with cheerful party ambiance and 'Happy Birthday' music snippet, then fades into calm, reflective background music. Voiceover narration about reaching a milestone and the need for comprehensive planning. Timeline interaction sounds."
+    },
+    "scene_2": {
+      "visual_prompt": "Holistic financial health dashboard interface. Displays key metrics: Net Worth, Savings Rate, Debt Levels, Current Asset Allocation pie chart. Includes a 'Behavioral Profile' section highlighting player's tendencies identified in previous levels (e.g., 'Moderate Loss Aversion', 'Susceptible to FOMO').",
+      "audio_prompt": "Neutral, informative background music. Data display sounds (beeps, clicks). Voiceover explaining the different components of the financial health assessment. Subtle sound cues drawing attention to the behavioral profile section."
+    },
+    "scene_3": {
+      "visual_prompt": "Immersive 'Dream Board' environment. Visualizes life goals: images of dream retirement location, desired lifestyle, family aspirations. Connects these goals to required financial resources. Includes an interactive 'Values Clarification' exercise interface.",
+      "audio_prompt": "Inspiring, aspirational background music. Positive sound effects associated with visualizing goals. Voiceover encouraging connection between life values and financial planning. Interface sounds for the values exercise."
+    },
+    "scene_4": {
+      "visual_prompt": "Investment laboratory environment focused on asset allocation. Competing information streams bombard the player: screens showing recent hot stock performance (Recency Bias), complex diversification charts (Complexity Bias), overly optimistic long-term projections (Optimism Bias). Decision interface presents allocation options.",
+      "audio_prompt": "Slightly chaotic audio mix: snippets of conflicting news reports, hype sounds for hot stocks, complex data sounds, optimistic jingles. Voiceover highlights the competing biases influencing the allocation decision. Tense music underscoring the difficulty."
+    },
+    "scene_5": {
+      "visual_prompt": "Risk visualization laboratory focused on protection planning (insurance). Interface shows potential life risks (job loss, illness, accident) visualized dramatically but statistically. Compares potential financial impact versus cost of insurance. Highlights 'Optimism Bias' preventing adequate coverage.",
+      "audio_prompt": "Slightly ominous background music when visualizing risks. Contrasting calm, reassuring sounds when viewing insurance solutions. Voiceover explaining risk management and optimism bias. Calculator sounds for comparing costs."
+    },
+    "scene_6": {
+      "visual_prompt": "Tax planning simulator interface. Visualizes trade-offs between short-term tax savings and long-term wealth accumulation (e.g., Traditional vs. Roth contributions). Charts project future tax liabilities under different strategies. Highlights 'Present Bias' favoring immediate gratification.",
+      "audio_prompt": "Neutral, analytical background music. Interface sounds for running simulations. Voiceover explaining tax optimization strategies and present bias. Clear display sounds for showing long-term financial differences."
+    },
+    "scene_7": {
+      "visual_prompt": "Financial command center integrating all previous decisions (allocation, protection, tax). Visualizes interconnectedness – how a change in one area impacts others. Stress-testing interface simulates different economic scenarios (recession, inflation) against the drafted plan.",
+      "audio_prompt": "Complex, layered background music suggesting integration and complexity. Alert sounds during stress-testing simulation. Voiceover emphasizing the holistic nature of the plan and the importance of resilience."
+    },
+    "scene_8": {
+      "visual_prompt": "Final decision matrix interface. Presents three distinct comprehensive financial approaches (e.g., Aggressive Growth-Focused, Balanced Security-Focused, Conservative Capital Preservation). Each option shows projected outcomes (net worth, retirement readiness) and associated risks/biases.",
+      "audio_prompt": "Serious, weighty decision music. Clear voiceover summarizing the pros and cons of each comprehensive approach. Sound effect upon final selection of a plan."
+    },
+    "scene_9": {
+      "visual_prompt": "Time acceleration sequence visualizing the next 20 years (player age 60). Split screen or comparative animation shows the divergent outcomes of the chosen financial approach versus alternatives. Key life milestones and financial health indicators are displayed.",
+      "audio_prompt": "Dynamic soundtrack reflecting the 20-year journey and outcome (e.g., successful, struggling, stable). Time-lapse sound effects. Voiceover narration highlighting the long-term consequences of the comprehensive plan chosen."
+    },
+    "scene_10": {
+      "visual_prompt": "Abstract 'Mind Palace' environment. Consolidates insights from the entire level. Visual nodes connect different biases (Optimism, Present Bias, Recency) showing how they interact in complex planning. Personal strategies for managing these interactions are displayed.",
+      "audio_prompt": "Synthesizing, insightful background music. Voiceover summarizing the key learning about bias interaction and holistic decision-making. Sound effects reinforcing the personal strategy formulation."
+    },
+    "scene_11": {
+      "visual_prompt": "Bridge environment connecting the game world to reality. Interface provides practical tools: downloadable financial plan template, bias checklist for real-world decisions, implementation roadmap graphic. Visual links to external resources.",
+      "audio_prompt": "Encouraging, forward-looking background music. Voiceover emphasizing the transition to real-world application. Positive sound effects associated with accessing tools. Final 'Level Complete' and 'Game Mastery' celebration sounds."
+    }
+  },
+  "level_8": {
+    "scene_1": {
+      "visual_prompt": "Virtual meeting room with a round table. Diverse character archetypes are seated: Conservative (older, suit), Tech Enthusiast (younger, tech gear), Value Investor (analytical look), Trend Follower (confident, fashionable), Academic (scholarly). A dynamic social network graph subtly shows connections. Player avatar is welcomed.",
+      "audio_prompt": "Friendly welcome chatter from different voices. Ambient meeting room sounds. Neutral background music. Notification sounds when influence dynamics shift subtly. Brief introductory voiceover for each archetype."
+    },
+    "scene_2": {
+      "visual_prompt": "Dynamic discussion environment. A central panel details the 'GreenStorage Inc.' investment proposal. Character avatars animate as they speak, expressing conflicting views (enthusiasm, skepticism). Real-time social influence graph shows opinions shifting and alliances forming. Charisma meters visible near speakers.",
+      "audio_prompt": "Layered audio: Clear voices of archetypes presenting their arguments. Background buzz of discussion. Music shifts subtly to match the tone of the dominant argument (e.g., exciting for tech view, cautious for value view). Polling sounds as opinions are registered."
+    },
+    "scene_3": {
+      "visual_prompt": "Scientific laboratory environment with multiple stations for exploring social influence: 'Authority Bias Station' (showing credentials influencing belief), 'Social Proof Chamber' (visualizing adoption cascades), 'Scarcity Theater' (showing perceived value increase), 'In-Group Center' (demonstrating tribal identity), 'Status Dynamics' (showing hierarchy effects).",
+      "audio_prompt": "Analytical, slightly clinical background music. Specific soundscapes for each station (e.g., authoritative voice snippets for Authority, crowd sounds for Social Proof, ticking clock for Scarcity). Voiceover explaining each bias mechanism. Interface sounds for interactive exercises."
+    },
+    "scene_4": {
+      "visual_prompt": "Time-compressed simulation over six months of investment club activity. Interactive timeline shows key meetings/decisions (GreenStorage vote, Contrarian pitch, Bubble warning, Inside tip, Expert disagreement, Reckoning). Club portfolio graph updates. Social network graph evolves showing changing relationships and player reputation based on chosen path (Independent, Navigator, Selective).",
+      "audio_prompt": "Dynamic soundtrack reflecting the six-month journey – periods of consensus, disagreement, success, failure. Voiceover snippets summarizing key events and decisions at each stage. Sound effects marking decisions and outcomes. Reputation change sounds (positive or negative)."
+    },
+    "scene_5": {
+      "visual_prompt": "Comprehensive learning environment displaying the 'Social Intelligence Framework'. Interactive models show Information Source Hierarchy, Social Capital Strategy, Group Dynamics Navigation, Bias Neutralization Techniques, Information Filtering Methods. Personal social style assessment results displayed.",
+      "audio_prompt": "Structured, educational background music. Clear voiceover explaining each component of the framework. Interface sounds for interacting with assessment tools and models. Positive sounds for identifying bias neutralization techniques."
+    },
+    "scene_6": {
+      "visual_prompt": "Integrative 'Wisdom Synthesis' environment. Neural network visualization shows new social-financial connections forming. Key wisdom points ('Markets are social systems...') appear. Practical tool interfaces are presented (Investment Club Framework, Digital Media Defense, Personal Circle Management). Mastery Certification badges awarded.",
+      "audio_prompt": "Synthesizing, insightful background music suggesting deep learning. Voiceover crystallizing key wisdom points. Positive sound effects associated with accessing practical tools. Final 'Mastery Certification' sounds for social intelligence."
+    },
+    "scene_7": {
+      "visual_prompt": "Bridge environment connecting game to reality. Split screen: Game principles on one side, real-world application challenges (Digital Community Engagement, Professional Relationships, Personal Circle Navigation) on the other. Interface for creating personalized engagement plans and boundary systems.",
+      "audio_prompt": "Encouraging, action-oriented background music. Voiceover guiding the player through real-world application planning. Interface sounds for creating plans. Final reflective voiceover emphasizing continuous improvement and growth mindset."
+    }
+  }
+} 
