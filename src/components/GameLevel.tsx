@@ -45,10 +45,10 @@ export function GameLevel() {
 }
 
 // Level Complete Component
-type LevelCompleteProps = {
-  levelNumber: number;
-  onContinue: () => void;
-};
+// type LevelCompleteProps = {
+//   levelNumber: number;
+//   onContinue: () => void;
+// };
 
 // function LevelComplete({ levelNumber, onContinue }: LevelCompleteProps) {
 //   const { gameState } = useGame();

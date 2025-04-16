@@ -21,7 +21,6 @@ const GameSceneComponent: React.FC<GameSceneProps> = ({
   scene, 
   onChoice, 
   onNext, 
-  playerStats,
   onRestart 
 }) => {
   // Render the appropriate scene component based on the scene type
@@ -44,7 +43,7 @@ const GameSceneComponent: React.FC<GameSceneProps> = ({
         
       default:
         console.warn("Unhandled scene type:", scene);
-        return <div>Unknown or unhandled scene type: {(scene as any)?.type}</div>;
+        return <div>Unknown or unhandled scene type</div>;
     }
   };
 
