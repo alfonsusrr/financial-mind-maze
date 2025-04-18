@@ -2,7 +2,7 @@
 // Focus: Resisting hype and FOMO, understanding IPO risks & representativeness bias
 // Key Biases: Social proof, anchoring, recency bias, skewness preference, representativeness
 
-import { GameScene, DecisionScene, OutcomeScene, InsightScene, EndingScene, EventScene, LevelInitialStats } from "../types/games";
+import { GameScene, DecisionScene, OutcomeScene, InsightScene, EndingScene, LevelInitialStats } from "../types/games";
 
 // Initial stats for Level 4 - Experienced investor making sophisticated decisions
 export const initialStats: LevelInitialStats = {
