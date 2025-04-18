@@ -1,0 +1,558 @@
+[
+  {
+    "background": "level3/intro_concepts.png",
+    "prompt": "A pixar style illustration showing two investment approaches side by side. On the left, a large stack of gold coins with a single arrow pointing to a growth chart. On the right, multiple smaller stacks of coins with multiple arrows pointing to the same growth chart at different points. Bright, educational visual with cute coin characters and vibrant backgrounds."
+  },
+  {
+    "background": "level3/s1_bonus.mp4",
+    "prompt": "A pixar style 30 year old character looking excitedly at a smartphone showing a banking app with a $50,000 deposit notification. Golden coins and dollar bills raining down around him. His workspace has a laptop with Apple logo visible on screen. Character has a surprised but delighted expression. Warm lighting and vibrant colors."
+  },
+  {
+    "background": "level3/s1_decision.mp4",
+    "prompt": "A pixar style 30 year old character sitting thoughtfully at a desk with three paths visualized in thought bubbles above: one showing stacks of cash, another showing a single large investment in Apple stock with the company logo, and a third showing multiple smaller periodic investments. A calendar, calculator, and smartphone are on the desk. Warm indoor lighting with soft shadows."
+  },
+  {
+    "background": "level3/s2_lumpsum_done.mp4",
+    "prompt": "A pixar style 30 year old character watching an animated chart of Apple stock price with dramatic ups and downs. Character's expression shows a mix of excitement and anxiety. Surrounding the character are 3D visualizations of Apple products floating in the air. The background shows a roller coaster track metaphor behind the stock chart. Vibrant colors with dynamic lighting."
+  },
+  {
+    "background": "level3/s2_dca_start.mp4",
+    "prompt": "A pixar style 30 year old character placing the first of ten equal-sized bags of coins into a growing apple tree. Nine empty spots around the tree are marked for future investments. The character looks confident and methodical. Calendar showing monthly schedule visible in corner. Bright, hopeful lighting with a spring atmosphere."
+  },
+  {
+    "background": "level3/insight_lumpsum.png",
+    "prompt": "A pixar style illustration of a large golden diving board over a pool filled with Apple-themed assets. A coin character with brave expression is poised to jump in all at once. Educational-looking chart in background shows historic performance of lump sum investing with mostly upward trend. Vibrant colors and clean, engaging visual style."
+  },
+  {
+    "background": "level3/insight_dca.png",
+    "prompt": "A pixar style illustration showing a staircase of increasing Apple stock ownership. Cute coin characters of equal size are walking up each step methodically. Calendar pages flip in sequence in the background. Protective umbrella shields them from price volatility shown as rain clouds above. Bright, educational visual style with calming blue tones."
+  },
+  {
+    "background": "level3/s2_dca_volatility.mp4",
+    "prompt": "A pixar style 30 year old character halfway through placing coins into an apple tree (5 of 10 spots filled). The tree shows some growth. Visible price chart shows past volatility. Character looks thoughtfully at remaining coins, considering whether to plant them all at once or continue the original plan. Weather changes from stormy to partly sunny in the background."
+  },
+  {
+    "background": "level3/s2_stick_dca.mp4",
+    "prompt": "A pixar style 30 year old character methodically placing another coin into apple tree following original plan, despite visible market turbulence in background charts. Character has determined, disciplined expression. Calendar showing consistent monthly investment schedule. The previously planted coins are showing small apple growth despite varying weather conditions."
+  },
+  {
+    "background": "level3/s2_switch_lumpsum.mp4",
+    "prompt": "A pixar style 30 year old character excitedly pouring all remaining coins into apple tree at once, abandoning the original spaced-out plan. Character's expression shows impatience and excitement. Market screens in background show temporarily positive trends. Dramatic lighting emphasizes the all-in moment. Half the tree already has methodically planted coins, other half getting flooded all at once."
+  },
+  {
+    "background": "level3/s3_downturn.mp4",
+    "prompt": "A pixar style illustration showing a dramatic storm over an apple tree investment. Rain and lightning strike as apple values visibly shrink. Dramatic red downward charts surround the scene. Newspaper headlines flutter in the wind. Dark, intense colors with hints of red warning signals throughout. The mood is tense and foreboding with exaggerated weather effects."
+  },
+  {
+    "background": "level3/s3_downturn.mp4",
+    "prompt": "A pixar style 30 year old character in rain gear standing by an apple tree during a market storm. Red charts plunging downward light up the rainy scene. The character still has some unplanted coins protected in a waterproof bag. Expression shows concern but also thoughtful consideration. Dramatic lighting with rain and market volatility visualized as weather."
+  },
+  {
+    "background": "level3/s3_decision_react.mp4",
+    "prompt": "A pixar style 30 year old character at crossroads during market downturn. Three paths visible: selling withering apples (exit path), standing firm holding existing apples (hold path), or buying more discounted apples (invest more path). Character's expression shows emotional struggle. News screens with negative headlines surround the scene. Dark storm clouds with occasional lightning in red-tinged sky."
+  },
+  {
+    "background": "level3/s3_sold.mp4",
+    "prompt": "A pixar style 30 year old character having sold apple investments at low prices, now sitting with bags of reduced money looking regretfully at market screens. The screens show prices beginning to stabilize. Character is outside the market garden now, looking in from behind a fence. Emotional expression shows regret and uncertainty. Gloomy colors starting to give way to patches of light."
+  },
+  {
+    "background": "level3/s3_hold.mp4",
+    "prompt": "A pixar style 30 year old character meditating peacefully in the middle of a market storm, firmly holding apple investments despite the chaos. Character wears noise-canceling headphones blocking out panic headlines swirling around. Expression shows determination and calm amid turmoil. The apple tree looks beaten down but still standing strong with roots visible below ground."
+  },
+  {
+    "background": "level3/s3_buy_more.mp4",
+    "prompt": "A pixar style 30 year old character confidently buying more apple investments at discount prices during market downturn. Character wears rain gear but has umbrella closed, embracing the storm while others flee. Shopping cart filled with discounted apples. Expression shows contrarian confidence while adding to position. Clever visual shows price tags being marked down dramatically."
+  },
+  {
+    "background": "level3/insight_panic_selling.png",
+    "prompt": "A pixar style educational illustration of behavioral gap between emotional and optimal investing. Coin character running away from temporary market dip, leaving behind potential recovery. Split-screen shows emotional path versus rational path with gap between them. Brain lighting up in fear response section. Clean, informative design with clear visual metaphors in vibrant colors."
+  },
+  {
+    "background": "level3/insight_loss_aversion.png",
+    "prompt": "A pixar style illustration showing loss aversion bias. A balance scale where the pain of losses side dips much lower than the pleasure of gains side rises, despite equal objective weight. Cute coin characters with exaggerated emotional expressions on either side. Brain scan imagery showing amygdala activation. Educational visual with clever metaphors in bright, engaging colors."
+  },
+  {
+    "background": "level3/insight_present_bias.png",
+    "prompt": "A pixar style illustration of present bias using time horizon visual. Near-term rewards appear disproportionately large while equal-sized future rewards appear smaller in forced perspective. Cute clock characters emphasize different time periods. Calendar pages showing today vs future dates with visual distortion. Clean educational design with engaging visual metaphors in bright colors."
+  },
+  {
+    "background": "level3/insight_present_bias.png",
+    "prompt": "A pixar style illustration of present bias using time horizon visual. A character choosing smaller immediate reward over larger delayed reward. Clock hands form a tunnel perspective shrinking toward future. Immediate gratification shown as brightly lit while future benefits appear dimmer despite being larger. Educational design with clean, engaging visuals in vibrant colors."
+  },
+  {
+    "background": "level3/s5_recovery.mp4",
+    "prompt": "A pixar style illustration of apple tree investment fully recovered and flourishing after the storm. Dramatic contrast between vibrant healthy tree now versus previous storm damage. Market screens show strong upward trends. Sun breaking through clouds with rainbow effect. New apple products sprouting abundantly from tree. Bright, triumphant color palette with golden sunlight illuminating the recovery."
+  },
+  {
+    "background": "level3/insight_missed_recovery.png",
+    "prompt": "A pixar style illustration showing the pain of missed opportunity. Character standing outside fence looking regretfully at flourishing apple tree they previously owned but sold during downturn. Split screen shows what portfolio would be worth now versus actual value. Emotional expression captures the unique regret of actions taken versus missed opportunities. Educational visual in vibrant colors."
+  },
+  {
+    "background": "level3/s5_decision_reenter.mp4",
+    "prompt": "A pixar style 30 year old character contemplating re-entering the apple market after recovery. The character stands at entrance gate with money bags, looking at much higher price tags on apple investments now. Expression shows conflict between regret of selling low and fear of buying high. Market screens show full price recovery and upward trend. Thoughtful, decision moment captured with appropriate lighting."
+  },
+  {
+    "background": "level3/s5_reenter_yes.mp4",
+    "prompt": "A pixar style 30 year old character re-entering the apple investment market at higher prices than where they sold. Character reluctantly handing over larger sacks of money for fewer apple assets than they previously owned. Expression shows determination despite discomfort. Comparison visual subtly shows price difference between exit and re-entry points. Bright forward-looking atmosphere despite the costly lesson."
+  },
+  {
+    "background": "level3/s5_reenter_no.mp4",
+    "prompt": "A pixar style 30 year old character deciding to remain on investing sidelines despite apple market recovery. Character sitting on bags of uninvested cash looking at thriving market garden from outside. Money bags subtly showing moths or inflation effects. Expression shows mix of stubbornness and lingering anxiety. Clock emphasizing time passing while decision remains unmade. Contrasting colors between vibrant market and duller sidelines."
+  },
+  {
+    "background": "level3/insight_disposition.png",
+    "prompt": "A pixar style educational illustration of disposition effect. Character steering clear of path that previously caused pain, despite circumstances changing. Brain scan showing emotional centers lighting up when approaching previous loss area. Before and after comparison showing how situation improved but avoidance continues. Clean, informative design with clear visual metaphors in bright, engaging colors."
+  },
+  {
+    "background": "level3/s5_recovery.mp4",
+    "prompt": "A pixar style 30 year old character celebrating as their held-through-downturn apple investments fully recover and reach new heights. Character relaxing in reclining chair as apple tree flourishes around them. Market screens showing impressive recovery trajectory. Calendar pages flipping to show patience over time. Triumphant lighting with bright optimistic colors. Character's expression shows vindication and relief."
+  },
+  {
+    "background": "level3/insight_resilience.png",
+    "prompt": "A pixar style illustration of emotional resilience in investing. Character remaining steady on balanced rock during market earthquake. Brain imagery showing prefrontal cortex overriding emotional responses. Before, during, and after sequence showing investment journey through volatility to success. Educational visual with clear metaphors for emotional control. Vibrant colors with progressive lightening through the sequence."
+  },
+  {
+    "background": "level3/insight_compounding.png",
+    "prompt": "A pixar style illustration demonstrating compounding growth with snowball rolling downhill gathering exponential size. Mathematical curve showing accelerating growth over time. Clock characters emphasizing long-term perspective. Small initial investment growing into impressive final size through miracle of compounding. Educational visual with clear progression stages in bright, engaging colors."
+  },
+  {
+    "background": "level3/s6_five_years.mp4",
+    "prompt": "A pixar style 30 year old character reviewing five-year investment journey with apple assets. Time-lapse effect showing growth from initial investment through volatility to current substantial portfolio. Animated chart showing full price history with volatile periods now appearing as small bumps in long-term upward trend. Calendar showing 5-year passage of time. Character's expression shows wisdom gained through experience."
+  },
+  {
+    "background": "level3/s6_five_years.mp4",
+    "prompt": "A pixar style 30 year old character looking at what could have been after five years of non-investment. Split screen showing actual minimal growth of cash versus hypothetical growth of apple investment over same period. Calendar showing 5-year passage of time. Character's expression shows contemplative realization of opportunity cost. Subtle inflation effects visible on uninvested cash."
+  },
+  {
+    "background": "level3/insight_tech.png",
+    "prompt": "A pixar style educational illustration showing dramatic long-term growth of tech investments despite volatility. Ten-year chart of apple performance with early volatility looking tiny compared to overall growth. Zoomed perspectives showing how major downturns appear as mere blips in long-term view. $10,000 initial investment growing to over $120,000 visualized with cute coin characters. Bright, informative design."
+  },
+  {
+    "background": "level3/s6_reflection.mp4",
+    "prompt": "A pixar style 30 year old character in thoughtful reflection mode, looking back on entire apple investment journey. Memory bubbles showing key decision points and market events from previous scenes. Character older and wiser now, contemplating lessons learned. Investment results prominently displayed. Warm, contemplative lighting with peaceful atmosphere. Charts showing complete investment journey."
+  },
+  {
+    "background": "level3/s6_dca_reflection.mp4",
+    "prompt": "A pixar style 30 year old character reflecting positively on dollar-cost averaging strategy with apple investments. Visual showing steadier emotional journey with less dramatic highs and lows than alternative paths. Calendar showing disciplined regular investment schedule maintained. Growth results displayed with emphasis on psychological comfort throughout journey. Balanced, harmonious visual design with steady progression."
+  },
+  {
+    "background": "level3/s6_lump_reflection.mp4",
+    "prompt": "A pixar style 30 year old character reflecting on lump sum investment experience with apple assets. Visual emphasis on maximized time in market despite emotional rollercoaster. Chart showing growth comparison with alternative strategies. Character's expression shows appreciation for mathematical advantage despite acknowledging psychological challenges faced. Dynamic visual showing full journey in condensed form."
+  },
+  {
+    "background": "level3/ending_savvy.mp4",
+    "prompt": "A pixar style 30 year old character triumphantly standing atop mountain of successful apple investments after 5-year journey. Trophy or medal for mastering market volatility. Portfolio value showing impressive results. Character exuding confidence and wisdom. Scenes from journey visible in background, particularly showing buying during dips. Celebratory atmosphere with vibrant, victorious lighting and colors."
+  },
+  {
+    "background": "level3/ending_disciplined.mp4",
+    "prompt": "A pixar style 30 year old character celebrating disciplined 5-year apple investment approach. Steady, consistent growth chart without major mistakes. Character standing firmly by apple tree that has grown impressively. Badge or certificate of disciplined investing visible. Expression shows quiet pride rather than exuberance. Strong, stable visual composition with balanced, harmonious elements."
+  },
+  {
+    "background": "level3/ending_panic.mp4",
+    "prompt": "A pixar style 30 year old character looking regretfully at chart showing consequences of panic selling apple investments during market dip. Visual clearly shows sell point at bottom and missed recovery. Empty portfolio compared to what could have been. Character's expression shows hard lesson learned. Educational moment about emotional investing pitfalls. Subdued colors with emphasis on learning opportunity."
+  },
+  {
+    "background": "level3/ending_inactive.mp4",
+    "prompt": "A pixar style 30 year old character realizing cost of inaction after 5 years. Cash stack noticeably eroded by inflation (20% smaller) while apple investments flourished (60% larger) in parallel universe bubble. Clock emphasizing time wasted. Calendar showing 5 years passed. Character's expression shows dawning realization of opportunity cost. Educational visual about risk of sidelines in inflationary environment."
+  },
+  {
+    "background": "level4/s1_start.mp4",
+    "prompt": "A pixar style 30 year old character stands at investment crossroads with two distinct paths: one leading to a futuristic AI company with holograms and excitement (Anthropic), the other to a well-established semiconductor plant with steady production (Intel). News screens show trade tensions between US and China. Character looks thoughtfully at both options while holding $50,000 investment money. Dramatic lighting contrasts the two choices."
+  },
+  {
+    "background": "level4/s1_ipo_outcome.mp4",
+    "prompt": "A pixar style 30 year old character on roller coaster representing Anthropic IPO volatility. Initially rising dramatically (58% up visual), then plunging sharply (19% down visual). Character's expression changes from exhilaration to concern. Stock ticker displays show extreme daily price swings. AI-themed visuals surround the scene with futuristic but unstable technology elements. Dynamic lighting emphasizes the dramatic price movements."
+  },
+  {
+    "background": "level4/s1_value_outcome.mp4",
+    "prompt": "A pixar style 30 year old character watching Intel investment grow steadily. Visual shows Intel chip factory with new AI chip production line and Amazon logo on shipping containers. Stock chart shows steady 21% upward trajectory with minimal volatility. Small dividend checks appearing periodically. Character's expression shows calm satisfaction rather than extreme excitement. Stable, progressive lighting with technological elements in the background."
+  },
+  {
+    "background": "level4/s1_fomo_insight.png",
+    "prompt": "A pixar style educational illustration of FOMO in investing. Character being magnetically pulled toward spectacular but rare rocket ship outcome while ignoring multiple crashed rockets in the background. Brain activation showing dopamine response to potential gains. Probability distribution chart showing positive skewness with long right tail but negative expected value. Clean, informative design with clear visual metaphors."
+  },
+  {
+    "background": "level4/s1_contrarian_insight.png",
+    "prompt": "A pixar style educational illustration of contrarian investing. Character confidently walking opposite direction from crowd rushing one way. Value-priced assets being ignored by the herd. Before and after sequence showing market cycle from ignored to appreciated. Cute coin characters with thoughtful expressions going against flow. Scale showing current price versus intrinsic value. Clean, informative design with clear visual metaphors."
+  },
+  {
+    "background": "level4/s2_start.mp4",
+    "prompt": "A pixar style 30 year old character watching news of FTC investigation into AI ethics and tech monopolies. Screen split between Anthropic facing intense scrutiny (if chosen) versus Intel facing minimal impact (if chosen). Regulatory figures with magnifying glasses examining tech companies. Character's expression shows concern about regulatory uncertainty. Government buildings and tech headquarters visible in background with dramatic stormy lighting."
+  },
+  {
+    "background": "level4/s2_double_down_outcome.mp4",
+    "prompt": "A pixar style 30 year old character doubling down on initial investment choice with contrasting outcomes. If Anthropic chosen, character adding more money as regulatory storm intensifies and value drops (24% down visual). If Intel chosen, character adding more money as government contracts arrive and value rises (18% up visual). Split screen effect shows divergent paths based on initial choice. Emotional expressions match respective outcomes."
+  },
+  {
+    "background": "level4/s2_diversify_outcome.mp4",
+    "prompt": "A pixar style 30 year old character diversifying portfolio by adding clean energy investment (ICLN). Visual shows solar panels and wind turbines with 18% growth indicator. Original investment (either Anthropic or Intel) still visible but now balanced by new sector allocation. Character's expression shows strategic satisfaction. Government building with Inflation Reduction Act visible in background. More balanced, harmonious visual composition."
+  },
+  {
+    "background": "level4/s2_anchoring_insight.png",
+    "prompt": "A pixar style educational illustration of anchoring bias in investing. Character firmly attached to initial investment thesis despite changing circumstances. Brain visual showing resistance to updating beliefs. Initial thesis as heavy anchor preventing movement despite new information current trying to pull in different direction. Before and after sequence showing consequences of rigid thinking. Clean, informative design."
+  },
+  {
+    "background": "level4/s2_diversification_insight.png",
+    "prompt": "A pixar style educational illustration of strategic diversification. Investment eggs distributed across multiple baskets with uncorrelated movement patterns. When one basket moves down, others move differently. Risk reduction visual showing how portfolio volatility smooths with proper diversification. Mathematical correlation concepts shown in accessible visual metaphors. Clean, engaging educational design with bright colors."
+  },
+  {
+    "background": "level4/s3_start.mp4",
+    "prompt": "A pixar style 30 year old character witnessing electric vehicle stock mania. Dramatically overvalued EV companies with minimal production floating like bubbles (Tesla at P/E 350, Rivian at $120B market cap visual). Character's current investments in either Anthropic (struggling with regulations) or Intel (steady with improving chips) visible in portfolio. Electric cars zooming around with extreme enthusiasm from market participants. Bubble-like quality to the entire scene."
+  },
+  {
+    "background": "level4/s3_bubble_outcome.mp4",
+    "prompt": "A pixar style 30 year old character caught in EV bubble collapse. Initially buying Rivian at peak price ($103), watching brief climb to $127, then experiencing devastating 76% crash to $24. Character's expression changes from excitement to shock. EV bubble bursting shown with dramatic visual effects. Production delays and component shortages visualized around barely-produced vehicles. Red charts plummeting across the entire EV sector."
+  },
+  {
+    "background": "level4/s3_research_outcome.mp4",
+    "prompt": "A pixar style 30 year old character researching deeper into EV supply chain, investing in Albemarle (lithium producer). Visual shows lithium mining operation contrasted with struggling EV manufacturers. While EV stocks crash 70%, Albemarle rises 85% with visual of tripling profits. Character receiving dividend increase notification. Expression shows satisfaction with thoughtful second-order thinking. Industrial production elements with stable growth visuals."
+  },
+  {
+    "background": "level4/s3_bubble_insight.png",
+    "prompt": "A pixar style educational illustration of market bubble dynamics. Asset prices floating detached from fundamental value anchors below. Historical bubbles shown in sequence (tulips, dot-com, etc.). Price-to-value gauge showing extreme disconnect. Cute bubble characters expanding then popping dramatically. Educational chart showing typical bubble formation, expansion and collapse phases. Clean, informative design with clear progression."
+  },
+  {
+    "background": "level4/s3_research_insight.png",
+    "prompt": "A pixar style educational illustration of second-order thinking in investing. Character looking beyond obvious first layer (EV makers) to essential suppliers behind the trend (battery materials, charging infrastructure). Chess board metaphor showing thinking multiple moves ahead. Connecting lines revealing supply chain relationships between end products and critical inputs. Thought bubbles showing deeper analytical process. Clean, strategic visual design."
+  },
+  {
+    "background": "level4/s4_start.mp4",
+    "prompt": "A pixar style 30 year old character facing global chip shortage crisis. Visual shows manufacturing constraints affecting Intel, Anthropic delaying AI models, or Albemarle benefiting from panic buying (depending on previous choices). Supply chain disruption illustrated with gaps in production lines. News headlines warning of Tech Winter and Supply Chain Collapse floating around character. Expression shows strategic calculation amid crisis. Global manufacturing visual with problem points highlighted."
+  },
+  {
+    "background": "level4/s4_cash_outcome.mp4",
+    "prompt": "A pixar style 30 year old character converting portfolio to cash during chip crisis. Initial relief expression followed by dismay as Biden administration announces $52 billion CHIPS Act (visual of government funding semiconductor expansion). Sector surges 45% in chart form while character remains sidelined with cash. Inflation effects subtly eroding cash value shown. Clock emphasizing missed timing opportunity. Expression showing paralysis about when to reinvest."
+  },
+  {
+    "background": "level4/s4_chipmaker_outcome.mp4",
+    "prompt": "A pixar style 30 year old character investing in Taiwan Semiconductor during peak shortage fears. TSMC factory visual showing massive $44 billion capacity expansion. Character buying at $90/share then seeing rise to $142 (chart visual). CHIPS Act funding raining down on semiconductor industry. Existing holdings also benefiting from improved supply chain visibility. Strategic expression showing countercyclical thinking paying off. High-tech manufacturing visuals with expansion indicators."
+  },
+  {
+    "background": "level4/s4_loss_aversion_insight.png",
+    "prompt": "A pixar style educational illustration of loss aversion affecting decision quality. Brain scan showing exaggerated response to potential losses versus equivalent gains. Character fleeing market during turbulence then watching recovery from sidelines. Emotional scale showing losses felt approximately twice as intensely as equivalent gains. Fear response dominating rational analysis. Clean, informative design with neurological elements sensitively portrayed."
+  },
+  {
+    "background": "level4/s4_countercyclical_insight.png",
+    "prompt": "A pixar style educational illustration of countercyclical investing during crisis. Character buying confidently while crowd flees in panic. Newspaper headlines showing maximum pessimism while character sees opportunity. Historical examples of crisis buying opportunities in visual form. Shopping cart filled with quality assets at discount prices. Courage meter showing emotional challenge but potential reward. Clean, informative design with clear visual metaphors."
+  },
+  {
+    "background": "level4/s5_start.mp4",
+    "prompt": "A pixar style 30 year old character experiencing social pressure from ESG investment wave. Visual shows record $120B flowing into sustainable funds. Character's existing portfolio (combination of tech and industrial companies based on previous choices) faces comparison with popular ESG names like Beyond Meat and Oatly. Friends and social media pushing green credentials over fundamentals. Character looking thoughtfully at social versus financial considerations."
+  },
+  {
+    "background": "level4/s5_esg_outcome.mp4",
+    "prompt": "A pixar style 30 year old character pivoting heavily into trending ESG stocks that subsequently collapse. Visual shows Beyond Meat at $120 crashing 78%, Oatly falling 86%, and Workhorse collapsing 92%. Character's expression changes from social validation to financial regret. Rising interest rates and profitability concerns visualized as storm affecting primarily story-driven companies. Charts dramatically illustrating how capital shifts from stories to profits during tightening cycles."
+  },
+  {
+    "background": "level4/s5_advocate_outcome.mp4",
+    "prompt": "A pixar style 30 year old character maintaining fundamentally sound portfolio while engaging with companies on sustainability improvements. TSMC implementing energy efficiency innovations and Albemarle developing water recycling in lithium production (visual improvements to existing operations). When ESG bubble bursts, character's portfolio significantly outperforms. Expression shows satisfaction with balanced approach that considered both values and valuation."
+  },
+  {
+    "background": "level4/s5_esg_trend_insight.png",
+    "prompt": "A pixar style educational illustration of ESG investing dynamics. Scale trying to balance ethical considerations with financial fundamentals. Bubble forming around pure narrative companies versus sustainable businesses with sound economics. Historical examples showing how values without valuation awareness led to poor outcomes. Cute plant characters representing different approaches to sustainable investing. Clean, informative design with environmental elements."
+  },
+  {
+    "background": "level4/s5_sustainable_insight.png",
+    "prompt": "A pixar style educational illustration contrasting authentic sustainability versus greenwashing. Microscope examining corporate practices beyond marketing claims. Real impact metrics versus superficial packaging changes. Tree with both visible branches (marketing) and roots (actual operations). Material versus immaterial sustainability initiatives compared. Clean, informative design with environmental elements thoughtfully integrated into business context."
+  },
+  {
+    "background": "level4/ending_disciplined.mp4",
+    "prompt": "A pixar style 30 year old character celebrating successful disciplined investing journey. Visual summary showing key decisions: choosing Intel over Anthropic, researching Albemarle during EV bubble, buying TSMC during chip shortage, and avoiding ESG hype. Portfolio growth chart showing impressive 127% return over five years. Character's expression shows quiet confidence and wisdom gained. Trophy or certificate highlighting value investing principles that worked consistently."
+  },
+  {
+    "background": "level4/ending_chaser.mp4",
+    "prompt": "A pixar style 30 year old character reflecting on disappointing trend-chasing investment journey. Visual summary showing key mistakes: chasing Anthropic IPO, buying Rivian during EV mania, and pivoting to Beyond Meat during ESG wave. Portfolio decline chart showing 62% loss over five years. Character's expression shows valuable but expensive lessons learned. Emotional toll of constant losses and uncertainty visualized through character's body language and environment."
+  },
+  {
+    "background": "level4/ending_pragmatist.mp4",
+    "prompt": "A pixar style 30 year old character reviewing mixed investment approach results. Visual showing combination of fundamentally-driven choices alongside occasional trend-following. Portfolio chart showing moderate 43% growth over five years with visible volatility. Character's expression shows balanced perspective on risk, return and psychological comfort. Learning journal highlighting personal insights about decision-making patterns discovered through the journey."
+  },
+  {
+    "background": "level5/intro_concepts.png",
+    "prompt": "A pixar style educational illustration explaining cryptocurrency fundamentals. Visual shows blockchain technology with connected blocks, decentralized network nodes, and cryptographic security elements. Comparison between traditional investments (9-5 market hours) and crypto markets (24/7 clock). Volatility charts and sentiment indicators highlight psychological factors. Bright, engaging colors with technical elements made accessible through clever visual metaphors."
+  },
+  {
+    "background": "level5/s1_friend_convo.mp4",
+    "prompt": "A pixar style 30 year old character in conversation with excited friend showing crypto gains on smartphone. Friend pointing at dramatically upward trending Ethereum chart showing 4x returns. Character's expression shows mix of skepticism and curiosity with thought bubble considering potential opportunity. Coffee shop setting with modern, casual atmosphere. Friend's enthusiasm contrasted with character's thoughtful reservation."
+  },
+  {
+    "background": "level5/s1_research.mp4",
+    "prompt": "A pixar style 30 year old character researching cryptocurrencies surrounded by multiple screens and books. Bitcoin and Ethereum logos prominent with thousands of smaller altcoin logos floating in background cloud. Character looking slightly overwhelmed by options while holding $15,000 investment money. Various crypto whitepapers and analysis tools visible on desk. Expression shows determination to understand this complex landscape before investing."
+  },
+  {
+    "background": "level5/s1_avoid.mp4",
+    "prompt": "A pixar style 30 year old character consciously stepping aside from cryptocurrency investment rush. Character standing firmly by traditional investment portfolio while friends excitedly jump into crypto pool in background. Thought bubble occasionally showing Bitcoin price surges but character sleeping peacefully in another visual. Expression shows contentment with decision despite occasional curiosity. Stable, calm color palette contrasting with frenetic crypto environment."
+  },
+  {
+    "background": "level5/s1_bluechip.mp4",
+    "prompt": "A pixar style 30 year old character making moderate crypto allocation with $3,000 split between Bitcoin and Ethereum. Character carefully placing small portion of total savings into crypto hardware wallet while keeping majority in secure traditional investments. Bitcoin and Ethereum logos prominently displayed with emphasis on their market dominance and established ecosystems. Expression shows measured approach to exploration without overcommitment."
+  },
+  {
+    "background": "level5/s1_altcoins.mp4",
+    "prompt": "A pixar style 30 year old character going big on crypto portfolio diversification with $10,000 investment. Visual shows research materials for Solana, Polkadot, Cardano and smaller projects spread across desk. Character creating pie chart allocation across multiple crypto assets with thoughtful strategic expression. Multiple crypto logos surrounding character with their key technological differentiators visualized. Significant exposure to crypto market movements illustrated through portfolio connection."
+  },
+  {
+    "background": "level5/s2_bull_market_observer.mp4",
+    "prompt": "A pixar style 30 year old character watching crypto bull market from sidelines. Character outside crypto party looking in through window as Bitcoin breaks all-time highs, Ethereum doubles, and altcoins soar 300%. Friends celebrating crypto gains inside while character's expression shows mix of relief at avoiding stress but wonder about missed opportunity. News coverage and social media celebration of crypto revolution visible everywhere."
+  },
+  {
+    "background": "level5/s4_bear_market_observer.mp4",
+    "prompt": "A pixar style 30 year old character observing crypto market crash from safe distance. Bitcoin down 65% and altcoins down 80-90% in dramatic chart crashes. Former crypto-enthusiast friends now looking stressed and defeated. Media headlines shifted from Crypto Millionaires to Crypto Collapse. Character's expression shows vindication in cautious approach while some die-hard believers still insist this is just another cycle in background."
+  },
+  {
+    "background": "level5/s2_bull_market.mp4",
+    "prompt": "A pixar style 30 year old character experiencing dramatic crypto bull run with their investments. Bitcoin breaking all-time high records, Ethereum doubling, altcoins up 300% with exaggerated chart rockets. Mainstream media coverage, celebrity endorsements, and social media feeds flooded with crypto success stories. Character's portfolio showing impressive gains with mix of excitement and slight concern about sustainability. Dynamic, euphoric atmosphere with bright colors."
+  },
+  {
+    "background": "level5/insight_market_dynamics.png",
+    "prompt": "A pixar style educational illustration of crypto market dynamics. Visual showing extreme volatility with 10-20% daily price swings as normal. Cyclical nature depicted through boom-bust pattern of historical crypto cycles. Psychological resilience meter showing emotional impact of volatility. Cute bitcoin character riding extreme roller coaster. Educational charts showing how market cycles repeat despite increasing maturity. Clean, informative design with clear visual metaphors."
+  },
+  {
+    "background": "level5/s3_leverage_tempt.mp4",
+    "prompt": "A pixar style 30 year old character tempted by leverage trading in crypto markets. Visual explanation of how 10x leverage makes $1,000 control $10,000 of crypto. Friend showing screenshot of making $20,000 in a day through leveraged position. Devil and angel on character's shoulders representing risk versus reward debate. Warning signs about liquidation risk partially obscured by potential gain statistics. Expression shows internal struggle between temptation and caution."
+  },
+  {
+    "background": "level5/s3_avoid_leverage.mp4",
+    "prompt": "A pixar style 30 year old character firmly declining leverage in crypto trading. Social media posts about overnight crypto millionaires using leverage visible but character standing firmly by stable, unleveraged position. Friend's liquidation disaster story shown in background - entire account wiped out by mere 10% market drop. Character's expression shows conviction in avoiding unnecessary risk despite temptation. Stable foundation visual metaphor under character's feet."
+  },
+  {
+    "background": "level5/s3_small_leverage.mp4",
+    "prompt": "A pixar style 30 year old character cautiously experimenting with limited leverage in crypto. Using only 5% of portfolio with modest 2x leverage visual. Character constantly checking prices with stressed expression despite limited exposure. Sudden 15% market drop causing 30% loss in leveraged position illustrated with mathematical relationship. Educational moment showing how leverage amplifies both gains and losses. Vivid emotional response despite rational limitation of risk."
+  },
+  {
+    "background": "level5/s3_high_leverage.mp4",
+    "prompt": "A pixar style 30 year old character taking major leveraged position with 10x leverage on 25% of crypto holdings. Initial excitement as position moves favorably shown through character's expression. Sudden 12% market drop triggering automatic liquidation sequence dramatically visualized. Account instantly losing quarter of total crypto portfolio illustrated with vanishing assets effect. Expression changing from euphoria to shock in rapid sequence. Dramatic lighting emphasizing the leverage disaster moment."
+  },
+  {
+    "background": "level5/insight_leverage_liquidations.png",
+    "prompt": "A pixar style educational illustration of crypto leverage liquidations. Dominoes falling as small price movements trigger cascading liquidations. Exchange automatically selling collateral visualized through mechanical process. Scale showing how extreme leverage (up to 100x) multiplies market impact. Historical examples of major crypto liquidation events. Statistical relationship between volatility, leverage level, and liquidation probability. Clean, informative design with clear cascade effects."
+  },
+  {
+    "background": "level5/s3_ico_opportunity.mp4",
+    "prompt": "A pixar style 30 year old character being pitched NextGenChain ICO by enthusiastic colleague. Colleague describing next Ethereum-level potential with 100x faster transactions and revolutionary smart contracts. Early investor discount emphasized with flashy token visuals. Professional-looking website and 50,000 Twitter followers mentioned as credibility markers. Character's expression shows mixture of interest and healthy skepticism. ICO promotional materials with insufficient substance disguised by attractive design."
+  },
+  {
+    "background": "level5/s3_ico_decision.mp4",
+    "prompt": "A pixar style 30 year old character evaluating NextGenChain ICO opportunity with caution. Character at crossroads with potential scam warning signs on one path and opportunity indicators on other. Research materials about ICO evaluation best practices visible. Thought bubble comparing spectacular ICO returns versus total losses outcomes. Expression shows critical analysis process rather than emotional reaction. Detective-like evaluation atmosphere with investigation tools surrounding character."
+  },
+  {
+    "background": "level5/s3_pass_ico.mp4",
+    "prompt": "A pixar style 30 year old character declining NextGenChain ICO investment, preferring established cryptocurrencies. Two months later timeline showing NextGenChain exposed as fraud with founders disappeared and worthless tokens. Character's colleague who invested looking devastated in background. Character's expression shows relief at avoided disaster but empathy for those affected. News articles about the ICO fraud visible in background. Wisdom of patience and skepticism visual theme."
+  },
+  {
+    "background": "level5/s3_fomo_ico.mp4",
+    "prompt": "A pixar style 30 year old character hastily investing $1,000 in NextGenChain ICO without proper research. Initial hype and token distribution followed by increasingly sparse team communication. Development milestones shown as missed on timeline. Project social media gradually going silent with final abandonment. Character's $1,000 investment visibly shrinking to worthless. Expression changing from excitement to concern to disappointment as reality unfolds. Costly lesson in due diligence illustrated through fading ICO dreams."
+  },
+  {
+    "background": "level5/s3_diligence_ico.mp4",
+    "prompt": "A pixar style 30 year old character conducting thorough NextGenChain ICO investigation. Character discovering concerning red flags: team members with fake credentials, plagiarized whitepaper sections, technically impossible claims, and suspicious token distribution favoring founders. Character sharing findings with interested colleagues who appreciate the warning. Expression shows satisfaction in proper research process protecting investments. Detective-style investigation visuals with each discovered red flag prominently highlighted."
+  },
+  {
+    "background": "level5/insight_crypto_risks.png",
+    "prompt": "A pixar style educational illustration of major crypto risk categories. Project/scam risk visualized through spectrum from legitimate projects to outright scams with evaluation criteria. Regulatory risk shown through global map with varying government approaches to crypto regulation. Cute coin characters navigating hazardous landscape with risk radar tools. Warning signs and safety measures for each risk category clearly illustrated. Clean, informative design with practical risk management strategies visually emphasized."
+  },
+  {
+    "background": "level5/s4_bear_market.mp4",
+    "prompt": "A pixar style 30 year old character experiencing dramatic crypto market crash. Bitcoin down 65% from peak and altcoins down 80-90% in painful chart formations. Media headlines shifted from Crypto Millionaires to Crypto Collapse with newspaper and screen visuals. Social media influencers who promoted coins now suspiciously quiet or deleted. Character's portfolio showing severe drawdown with winter/ice visual metaphors representing extended bear market beginning. Emotional test of conviction illustrated through character's expression."
+  },
+  {
+    "background": "level5/s4_bear_decision.mp4",
+    "prompt": "A pixar style 30 year old character at crypto bear market decision point. Portfolio value has plummeted in crypto winter. Former enthusiasts now declaring crypto dead and failed experiment in background. Character at crossroads with three paths: complete exit, holding through winter, or buying more at lower prices. Expression shows careful consideration of options amid extreme negative sentiment environment. Chart showing full market cycle with current position at pain point. Decision scales weighing emotional versus rational factors."
+  },
+  {
+    "background": "level5/s4_exit_crypto.mp4",
+    "prompt": "A pixar style 30 year old character deciding to exit crypto completely during bear market. Character selling remaining crypto assets at depressed prices with pained expression but visible emotional relief afterward. Walking away from crypto markets entirely. Thought bubble showing lessons learned about market cycles, risk management, and psychological responses. Mixed feelings of loss acceptance but freedom from constant market anxiety illustrated in character's body language and environment."
+  },
+  {
+    "background": "level5/insight_crypto_psychology_exit.png",
+    "prompt": "A pixar style educational illustration of crypto investing's psychological impact. Emotional rollercoaster from euphoria during bull markets to despair during crashes visualized literally. Brain scan showing different activation patterns during extreme market conditions. Decision quality degrading under emotional stress illustrated through clever visual metaphor. Psychological resilience scale showing breaking points for different personality types. Clean, informative design with neurological elements sensitively portrayed."
+  },
+  {
+    "background": "level5/s4_hold_bear.mp4",
+    "prompt": "A pixar style 30 year old character holding crypto assets through bear market despite deep drawdowns. Character disengaging from daily price checking (deleting apps visual) to focus on fundamental blockchain technology developments continuing despite price action. Shifting focus from price to project progress illustrated through character's attention redirection. Emotional fortitude despite portfolio remaining deeply in red shown through steady expression. Calendar showing passage of months during winter period."
+  },
+  {
+    "background": "level5/insight_crypto_psychology_hold.png",
+    "prompt": "A pixar style educational illustration of psychological challenge in holding through downturns. Character maintaining position on sinking ship that historical precedent suggests will eventually rise again. Conviction meter being tested by increasingly negative market sentiment. Historical examples of previous crypto winters and subsequent recoveries shown in miniature cycles. Brain activation shifting from emotional to rational centers during holding period. Clean, informative design with psychological concepts clearly visualized."
+  },
+  {
+    "background": "level5/s4_dca_bear.mp4",
+    "prompt": "A pixar style 30 year old character methodically dollar-cost averaging into Bitcoin and Ethereum during crypto winter. Character adding small regular investments while mainstream declares crypto dead. Shopping cart collecting assets at 70-80% discounts from all-time highs. Average purchase price significantly lowering through disciplined buying strategy visual. Contrarian approach illustrated through character buying while crowd flees. Calendar showing consistent investment schedule regardless of sentiment."
+  },
+  {
+    "background": "level5/insight_crypto_psychology_dca.png",
+    "prompt": "A pixar style educational illustration of the psychological difficulty in buying during market fear. Character walking against crowd flow toward discounted assets. Psychological pressure gauge showing extreme resistance to contrarian actions. Social pressure visualized as friends, media, and culture pushing character to conform to bearish consensus. Statistical historical advantage of buying during fear periods shown in background chart. Clean, informative design with psychological pressure clearly visualized."
+  },
+  {
+    "background": "level5/insight_crypto_psychology.png",
+    "prompt": "A pixar style educational illustration of comprehensive crypto market psychology. Emotional discipline shown through character maintaining stability during price earthquake. Community dynamics visualized through tribal behavior and social sentiment waves affecting individual decisions. Brain activation patterns during different market phases. Psychological tools for maintaining rationality during extreme conditions. Clean, informative design with neurological elements and social dynamics clearly portrayed."
+  },
+  {
+    "background": "level5/s5_recovery.mp4",
+    "prompt": "A pixar style illustration of crypto market cycle turning after 18-month winter. Bitcoin and Ethereum charts showing strength again after 70-90% drawdowns. Institutional adoption increasing with professional investors entering market. Technological development continuing despite price decline (new features launching). Those who maintained positions through bear market positioned advantageously as cycle turns. Early signs of recovery with cautious optimism replacing extreme pessimism in market sentiment indicators."
+  },
+  {
+    "background": "level5/s5_recovery_dca.mp4",
+    "prompt": "A pixar style 30 year old character seeing exceptional results from bear market dollar-cost averaging strategy as crypto markets recover. Character now owning significantly more coins than before crash due to systematic buying at lower prices. Average purchase price now well below current market prices illustrated through clever visual comparison. Portfolio recovering much faster than those who merely held through downturn. Character's expression showing satisfaction in contrarian approach paying off as market sentiment begins shifting positive."
+  },
+  {
+    "background": "level5/s5_reflection.mp4",
+    "prompt": "A pixar style 30 year old character in thoughtful reflection on entire cryptocurrency investment experience. Visual timeline showing journey from initial entry through bull market euphoria, bear market despair, to beginning of recovery. Character contemplating key lessons learned with thought bubbles showing critical insights discovered. Experience has shaped not just financial position but investment philosophy. Introspective atmosphere with character genuinely processing the volatile journey's meaning."
+  },
+  {
+    "background": "level5/s5_volatile.mp4",
+    "prompt": "A pixar style 30 year old character concluding that cryptocurrency's extreme volatility makes it unsuitable for significant portfolio allocation. Character adjusting strategy to maintain only small speculative position while focusing primarily on more established asset classes. Risk tolerance self-awareness visualization showing character's personal comfort zone. Decision scale weighing potential returns against emotional and financial volatility costs. Character's expression shows peace with properly sized crypto exposure matching personal risk profile."
+  },
+  {
+    "background": "level5/s5_discipline.mp4",
+    "prompt": "A pixar style 30 year old character realizing successful investing is primarily about psychology management. Visual showing that rational decisions during emotional markets outperform technical analysis or information advantages. Character developing system to remain disciplined regardless of market conditions - rules-based approach visualized. Personal emotional regulation tools depicted as character's most valuable investment assets. Expression shows hard-earned wisdom about the mental game of investing being paramount to success."
+  },
+  {
+    "background": "level5/s5_cycles.mp4",
+    "prompt": "A pixar style 30 year old character mastering crypto market cycles. Visual showing character accumulating during bear markets when assets undervalued and taking profits during bull markets when euphoria dominates. Cyclical pattern recognition illustrated through character's strategic positioning at different market phases. Contrarian approach requiring patience and conviction demonstrated through character's positioning against crowd at key moments. Expression shows strategic satisfaction in working with market cycles rather than fighting them."
+  },
+  {
+    "background": "level5/ending_selector.mp4",
+    "prompt": "A pixar style 30 year old character reviewing complete cryptocurrency journey. Different possible paths and outcomes displayed across multiple timeline branches based on key decisions made. Financial standing and psychological development visibly shaped by choices throughout the volatile asset class experience. Character contemplating both lessons learned and results achieved with thoughtful expression. Market cycle visualization showing where character entered, navigated, and concluded their crypto frontier experience."
+  },
+  {
+    "background": "level5/ending_savvy.mp4",
+    "prompt": "A pixar style 30 year old character celebrating exceptional cryptocurrency navigation skills. Character successfully avoided FOMO, leverage risks, and ICO scams while making strategic decisions throughout market cycles. Portfolio showing impressive results through combination of emotional discipline and intelligent risk management. Trophy or certificate for crypto mastery. Character's expression shows confident wisdom earned through successfully navigating extremely volatile frontier asset class. Celebratory atmosphere with proven strategy elements highlighted."
+  },
+  {
+    "background": "level5/ending_disciplined.mp4",
+    "prompt": "A pixar style 30 year old character completing balanced cryptocurrency journey. Moderate risks taken while avoiding most dangerous pitfalls. Character experienced full market cycle from bull market through bear market with reasonable decisions throughout. Financial and psychological lessons prominently featured that will benefit future investment decisions across all asset classes. Character's expression shows measured satisfaction with performance and valuable experience gained despite some challenges faced."
+  },
+  {
+    "background": "level5/ending_lessons.mp4",
+    "prompt": "A pixar style 30 year old character reflecting on costly crypto mistakes that provided valuable experience. Visual showing consequences of excessive risk-taking, emotional decision-making, or insufficient research in cryptocurrency markets. Significant financial tuition paid for these lessons illustrated clearly. Character's expression shows determination to apply hard-learned insights to future investment decisions. Educational moment emphasizing growth through difficult experiences rather than just financial outcomes."
+  },
+  {
+    "background": "level5/ending_cautious.mp4",
+    "prompt": "A pixar style 30 year old character who approached cryptocurrency with extreme caution or avoidance. Character observing both dramatic gains during bull markets and devastating losses during crashes from safe distance. Conservative approach protected from volatility while sacrificing potential returns. Character's expression shows comfort with risk assessment decision aligning with personal tolerance. Skepticism about speculative manias validated through observation of full market cycle without direct financial or emotional damage."
+  },
+  {
+    "background": "level6/s1_start.mp4",
+    "prompt": "A pixar style 30 year old character witnessing US-China tech tensions disrupting Apple's supply chain. Split screen showing rising geopolitical conflict between U.S. and Chinese flags with semiconductor restrictions visual. Apple stock plummeting 15% with Taiwan-based chip production issues highlighted. Character holding $50,000 in long-term Apple stock now worth $42,500 with worried expression. Decision moment about how to handle the significant drop illustrated with multiple potential paths forward."
+  },
+  {
+    "background": "level6/s1_panic_outcome.mp4",
+    "prompt": "A pixar style 30 year old character panic selling Apple shares at $127, locking in $7,500 loss. Three-month timeline showing subsequent Apple announcement of new chip partnerships with Samsung and Intel as backup suppliers. Biden administration securing temporary exemptions for Apple components. Apple stock rebounding 20% to $152 while character watches from sidelines with regret. Portfolio would be nearly back to even had character held through temporary disruption."
+  },
+  {
+    "background": "level6/s1_diversify_outcome.mp4",
+    "prompt": "A pixar style 30 year old character holding Apple shares while strategically diversifying into semiconductor supply chain. Adding $10,000 in Taiwan Semiconductor and $5,000 in ASML Holding (critical equipment supplier). Three-month timeline showing Apple recovering 12% as they announce supply chain adaptations while TSM jumps 18% and ASML rises 15%. Biden administration's $53 billion CHIPS Act boosting domestic production across sector. Portfolio now worth $59,500, more than recovering initial paper loss."
+  },
+  {
+    "background": "level6/s1_loss_aversion_insight.png",
+    "prompt": "A pixar style educational illustration of loss aversion bias in investing psychology. Brain scan showing pain of losses activating twice the neural response as equivalent gains. This evolutionary bias leading to panic selling during market declines visualized through investor fleeing temporary drop. Historical performance impact of emotional selling versus rational holding shown through diverging performance paths. Clean, informative design with neurological elements thoughtfully portrayed."
+  },
+  {
+    "background": "level6/s1_diversification_insight.png",
+    "prompt": "A pixar style educational illustration of strategic diversification as portfolio protection. Eggs distributed across related but distinct baskets within semiconductor ecosystem. When one basket experiences problems, others remain stable or benefit from shifting dynamics. Portfolio volatility visibly reduced through proper diversification without sacrificing potential returns. Mathematical correlation concepts shown through accessible visual metaphors. Clean, engaging educational design with bright colors."
+  },
+  {
+    "background": "level6/s2_start.mp4",
+    "prompt": "A pixar style 30 year old character reacting to Omicron COVID variant market shock. Dow dropping 905 points (2.5%) visualization with tech stocks initially crashing. Biotech companies like Moderna and Pfizer soaring 20% on booster potential. Character's portfolio includes Apple (down 10%) and Tesla (surprisingly up 3% on EV momentum). CNBC running special Omicron market impact reports while investment chat group buzzing with friends rushing to buy biotech stocks."
+  },
+  {
+    "background": "level6/s2_fomo_outcome.mp4",
+    "prompt": "A pixar style 30 year old character selling Tesla at $1,100/share to buy Moderna at $368/share (pandemic high) out of FOMO. Timeline showing subsequent studies revealing Omicron as more contagious but less deadly than feared. Moderna dropping 45% to $204 as urgent booster demand fades. Meanwhile, Tesla announcing record quarterly deliveries and climbing another 12% before eventual split. Character's expression shows painful realization of double mistake timing, selling winner to buy loser at worst possible moment."
+  },
+  {
+    "background": "level6/s2_balanced_outcome.mp4",
+    "prompt": "A pixar style 30 year old character holding both stocks and adding iShares 7-10 Year Treasury Bond ETF (IEF) for stability. When Omicron news proves less severe than initially feared, Tesla position continues rising while bonds provide stability during brief volatility. By January 2022, markets largely recovered with character's balanced approach preserving capital while maintaining growth exposure. Expression shows satisfaction with balanced risk management that avoided emotional decisions."
+  },
+  {
+    "background": "level6/s2_herd_mentality_insight.png",
+    "prompt": "A pixar style educational illustration of herd mentality during health crises. Humans evolved to follow crowd for safety, but in investing this instinct leads to buying high and selling low. During pandemic threats, fear dominates rational analysis as shown through exaggerated crowd movement versus independent thinker. Historical examples of health crisis market overreactions and subsequent recoveries. Brain showing primitive safety-seeking activation overriding analytical regions. Clean, informative design with clear visual metaphors."
+  },
+  {
+    "background": "level6/s2_mental_accounting_insight.png",
+    "prompt": "A pixar style educational illustration of mental accounting benefits during health crises. Character treating different assets as separate buckets shown through literal portfolio compartmentalization. Safety bucket of treasury bonds providing both financial and psychological benefits during pandemic volatility. Emotion regulation effect of having protected assets illustrated through character's reduced stress levels despite market turbulence. Clean, informative design with psychological concepts clearly visualized."
+  },
+  {
+    "background": "level6/s3_start.mp4",
+    "prompt": "A pixar style 30 year old character witnessing major tech regulation wave. Department of Justice filing antitrust lawsuit against Apple over iPhone ecosystem monopoly practices. EU imposing €8.25 billion fine on Google for ad market dominance. Congress advancing American Innovation and Choice Online Act targeting tech giants. Apple dropping 12% on potential forced App Store changes that could cut billions in revenue. Tesla facing FTC scrutiny over Autopilot safety claims. Regulatory storm intensifying around entire tech sector."
+  },
+  {
+    "background": "level6/s3_flight_outcome.mp4",
+    "prompt": "A pixar style 30 year old character completely exiting tech stocks for Vanguard Value ETF (VTV) and infrastructure companies during regulatory scare. Six-month timeline revealing DOJ case against Apple settling with manageable terms ($500M fine and minor App Store changes). Google's appeal reducing EU fine and tech regulation bill stalling in Congress. Tech stocks rebounding 20% while character's value investments gain just 3%. Expression shows frustration at overreacting to regulatory headlines."
+  },
+  {
+    "background": "level6/s3_shift_outcome.mp4",
+    "prompt": "A pixar style 30 year old character strategically pivoting from Apple and Google to smaller tech companies like MongoDB, Cloudflare, and Palantir. When DOJ settlements prove less severe than feared, entire tech sector benefits with character's smaller tech holdings gaining 35%, outperforming even rebounding giants. Government contracts and less dominant market positions making these companies less vulnerable to antitrust scrutiny. Expression shows satisfaction with nuanced approach to regulatory risks."
+  },
+  {
+    "background": "level6/s3_anchoring_insight.png",
+    "prompt": "A pixar style educational illustration of anchoring bias in regulatory reactions. Investors becoming fixated on dramatic regulatory headlines, causing overestimation of long-term impact on company values. Visual showing initial headline impact versus actual business impact over time. Historical examples of regulatory headlines versus eventual outcomes for major companies. Character breaking free from headline anchor to assess true business impact. Clean, informative design with clear anchoring metaphor."
+  },
+  {
+    "background": "level6/s3_optimism_insight.png",
+    "prompt": "A pixar style educational illustration balancing optimism bias in tech regulation assessment. While optimism can lead to underestimating regulatory risks, controlled optimism is essential for successful tech investing. Scale balancing regulatory awareness with recognition of tech companies' adaptability to new rules. Historical examples showing how top companies navigated past regulatory challenges and emerged stronger. Clean, balanced visual design emphasizing nuanced perspective rather than extreme positions."
+  },
+  {
+    "background": "level6/s4_start.mp4",
+    "prompt": "A pixar style 30 year old character facing Hurricane Ida's impact on energy infrastructure. Category 4 storm shutting down 95% of Gulf oil production and damaging key refineries. Oil jumping to $75/barrel (three-year high) with gasoline shortages hitting East Coast. Tech manufacturing facing higher costs with Apple dropping 8% on supply concerns. Solar stocks like First Solar and Enphase Energy surging 15% as climate crisis awareness grows. Character evaluating complex market implications of natural disaster across different sectors."
+  },
+  {
+    "background": "level6/s4_green_outcome.mp4",
+    "prompt": "A pixar style 30 year old character selling some Apple to buy Invesco Solar ETF (TAN) during hurricane aftermath. Solar stocks jumping 20% initially as storm damage highlights fossil fuel vulnerability. Later timeline showing rising interest rates and normalized oil production causing solar sector to correct 35% from peaks. Passage of new climate legislation with substantial funding eventually helping sector recover some losses. Character's expression shows learning experience about sector volatility despite sound long-term thesis."
+  },
+  {
+    "background": "level6/s4_oil_outcome.mp4",
+    "prompt": "A pixar style 30 year old character buying United States Oil Fund (USO) as oil prices spike during hurricane. ETF initially rising 10% as expected, then facing issues with contango (futures contracts costing more than spot price). Despite oil prices remaining elevated when character sells after three months, ETF gained only 3% due to structural issues. Tax form showing short-term capital gains liability further reducing net return. Character's expression shows dawning understanding of complex commodity ETF mechanics."
+  },
+  {
+    "background": "level6/s4_recency_insight.png",
+    "prompt": "A pixar style educational illustration of recency bias in climate investing. Investors overweighting recent climate disasters in decision-making shown through magnified recent events versus historical pattern. This leads to performance chasing in clean energy stocks and buying thematic ETFs near peaks after major climate events. Timing chart showing typical investor entry points versus optimal entry points. Clean, informative design with climate elements sensitively portrayed."
+  },
+  {
+    "background": "level6/s4_moral_licensing_insight.png",
+    "prompt": "A pixar style educational illustration of moral licensing bias in commodity trading. Character using good deeds to justify ethically questionable choices visualized through balance scale of moral accounts. In investing, this appears when trading commodities during crises, justifying potential profits from disruptions by promising to use gains ethically. Psychological self-deception mechanisms clearly illustrated. Clean, thoughtful design exploring complex ethical considerations in investing decisions."
+  },
+  {
+    "background": "level6/s5_start.mp4",
+    "prompt": "A pixar style 30 year old character experiencing market shockwaves from crypto exchange FTX collapse. Bitcoin crashing 25% and Ethereum plummeting 33% in days. Contagion spreading to public companies with crypto exposure - Coinbase dropping 50% while Tesla (holding Bitcoin on balance sheet) falling 15%. NVIDIA declining 20% as crypto mining demand evaporates. Character's tech-heavy portfolio facing significant turbulence amid what Bloomberg calls Crypto's Lehman Moment with hourly crisis coverage."
+  },
+  {
+    "background": "level6/s5_cash_outcome.mp4",
+    "prompt": "A pixar style 30 year old character liquidating all semiconductor and crypto-adjacent stocks for cash during market panic. Timeline showing subsequent NVIDIA surge over 300% as AI demand completely overshadows lost crypto mining business. AMD rising 150% as data center growth and Microsoft's AI initiatives drive chip demand to record levels. Meanwhile, inflation visibly eroding character's cash position by 9% over same period. Expression shows painful realization of opportunity cost from fear-based decision."
+  },
+  {
+    "background": "level6/s5_blue_chip_outcome.mp4",
+    "prompt": "A pixar style 30 year old character recognizing NVIDIA and AMD's temporary crypto mining setback masks their true value in AI, data centers, and gaming. Character buying aggressively during FTX-triggered selloff. When ChatGPT launches shortly after, it showcases immense AI demand for these chips. In subsequent months, NVIDIA becomes star of AI boom, surging over 200%, while AMD gains 100% on similar tailwinds. Character's expression shows satisfaction in seeing beyond immediate panic to underlying technological trends."
+  },
+  {
+    "background": "level6/s5_hyperbolic_insight.png",
+    "prompt": "A pixar style educational illustration of hyperbolic discounting during crypto contagion. Character valuing immediate emotional relief over future financial outcomes through visual of choosing smaller immediate reward over larger delayed one. This becomes particularly powerful during crypto market meltdowns, which tend to be more dramatic and media-amplified than traditional market corrections. Time distortion effect on decision quality clearly illustrated through clever visual metaphors."
+  },
+  {
+    "background": "level6/s5_time_horizon_insight.png",
+    "prompt": "A pixar style educational illustration of time horizon power during market pessimism. The longer the investment time horizon, the more dramatic sell-offs appear as opportunities rather than threats. Visual spectrum showing how same market event looks to day trader, one-year investor, and decade-long investor. Perspective shift illustrated through zooming out from volatile short-term chart to reveal long-term growth pattern. Clean, educational design emphasizing how time transforms risk perception."
+  },
+  {
+    "background": "level6/ending_selector.mp4",
+    "prompt": "A pixar style 30 year old character reviewing decisions through multiple market crises. From Taiwan tensions to FTX collapse, each choice compounded to shape investment outcomes. Portfolio weathering geopolitical, pandemic, regulatory, climate, and crypto challenges with varying degrees of success depending on decisions made. Character's expression shows thoughtful assessment of crisis response patterns that emerged through these diverse stress tests. Complete financial journey visualization with key decision points highlighted."
+  },
+  {
+    "background": "level6/ending_master.mp4",
+    "prompt": "A pixar style 30 year old character celebrating contrarian investment mastery through multiple crises. Character consistently bought quality assets when others panicked - diversifying intelligently during Taiwan chip crisis, maintaining balance during Omicron scare, navigating tech regulation strategically, making thoughtful climate investments, and identifying AI chip opportunities during crypto collapse. Portfolio significantly outperforming benchmarks through crisis alpha generation. Trophy or certificate recognizing exceptional crisis navigation skills."
+  },
+  {
+    "background": "level6/ending_optimist.mp4",
+    "prompt": "A pixar style 30 year old character successfully adapting through market disruptions with thoughtful adjustments. Pivoting from large to small tech during regulatory threats, diversifying across semiconductor supply chains during geopolitical tensions, and maintaining core positions through volatility. Character's balanced approach delivered solid returns while avoiding major mistakes during various crises. Expression shows earned confidence in ability to navigate changing market environments through strategic flexibility."
+  },
+  {
+    "background": "level6/ending_survivor.mp4",
+    "prompt": "A pixar style 30 year old character showing mixed results from inconsistent crisis responses. Some good moves (like diversifying during chip crisis) offset by timing errors (chasing pandemic stocks or overreacting to regulatory headlines). Portfolio performance chart showing uneven results with some wins offset by behavioral mistakes. Character's expression shows developing self-awareness about emotional triggers that affected decision quality. Learning journal highlighting patterns identified for future improvement."
+  },
+  {
+    "background": "level6/ending_gambler.mp4",
+    "prompt": "A pixar style 30 year old character whose investment approach featured significant emotional reactions to market events. Panic selling Apple during supply chain issues, chasing Moderna at peak during Omicron, fleeing tech during regulatory concerns, and making speculative commodity trades during climate crises. These reactionary decisions created visible pattern of buying high and selling low that significantly impaired long-term returns. Character beginning to recognize emotional response patterns that need addressing."
+  },
+  {
+    "background": "level6/ending_hoarder.mp4",
+    "prompt": "A pixar style 30 year old character whose investment strategy was dominated by fear across multiple disruptions. Selling Apple during supply chain issues, fleeing to cash during crypto collapse, and generally avoiding market volatility rather than navigating it strategically. While this reduced short-term stress, substantial opportunity costs visualized - particularly missing AI semiconductor boom following crypto crash. Cash pile showing visible inflation erosion while growth opportunities passed by unheeded."
+  }
+] 

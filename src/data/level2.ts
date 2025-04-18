@@ -288,7 +288,7 @@ const level2Data: GameScene[] = [
     type: 'decision',
     title: '💰 Tax Now or Tax Later?',
     description: "Now that you've decided on your contribution amount, HR asks about the tax treatment. You can choose a Traditional 401(k) (pay taxes later, when you withdraw in retirement) or Roth 401(k) (pay taxes now, withdraw tax-free in retirement).",
-    background: 'level2/roth_vs_traditional.mp4', // Placeholder
+    background: 'level2/tax now or later.mp4', // Placeholder
     choices: [
       {
         text: '💲 Traditional 401(k): Take the tax break now.',
@@ -341,7 +341,7 @@ const level2Data: GameScene[] = [
     type: 'outcome',
     title: 'Traditional Tax Advantage',
     description: "You opt for the Traditional 401(k). Your paycheck is higher thanks to the immediate tax savings. Your retirement account grows steadily, though a nagging thought about future tax rates occasionally crosses your mind.",
-    background: 'level2/traditional_outcome.mp4', // Placeholder
+    background: 'level2/outcome phase 2.mp4', // Placeholder
     outcome: { 
       netWorthChange: 0,
       incomeChange: "+2%", // Higher take-home pay due to tax savings 
@@ -356,7 +356,7 @@ const level2Data: GameScene[] = [
     type: 'outcome',
     title: 'Roth Tax-Free Future',
     description: "You choose the Roth 401(k). Your paycheck is slightly lower, but you feel confident knowing your retirement withdrawals will be completely tax-free. This feels especially valuable given uncertainty about future tax rates.",
-    background: 'level2/roth_outcome.mp4', // Placeholder
+    background: 'level2/outcome phase 2.mp4', // Placeholder
     outcome: { 
       netWorthChange: 0,
       incomeChange: "-2%", // Lower take-home pay due to post-tax contributions
@@ -372,7 +372,7 @@ const level2Data: GameScene[] = [
     type: 'insight',
     title: '💡 Roth vs Traditional: The Tax Timing Strategy',
     description: "The Roth vs Traditional decision centers on when you pay taxes - now (Roth) or later (Traditional). This seemingly simple choice can have a profound impact on your retirement wealth.",
-    background: 'level2/tax_insight.mp4', // Placeholder
+    background: 'level2/insight.mp4', // Placeholder
     realWorldExample: "A 2021 Vanguard study found that only 14% of 401(k) participants use Roth accounts despite their advantages for many. For someone in the 24% tax bracket saving $6,000 annually from age 25-65 with 7% returns: Traditional grows to ~$1.2M before taxes (~$912K after), while Roth grows to ~$890K tax-free. If tax rates rise just 3% by retirement, Roth wins significantly.",
     summary: "Traditional 401(k) benefits: 1) Immediate tax deduction, 2) Potentially lower tax bracket in retirement, 3) More money invested upfront. Roth 401(k) benefits: 1) Tax-free withdrawals, 2) No required minimum distributions, 3) Hedge against future tax increases, 4) Effectively contributes 'more' since limits are the same but Roth is post-tax.",
     outcome: {
@@ -389,7 +389,7 @@ const level2Data: GameScene[] = [
     type: 'decision',
     title: '📊 Fund Selection Overload!',
     description: "Your 401(k) is up and running, but HR just dropped a bombshell: 12 NEW INVESTMENT FUNDS to choose from! The glossy fund brochures show everything from 'Ultra-Conservative Bond Fund' to 'Aggressive Emerging Markets' and 'Crypto-Adjacent Innovation Fund.' Your co-workers are all discussing their strategies, and the 401(k) website has a flashing 'Make Your Selection Now!' button. Your default option is a low-return money market fund if you do nothing.",
-    background: 'level2/s2_start.mp4', // Placeholder
+    background: 'level2/fund selection.mp4', // Placeholder
     choices: [
       {
         text: '🔄 Equal split across all 12 funds (1/n strategy)',
@@ -595,7 +595,7 @@ const level2Data: GameScene[] = [
     type: 'insight',
     title: '🧠 The Portfolio Personality Test',
     description: "As you gain investing experience, you realize there's no one-size-fits-all portfolio. The optimal strategy balances mathematical optimization with psychological comfort. A theoretically 'perfect' portfolio that causes panic selling during downturns is actually worse than a 'good enough' portfolio you can stick with consistently.",
-    background: 'level2/l2_portfolio_insight.mp4',
+    background: 'level2/insight.mp4',
     realWorldExample: "Research shows dramatic differences in portfolio construction by age and personality: A typical 30-year-old might allocate 90% stocks/10% bonds, while someone nearing retirement shifts to 40% stocks/60% bonds. Studies find investors with financial advisors often maintain more appropriate risk levels and are 5x less likely to panic-sell during market crashes.",
     outcome: {
       wellBeingChange: 2,
@@ -612,7 +612,7 @@ const level2Data: GameScene[] = [
     type: 'decision',
     title: '🏠 Life Happens: Insurance Check-in',
     description: "A few years pass. Maybe you've bought a house, started a family, or taken on new responsibilities. You revisit your insurance needs. Do you need life insurance? Disability insurance? How much is enough?",
-    background: 'level2/s3_start.mp4', // Placeholder
+    background: 'level2/decision Insurance.mp4', // Placeholder
     choices: [
       {
         text: '🤞 Skip insurance. I feel healthy, it\'s an unnecessary expense.',
@@ -705,7 +705,7 @@ const level2Data: GameScene[] = [
     type: 'outcome',
     title: '🎲 Risking It',
     description: "You decide against buying insurance for now, saving the premium cost. You feel fine, but a nagging worry remains about 'what if'.",
-    background: 'level2/s3_outcome1.mp4', // Placeholder
+    background: 'level2/outcome phase 3.mp4', // Placeholder
     outcome: { incomeChange: 0, // No immediate cost/benefit
                wellBeingChange: -1, // Lingering worry
                qualitativeNote: "Optimism bias prevailed. Saved money short-term, but exposed yourself (and dependents) to significant financial risk." },
@@ -716,7 +716,7 @@ const level2Data: GameScene[] = [
     type: 'outcome',
     title: '🛡️ Sensible Protection',
     description: "You purchase basic term life insurance. The cost is manageable, and you feel a significant weight lifted, knowing your loved ones would be financially okay if the unexpected happened.",
-    background: 'level2/s3_outcome1.mp4', // Placeholder
+    background: 'level2/outcome phase 3.mp4', // Placeholder
     outcome: { incomeChange: -300, // Annual premium
                wellBeingChange: -1,
                qualitativeNote: "Smart move. You've cost-effectively addressed a major financial risk during your peak earning years." },
@@ -727,7 +727,7 @@ const level2Data: GameScene[] = [
     type: 'outcome',
     title: '♾️ Lifelong Coverage (at a Price)',
     description: "You opt for whole life insurance. The agent emphasized the cash value growth and lifelong guarantee. The premiums are high, impacting your budget more than expected.",
-    background: 'level2/s3_outcome1.mp4', // Placeholder
+    background: 'level2/outcome phase 2.mp4', // Placeholder
     outcome: { incomeChange: -5000, // Annual premium
                wellBeingChange: 0, // Peace of mind offset by high cost stress
                qualitativeNote: "Often suboptimal. The high cost likely outweighs benefits compared to term + investing the difference. Cash value growth is typically slow." },
@@ -738,7 +738,7 @@ const level2Data: GameScene[] = [
     type: 'outcome',
     title: '🛡️ Comprehensive Safety Net',
     description: "You secure both term life and disability insurance. It's a noticeable monthly expense, but the peace of mind knowing your income and family are protected against major life events feels invaluable.",
-    background: '/images/backgrounds/shield-protection.webp', // Placeholder
+    background: 'level2/outcome phase 3.mp4', // Placeholder
     outcome: { incomeChange: -10000,
                wellBeingChange: -1,
                qualitativeNote: "Excellent risk management. You've protected against both death and disability, securing your financial foundation." },
@@ -751,7 +751,7 @@ const level2Data: GameScene[] = [
     type: 'event', // Changed from 'outcome' to 'event'
     title: '⚡ A Sudden Setback',
     description: "Life throws a curveball. You're involved in an accident and unable to work for 6 months. Without disability insurance, your income stops, and medical bills pile up. Your savings dwindle rapidly.",
-     background: 'level2/s3_accident.mp4', // Placeholder
+     background: 'level2/sudden setback.mp4', // Placeholder
      // This event might only trigger if 'l2_s3_outcome_no_insurance' was chosen
     outcome: { cashChange: -250000, // Lost income + medical costs
                wellBeingChange: -10,
@@ -764,7 +764,7 @@ const level2Data: GameScene[] = [
     type: 'ending',
     title: '🏆 Financial Security Master',
     description: "You've built an exceptional financial foundation. Your balanced approach to saving, investing, and risk management demonstrates remarkable financial wisdom. Your choices reflect a thoughtful balance between present needs and future security, positioning you for long-term financial success and peace of mind.",
-    background: '/images/backgrounds/financial-success.webp',
+    background: 'level2/ending 1.mp4',
     score: 90,
     scoreThreshold: 85, // High contribution, safe investment, optimal insurance
     qualitativeSummary: "Your financial foundation reflects balance, foresight, and prudent risk management.",
@@ -775,7 +775,7 @@ const level2Data: GameScene[] = [
     type: 'ending',
     title: '📈 Growth-Oriented Strategist',
     description: "Your financial foundation shows a strong growth orientation with appropriate risk protection. While your investment approach leans toward growth potential, you've maintained important safety nets. This balanced approach positions you for meaningful long-term wealth building with reasonable protection against life's uncertainties.",
-    background: '/images/backgrounds/growth-potential.webp',
+    background: 'level2/ending 2.mp4',
     score: 70,
     scoreThreshold: 70, // High contribution, risky investment, optimal insurance
     qualitativeSummary: "Your financial approach balances growth potential with necessary protection.",
@@ -786,7 +786,7 @@ const level2Data: GameScene[] = [
     type: 'ending',
     title: '🐢 Cautious Saver',
     description: "Your financial foundation prioritizes basic security over growth. While you've taken important steps to protect your financial health, some opportunities for long-term growth remain untapped. This cautious approach provides stability but may require higher contributions later to reach long-term financial goals.",
-    background: '/images/backgrounds/steady-growth.webp',
+    background: 'level2/ending 2.mp4',
     score: 65,
     scoreThreshold: 65, // Low contribution with some insurance
     qualitativeSummary: "Your approach prioritizes security and simplicity with room for more growth potential.",
@@ -797,7 +797,7 @@ const level2Data: GameScene[] = [
     type: 'ending',
     title: '🧩 Complex Financial Strategy',
     description: "Your financial foundation shows commitment to growth with some resource-intensive protection strategies. While you've dedicated significant resources to your financial health, there may be inefficiencies in your approach. This path can succeed but requires careful attention to ensure resources are allocated optimally between growth and protection.",
-    background: '/images/backgrounds/complex-strategy.webp',
+    background: 'level2/ending 2.mp4',
     score: 60,
     scoreThreshold: 60, // High contribution, risky investment, too much insurance
     qualitativeSummary: "Your approach shows strong commitment but contains some allocation inefficiencies.",
@@ -808,7 +808,7 @@ const level2Data: GameScene[] = [
     type: 'ending',
     title: '⚖️ Unbalanced Growth Strategy',
     description: "Your financial foundation emphasizes building assets without sufficient protection. While your growth orientation has potential for significant returns, your financial structure lacks key safeguards against unexpected events. This approach can succeed in favorable conditions but leaves you vulnerable to disruptions that could undermine your financial progress.",
-    background: '/images/backgrounds/risky-growth.webp',
+    background: 'level2/ending 2.mp4',
     score: 50,
     scoreThreshold: 50, // High contribution, risky investment, no insurance
     qualitativeSummary: "Your approach prioritizes growth potential over crucial financial safeguards.",
@@ -819,7 +819,7 @@ const level2Data: GameScene[] = [
     type: 'ending',
     title: '🌪️ Vulnerable Financial Foundation',
     description: "Your financial foundation prioritizes immediate needs over future security. Your cautious approach to committing resources toward long-term financial goals, combined with limited protection against financial risks, creates significant vulnerability. This path may require substantial adjustments to achieve financial security and successfully navigate unexpected challenges.",
-    background: '/images/backgrounds/financial-storm.webp',
+    background: 'level2/ending 2.mp4',
     score: 35,
     scoreThreshold: 0, // Default ending - reluctant, low contribution, no insurance
     qualitativeSummary: "Your financial foundation shows significant gaps in both growth potential and protection.",

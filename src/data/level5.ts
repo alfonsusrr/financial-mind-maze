@@ -23,7 +23,7 @@ const level5Data: GameScene[] = [
     type: 'insight',
     title: '💡 Crypto Investing: Fundamentals & Psychology',
     description: "**Cryptocurrencies** are digital assets that use cryptography for security and operate on decentralized networks called blockchains. Unlike traditional investments, crypto markets operate 24/7, experience extreme volatility, and are heavily influenced by sentiment, technology developments, and regulatory news. Understanding both the technology and the psychological biases that affect crypto investors is crucial for navigating this frontier market.",
-    background: 'level5/intro_concepts.png',
+    background: 'level5/1_crypto_insights.mp4',
     realWorldExample: "Bitcoin went from under $1,000 in early 2017 to nearly $20,000 by December 2017, crashed to around $3,000 in 2018, then climbed to over $60,000 in 2021 before dropping significantly again. During the 2017 bull run, FOMO (Fear Of Missing Out) drove many inexperienced investors to buy at peak prices using borrowed money. When the market crashed in 2018, many of these investors lost 80% or more of their investments. This cycle of greed and fear continues to dominate crypto market psychology.",
     summary: "Key concepts to understand before investing in crypto: 1) **Blockchain technology** creates trust without central authorities but has technical complexities and vulnerabilities; 2) **Market psychology** is dominated by FOMO, overconfidence, and herd mentality that drive extreme price swings; 3) **Investment risks** include volatility, regulatory uncertainty, and potential scams; 4) **Emotional discipline** is perhaps the most important skill in this market where sentiment drives prices more than fundamentals.",
     outcome: {
@@ -39,7 +39,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '🚀 The Crypto Conversation',
     description: "Your friend Alex can't stop talking about how much money they've made in cryptocurrency. 'I put $2,000 into Ethereum last year and it's worth $8,000 now! Everyone's getting rich from crypto!' They show you price charts on their phone - all trending dramatically upward. The conversation leaves you wondering if you're missing out on a once-in-a-lifetime opportunity.",
-    background: 'level5/s1_friend_convo.mp4',
+    background: 'level5/2_crypto conversations.mp4',
     outcome: {
       wellBeingChange: -1,
       qualitativeNote: "Your friend's excitement has planted the seed of FOMO (Fear Of Missing Out) in your mind. Suddenly your traditional investments seem boring compared to these explosive returns.",
@@ -54,7 +54,7 @@ const level5Data: GameScene[] = [
     type: 'decision',
     title: '🤔 Your Crypto Entry Strategy',
     description: "After researching cryptocurrencies for a few weeks, you understand the basics but feel overwhelmed by the options. Bitcoin and Ethereum are the established leaders, but there are thousands of 'altcoins' promising revolutionary technology and higher returns. You have $15,000 in savings that you could potentially invest. What's your approach to entering the crypto market?",
-    background: 'level5/s1_research.mp4',
+    background: 'level5/2_crypto_conversations.mp4',
     choices: [
       {
         text: '🙅 Avoid crypto entirely - too risky and speculative',
@@ -104,13 +104,13 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '🛑 Staying on the Sidelines',
     description: "You decide that cryptocurrency is too speculative for your risk tolerance. While friends excitedly discuss their crypto holdings at social gatherings, you maintain your traditional investment approach. You occasionally wonder 'what if' when you see headlines about Bitcoin price surges, but you sleep well knowing your money isn't exposed to the wild price swings.",
-    background: 'level5/s1_avoid.mp4',
+    background: 'level5/5a_avoiding crypto.mp4',
     outcome: {
       wellBeingChange: 2,
       ageChange: 1.0,
       qualitativeNote: "You've avoided the emotional rollercoaster of crypto investing. Your financial life remains stable and predictable, though you sometimes wonder about the opportunity cost."
     },
-    nextSceneId: 'l5_s4_event_bear_market',
+    nextSceneId: 'l5_s2_event_bull_market_observer',
   } as OutcomeScene,
   
   {
@@ -118,7 +118,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '🔵 Blue Chip Crypto Strategy',
     description: "You allocate $3,000 to the crypto market, splitting it equally between Bitcoin and Ethereum. This gives you skin in the game while keeping the majority of your savings secure. You've taken a moderate approach, focusing on the two cryptocurrencies with the largest market caps and most established ecosystems.",
-    background: 'level5/s1_bluechip.mp4',
+    background: 'level5/3_crypto research.mp4',
     outcome: {
       cashChange: -3000,
       portfolioValueChange: 3000,
@@ -135,7 +135,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '🎯 Altcoin Portfolio Strategy',
     description: "You've gone big on crypto, investing $10,000 across several promising altcoin projects. You spent hours researching tokenomics, development teams, and use cases, spreading your investment across coins like Solana, Polkadot, Cardano, and several smaller projects. Your portfolio is now significantly exposed to crypto market movements.",
-    background: 'level5/s1_altcoins.mp4',
+    background: 'level5/3_crypto research.mp4',
     outcome: {
       cashChange: -10000,
       portfolioValueChange: 10000,
@@ -147,13 +147,43 @@ const level5Data: GameScene[] = [
     nextSceneId: 'l5_s2_event_bull_market',
   } as OutcomeScene,
 
+  // Special bull market event for those who avoided crypto
+  {
+    id: 'l5_s2_event_bull_market_observer',
+    type: 'event',
+    title: '👀 Watching the Crypto Bull Market from the Sidelines',
+    description: "Six months later, Bitcoin breaks its previous all-time high, Ethereum doubles in value, and many altcoins are up 300% or more. Your friends who invested can't stop talking about their gains. Social media is filled with crypto success stories, and mainstream news covers the 'crypto revolution' daily. You experience a mix of relief at avoiding the stress but also wonder about the missed opportunity.",
+    background: 'level5/4_crypto bull run.mp4',
+    outcome: {
+      wellBeingChange: -1,
+      ageChange: 0.5,
+      qualitativeNote: "Staying on the sidelines during a bull market tests your conviction. While you've avoided the risks, the potential rewards others are experiencing can trigger doubt."
+    },
+    nextSceneId: 'l5_s4_event_bear_market_observer',
+  } as EventScene,
+
+  // Bear market event for those who avoided crypto
+  {
+    id: 'l5_s4_event_bear_market_observer',
+    type: 'event',
+    title: '📉 Vindication: Crypto Market Crashes',
+    description: "The euphoria in crypto markets has dramatically reversed. Bitcoin has crashed 65% from its peak, and most altcoins are down 80-90%. Many of your friends who were boasting about gains are now dealing with significant losses. Media headlines have shifted from 'Crypto Millionaires' to 'Crypto Collapse.' Your decision to stay out of crypto has been validated, though some die-hard believers insist 'this is just another cycle.'",
+    background: 'level5/5b_disappointment.mp4',
+    outcome: {
+      wellBeingChange: 2,
+      ageChange: 1.0,
+      qualitativeNote: "Your cautious approach has protected you from significant losses. The crypto crash demonstrates the real risks of speculative markets that you'd identified from the beginning."
+    },
+    nextSceneId: 'l5_s4_insight_crypto_psychology',
+  } as EventScene,
+
   // Bull Market Event
   {
     id: 'l5_s2_event_bull_market',
     type: 'event',
     title: '📈 Crypto Bull Market Surge!',
     description: "Six months after your initial crypto decision, the entire market enters a dramatic bull run! Bitcoin breaks its previous all-time high, Ethereum doubles in value, and many altcoins are up 300% or more. Mainstream media is covering crypto daily, celebrities are promoting coins, and it seems like everyone is making money. Your social media feeds are filled with friends showing off their crypto gains.",
-    background: 'level5/s2_bull_market.mp4',
+    background: 'level5/4_crypto bull run.mp4',
     outcome: {
       portfolioValueChange: "+150%", // More realistic bull market gain over 6 months
       portfolioGrowthRate: "300%", // Annualized - extremely high during bull run
@@ -170,43 +200,11 @@ const level5Data: GameScene[] = [
     type: 'insight',
     title: '📊 Crypto Market Dynamics: Volatility and Cycles',
     description: "Two critical aspects of crypto markets are their **extreme volatility** and **cyclical nature**. Price swings of 10-20% in a single day are common, and the markets move through dramatic boom-and-bust cycles that test investors' psychological resilience.",
-    background: 'level5/insight_market_dynamics.png',
+    background: 'level5/1_crypto insights.mp4',
     realWorldExample: "Bitcoin has experienced multiple dramatic cycles. In 2017, it rose from $1,000 to nearly $20,000 before crashing to $3,200 in 2018 (an 84% drop). Similarly, Ethereum rose from $730 to over $4,800 in 2021 (a 550% gain), only to fall below $1,000 in 2022 (an 80% drop). During the May 2021 crash, Bitcoin plunged 30% in a single day. Those who bought during euphoric phases typically sold at losses during crashes, while those who understood market cycles and maintained emotional discipline were often rewarded when prices recovered in subsequent cycles.",
     summary: "Successful crypto investors develop strategies to navigate both volatility and market cycles. They understand that extreme emotions - both FOMO during bull markets and despair during bear markets - are contrary indicators. The most successful tend to be contrarians: taking some profits during periods of market euphoria and accumulating during bear markets when others are fearful. This requires going against powerful emotional and social pulls, but has historically been rewarded.",
     outcome: {
       wellBeingChange: 1,
-      ageChange: 0.1
-    },
-    nextSceneId: 'l5_s3_decision_leverage',
-  } as InsightScene,
-
-  // Market Cycle Insight
-  {
-    id: 'l5_s3_insight_cycle',
-    type: 'insight',
-    title: '🔄 Crypto Market Cycles: Booms and Busts',
-    description: "Cryptocurrency markets move in dramatic cycles of boom and bust. Understanding these cycles is crucial for managing emotions and making rational decisions. During bull markets, prices rise dramatically, media attention increases, new investors rush in, and euphoria takes hold. Bear markets bring the opposite - prices crash, interest wanes, and fear dominates.",
-    background: 'level5/insight_cycles.png',
-    realWorldExample: "Bitcoin has experienced multiple dramatic cycles since its creation. After reaching nearly $20,000 in December 2017, it crashed to about $3,200 by December 2018 (an 84% drop). Most investors who bought during the euphoric phase sold at a loss during the crash. However, those who understood the cyclical nature and had conviction in the long-term value proposition were rewarded when Bitcoin eventually reached $69,000 in November 2021, before entering another bear market in 2022.",
-    summary: "The most successful crypto investors tend to be contrarians - accumulating during bear markets when others are fearful and taking profits during bull markets when others are greedy. This requires going against powerful emotional and social pulls, but has historically been rewarded.",
-    outcome: {
-      wellBeingChange: 1,
-      ageChange: 0.1
-    },
-    nextSceneId: 'l5_s3_insight_leverage_intro',
-  } as InsightScene,
-
-  // NEW: Leverage Introduction Insight
-  {
-    id: 'l5_s3_insight_leverage_intro',
-    type: 'insight',
-    title: '💡 Leverage: Amplifying Bets',
-    description: "**Leverage** allows you to control a larger position than your capital would normally allow by borrowing funds from an exchange. For example, with 10x leverage, $1,000 can control $10,000 worth of crypto. This magnifies *both* potential profits and potential losses.",
-    background: 'level5/insight_leverage_intro.png',
-    realWorldExample: "If Bitcoin moves up 5% and you have a 10x leveraged position, your profit isn't 5%, it's 50% (minus fees/interest). However, if Bitcoin drops 5%, your loss is 50%. A drop of just 10% could wipe out your entire initial $1,000 (liquidation). Exchanges offer leverage because they profit from trading fees and liquidations.",
-    summary: "Leverage is a powerful tool that can accelerate gains in favorable market conditions but dramatically increases risk. Small adverse price movements can lead to total loss of invested capital due to liquidation thresholds set by exchanges.",
-    outcome: {
-      wellBeingChange: 0,
       ageChange: 0.1
     },
     nextSceneId: 'l5_s3_decision_leverage',
@@ -218,7 +216,7 @@ const level5Data: GameScene[] = [
     type: 'decision',
     title: '⚠️ The Leverage Temptation',
     description: "As the bull market continues, you start hearing about traders using leverage to amplify their gains. **Leverage** allows you to control a larger position than your capital would normally allow by borrowing funds from an exchange. For example, with 10x leverage, $1,000 can control $10,000 worth of crypto. This magnifies both potential profits and losses and can result in complete liquidation of your position. Your friend shares screenshots of making $20,000 in a day from a leveraged position. 'It's free money in this market!' they claim.",
-    background: 'level5/s3_leverage_tempt.mp4',
+    background: 'level5/4_crypto bull run.mp4',
     choices: [
       {
         text: '❌ Avoid leverage completely - too risky',
@@ -268,13 +266,13 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '🛡️ Safe Harbor: Avoiding the Leverage Trap',
     description: "You decide that leverage is too risky for your investment style. This decision gets tested immediately as you see social media posts about overnight crypto millionaires using leverage. However, your conviction in avoiding leverage is reinforced when you hear about a friend who lost their entire crypto holdings in a leveraged position when the market dropped just 10% in an hour - a common occurrence in crypto.",
-    background: 'level5/s3_avoid_leverage.mp4',
+    background: 'level5/5a_avoiding crypto.mp4',
     outcome: {
       wellBeingChange: 2,
       ageChange: 0.5,
       qualitativeNote: "Your disciplined approach keeps you safe from one of the most common ways crypto investors lose everything. Slow and steady often wins the race."
     },
-    nextSceneId: 'l5_s3_event_ico',
+    nextSceneId: 'l5_s3_insight_leverage_liquidations',
   } as OutcomeScene,
   
   {
@@ -282,14 +280,14 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '⚖️ Dipping a Toe: Limited Leverage',
     description: "You decide to experiment with leverage, but cautiously - using only 5% of your portfolio with modest 2x leverage. The experience is eye-opening. Even with such limited exposure, you find yourself checking prices constantly, feeling extreme stress with every price movement. When a sudden 15% market drop occurs, your leveraged position loses 30% of its value in hours, giving you a visceral education in how leverage amplifies both gains and losses.",
-    background: 'level5/s3_small_leverage.mp4',
+    background: 'level5/3_crypto research.mp4',
     outcome: {
       portfolioValueChange: "-1.5%",
       wellBeingChange: -2,
       ageChange: 0.5,
       qualitativeNote: "You've gained firsthand experience with leverage without catastrophic damage. The emotional impact was significant despite the limited financial exposure."
     },
-    nextSceneId: 'l5_s3_event_ico',
+    nextSceneId: 'l5_s3_insight_leverage_liquidations',
   } as OutcomeScene,
   
   {
@@ -297,30 +295,30 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '💥 Liquidation: The Leverage Disaster',
     description: "You take a major leveraged position with 10x leverage on 25% of your crypto holdings. Initially, the position moves in your favor, creating a rush of excitement. But crypto markets are notoriously volatile - a sudden 12% drop in prices triggers an automatic liquidation of your entire leveraged position because the loss exceeded your margin. In just hours, a quarter of your crypto portfolio disappears completely.",
-    background: 'level5/s3_high_leverage.mp4',
+    background: 'level5/5c_leverage disaster.mp4',
     outcome: {
       portfolioValueChange: "-25%",
       wellBeingChange: -5,
       ageChange: 0.5,
       qualitativeNote: "A painful and expensive lesson in the dangers of leverage. A mere 10% adverse move was enough to wipe out 25% of your crypto due to 10x leverage. The certainty of long-term assets was traded for the possibility of short-term gains, with devastating results."
     },
-    nextSceneId: 'l5_s3_event_ico',
+    nextSceneId: 'l5_s3_insight_leverage_liquidations',
   } as OutcomeScene,
 
-  // UPDATED: Leverage Risk Insight
+  // Leverage Liquidations Insight
   {
-    id: 'l5_s3_insight_leverage_risk',
+    id: 'l5_s3_insight_leverage_liquidations',
     type: 'insight',
-    title: '🧠 The Psychology & Risk of Leverage',
-    description: "**Leverage** amplifies both gains and losses, but its primary danger is **liquidation** - the forced closing of your position when losses exceed your deposited margin. This risk is extremely high in volatile crypto markets, where small price swings can trigger catastrophic losses for leveraged traders.",
-    background: 'level5/insight_leverage.png',
-    realWorldExample: "During the crypto crash beginning in May 2021, over **$10 billion** in leveraged positions were liquidated across exchanges within just a few days, according to Bybt data. One of the single largest liquidation events happened around May 19th, 2021, with billions liquidated in a 24-hour period as Bitcoin's price plummeted over 30%. These events wiped out countless traders who were using high leverage (50x, 100x, even 125x offered by some exchanges). Financial psychologist Dr. Brad Klontz notes the allure of massive potential gains can impair risk assessment, akin to gambling addiction.",
-    summary: "While professionals might use very low leverage (e.g., 1.5-2x) with strict risk controls, high leverage in crypto is widely considered gambling, not investing. Studies consistently show the vast majority (>90%) of retail leveraged crypto traders lose money. As Warren Buffett famously said, 'When you combine ignorance and leverage, you get some pretty interesting results.' Avoiding leverage is often the most prudent strategy for long-term success.",
+    title: '💣 Leverage Liquidations: The Crypto Wipeouts',
+    description: "**Leverage liquidations** occur when the market moves against a leveraged position, and the exchange automatically sells the collateral to cover losses. In crypto markets, these can happen at extraordinary scale due to the prevalence of high leverage (up to 100x or more) combined with extreme volatility.",
+    background: 'level5/1_crypto insights.mp4',
+    realWorldExample: "The largest crypto liquidation event in history occurred on May 19, 2021, known as 'Black Wednesday' in crypto circles. When Bitcoin plunged from around $43,000 to under $30,000 in a matter of hours, over **$8.6 billion** worth of leveraged positions were liquidated across exchanges in a single 24-hour period. More than 775,000 traders had their positions completely wiped out. The cascading effect of these forced liquidations accelerated the price drop, as each liquidation triggered more selling, forcing more liquidations in a devastating chain reaction. Another massive event was March 12-13, 2020 ('Black Thursday') when over $4 billion was liquidated during a 50% Bitcoin crash.",
+    summary: "Leverage transforms normal market volatility into existential risk. The largest liquidation events in crypto history have vaporized billions of dollars in minutes to hours, affecting hundreds of thousands of traders simultaneously. Exchange data consistently shows that 70-90% of leveraged retail traders ultimately lose money. Professional traders who use leverage do so sparingly (typically 2-3x maximum), with strict risk controls, and never risk their entire portfolio - principles that retail traders often ignore to their detriment.",
     outcome: {
       wellBeingChange: 1,
       ageChange: 0.1
     },
-    nextSceneId: 'l5_s3_insight_regulation',
+    nextSceneId: 'l5_s3_event_ico',
   } as InsightScene,
 
   // ICO Opportunity
@@ -329,7 +327,7 @@ const level5Data: GameScene[] = [
     type: 'event',
     title: '💰 ICO Opportunity: NextGenChain',
     description: "Your crypto-savvy colleague excitedly tells you about an upcoming ICO (Initial Coin Offering) called NextGenChain. 'This could be the next Ethereum! The team is promising 100x faster transactions and revolutionary smart contracts. Early investors will get tokens at a huge discount before they hit exchanges.' When you ask about the team and technology, they admit they haven't researched deeply but 'the website looks really professional and they have 50,000 Twitter followers already.'",
-    background: 'level5/s3_ico_opportunity.mp4',
+    background: 'level5/3_crypto research.mp4',
     outcome: {
       wellBeingChange: 0,
       ageChange: 0.5,
@@ -344,7 +342,7 @@ const level5Data: GameScene[] = [
     type: 'decision',
     title: '🔍 Evaluating the ICO: Opportunity or Scam?',
     description: "You're intrigued by the NextGenChain ICO but wary of potential scams. ICOs have produced both spectacular returns and total losses. Before making any decision, you need to assess this opportunity. How will you approach evaluating this ICO?",
-    background: 'level5/s3_ico_decision.mp4',
+    background: 'level5/3_crypto research.mp4',
     choices: [
       {
         text: '🚫 Pass on all ICOs - too many scams and risks',
@@ -394,7 +392,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '🛑 Avoiding the ICO Gamble',
     description: "You decide to skip the NextGenChain ICO, preferring to stick with established cryptocurrencies. Your caution proves warranted when, two months later, you read that NextGenChain has been exposed as a fraudulent project. The founders disappeared with millions in investor funds, and the tokens are worthless. Your colleague who invested is devastated.",
-    background: 'level5/s3_pass_ico.mp4',
+    background: 'level5/5a_avoiding crypto.mp4',
     outcome: {
       wellBeingChange: 3,
       ageChange: 0.5,
@@ -408,7 +406,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '💔 ICO Disappointment: Money Gone',
     description: "You hastily invest $1,000 in the NextGenChain ICO without proper research, hoping to get in early on the next big thing. After some initial hype and token distribution, communication from the team becomes sporadic. Development milestones are missed, and eventually, the project's social media goes silent. Your $1,000 investment is now effectively worthless.",
-    background: 'level5/s3_fomo_ico.mp4',
+    background: 'level5/5b_disappointment.mp4',
     outcome: {
       cashChange: -1000,
       wellBeingChange: -3,
@@ -423,7 +421,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '🔎 ICO Investigation Reveals Red Flags',
     description: "You spend several days researching NextGenChain thoroughly. Your investigation reveals concerning issues: team members with fake credentials, whitepaper sections plagiarized from other projects, technical claims that don't withstand scrutiny, and a suspicious token distribution model heavily favoring the founders. Based on this research, you decide not to invest and share your findings with your interested colleagues.",
-    background: 'level5/s3_diligence_ico.mp4',
+    background: 'level5/3_crypto research.mp4',
     outcome: {
       wellBeingChange: 2,
       ageChange: 0.5,
@@ -454,7 +452,7 @@ const level5Data: GameScene[] = [
     type: 'event',
     title: '📉 Crypto Winter Arrives',
     description: "The euphoria of the bull market has dramatically reversed. Bitcoin has crashed 65% from its peak, and most altcoins are down 80-90%. Media headlines have shifted from 'Crypto Millionaires' to 'Crypto Collapse.' Social media influencers who loudly promoted coins have gone quiet or deleted their accounts. The crypto winter has arrived - a prolonged bear market that tests conviction and patience.",
-    background: 'level5/s4_bear_market.mp4',
+    background: 'level5/6_crypto winter.mp4',
     outcome: {
       portfolioValueChange: "-70%",
       portfolioGrowthRate: "-80%",
@@ -471,7 +469,7 @@ const level5Data: GameScene[] = [
     type: 'decision',
     title: '❄️ Navigating Crypto Winter',
     description: "Your crypto investments have plummeted in value during this brutal bear market. The excitement and bullish sentiment are gone, replaced by doom and gloom. Many former crypto enthusiasts are now declaring it 'dead' and 'a failed experiment.' As the bear market continues, what's your strategy?",
-    background: 'level5/s4_bear_decision.mp4',
+    background: 'level5/6_crypto winter.mp4',
     choices: [
       {
         text: '🚫 Exit crypto completely - sell everything',
@@ -521,7 +519,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '👋 Crypto Exit: Selling in the Bear Market',
     description: "You decide to cut your losses and exit crypto completely. While it's painful to sell at such depressed prices, the emotional relief of no longer watching the continuing volatility provides some comfort. You've learned valuable lessons about market cycles, risk management, and your own psychological responses to extreme market conditions.",
-    background: 'level5/s4_exit_crypto.mp4',
+    background: 'level5/6_crypto winter.mp4',
     outcome: {
       cashChange: "+30%",
       portfolioValueChange: "-100%",
@@ -529,29 +527,61 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "You've experienced the full crypto cycle - from excitement to despair. The financial loss is significant, but the educational value considerable."
     },
-    nextSceneId: 'l5_s4_insight_crypto_psychology',
+    nextSceneId: 'l5_s4_insight_crypto_psychology_exit',
   } as OutcomeScene,
+  
+  // Special psychology insight for those who exited
+  {
+    id: 'l5_s4_insight_crypto_psychology_exit',
+    type: 'insight',
+    title: '🧠 The Emotional Impact of Crypto Investing',
+    description: "Your experience with cryptocurrency has shown firsthand how extreme volatility can test an investor's psychological resilience. The emotional rollercoaster from euphoria during bull markets to despair during crashes often drives poor decision-making.",
+    background: 'level5/insight_crypto_psychology_exit.png',
+    realWorldExample: "Studies show the average cryptocurrency investor dramatically underperforms the assets they invest in. While Bitcoin returned approximately 900% from 2015-2020, the average Bitcoin investor earned only about 200% due to emotional trading - buying during periods of excitement and selling during downturns. This pattern of buying high and selling low is driven by powerful psychological forces that are difficult to overcome.",
+    summary: "Whether or not you return to crypto investing in the future, this experience has provided valuable insights about market psychology and your own emotional responses to volatility. The lessons learned about managing fear and greed, maintaining emotional discipline, and the dangers of herd mentality are applicable across all investment activities.",
+    outcome: {
+      wellBeingChange: 2,
+      ageChange: 0.1
+    },
+    nextSceneId: 'l5_ending_selector',
+  } as InsightScene,
   
   {
     id: 'l5_s4_outcome_hold_bear',
     type: 'outcome',
     title: '⏱️ Weathering the Storm: Holding Through the Bear Market',
     description: "You decide to hold your remaining crypto assets through the bear market. It's not easy watching your investment remain deeply in the red month after month, but you maintain belief in the long-term potential of blockchain technology. You disengage from daily price checking and focus on the fundamentals of the projects you've invested in.",
-    background: 'level5/s4_hold_bear.mp4',
+    background: 'level5/6_crypto winter.mp4',
     outcome: {
       wellBeingChange: -1,
       ageChange: 0.5,
       qualitativeNote: "Your patience is being tested, but history suggests that those who can endure crypto winters eventually see spring return."
     },
-    nextSceneId: 'l5_s4_insight_crypto_psychology',
+    nextSceneId: 'l5_s4_insight_crypto_psychology_hold',
   } as OutcomeScene,
+  
+  // Psychology insight for holders
+  {
+    id: 'l5_s4_insight_crypto_psychology_hold',
+    type: 'insight',
+    title: '🧠 The Psychology of Holding Through Downturns',
+    description: "Holding through a severe market downturn is one of the most psychologically challenging aspects of investing. It requires conviction in your original thesis despite market sentiment turning strongly negative.",
+    background: 'level5/insight_crypto_psychology_hold.png',
+    realWorldExample: "Studies show that investors who can maintain emotional discipline during downturns often outperform those who react emotionally. For example, Bitcoin investors who held through multiple 80%+ crashes since 2011 have seen returns exceeding 10,000%, while those who sold during panics and tried to re-enter later typically achieved only a fraction of those returns.",
+    summary: "The ability to weather market storms without panic selling is a rare but valuable psychological trait for investors. By focusing on fundamentals rather than price fluctuations and maintaining conviction in your long-term thesis, you've demonstrated this resilience. This skill transfers to all investment markets and is often what separates successful long-term investors from the crowd.",
+    outcome: {
+      wellBeingChange: 2,
+      ageChange: 0.1
+    },
+    nextSceneId: 'l5_s5_event_recovery',
+  } as InsightScene,
   
   {
     id: 'l5_s4_outcome_dca_bear',
     type: 'outcome',
     title: '🌱 Buying the Dip: Dollar-Cost Averaging in the Bear Market',
     description: "Taking a contrarian approach, you methodically invest small amounts into Bitcoin and Ethereum each month during the bear market. While friends and media declare crypto 'dead,' you're quietly accumulating at prices 70-80% below the all-time highs. This disciplined strategy significantly lowers your average purchase price.",
-    background: 'level5/s4_dca_bear.mp4',
+    background: 'level5/6_crypto winter.mp4',
     outcome: {
       cashChange: -3000,
       portfolioValueChange: 3000,
@@ -559,23 +589,39 @@ const level5Data: GameScene[] = [
       ageChange: 0.5,
       qualitativeNote: "Your contrarian approach is both intimidating and potentially rewarding. By investing when others are fearful, you've positioned yourself well if the cycle turns again."
     },
-    nextSceneId: 'l5_s4_insight_crypto_psychology',
+    nextSceneId: 'l5_s4_insight_crypto_psychology_dca',
   } as OutcomeScene,
 
-  // Combined Crypto Psychology Insight
+  // Psychology insight for DCA investors
+  {
+    id: 'l5_s4_insight_crypto_psychology_dca',
+    type: 'insight',
+    title: '🧠 The Contrarian Psychology of Buying During Fear',
+    description: "Systematically buying during a bear market represents one of the most psychologically difficult but potentially rewarding investing strategies. It requires going directly against market sentiment and the social pressure of friends, media, and the broader culture.",
+    background: 'level5/1_crypto insights.mp4',
+    realWorldExample: "Legendary investors like Warren Buffett have built fortunes on the principle of 'being fearful when others are greedy and greedy when others are fearful.' In cryptocurrency markets, those who accumulated Bitcoin during the 2018-2019 bear market at prices around $3,000-6,000 saw their investments grow 10-20x during the next bull cycle. These contrarian investors are rare - studies show that most retail investors do the opposite, buying during euphoria and selling during panic.",
+    summary: "By systematically investing during a period of extreme pessimism, you've demonstrated exceptional psychological discipline and contrarian thinking. This approach treats market volatility as an opportunity rather than a threat and has historically been one of the most effective wealth-building strategies in cyclical markets - though it requires uncommon emotional fortitude to execute.",
+    outcome: {
+      wellBeingChange: 2,
+      ageChange: 0.1
+    },
+    nextSceneId: 'l5_s5_event_recovery_dca',
+  } as InsightScene,
+
+  // Combined Crypto Psychology Insight for observers
   {
     id: 'l5_s4_insight_crypto_psychology',
     type: 'insight',
     title: '🧠 The Psychology of Crypto Markets: Emotions and Communities',
     description: "Crypto investing is as much a psychological challenge as a financial one. Two critical psychological factors are **emotional discipline** during extreme volatility and awareness of **community dynamics** that influence markets through social sentiment and tribal behavior.",
-    background: 'level5/insight_crypto_psychology.png',
+    background: 'level5/1_crypto insights.mp4',
     realWorldExample: "The emotional impact of volatility is reflected in a Dalbar study showing that while Bitcoin returned approximately 900% from 2015-2020, the average Bitcoin investor earned only about 200% due to emotional trading - buying high during euphoria and selling low during crashes. Community influence was dramatically demonstrated when Reddit's WallStreetBets group and Elon Musk's tweets drove Dogecoin from less than $0.01 to over $0.70 in 2021 - a 7,000% increase for a cryptocurrency created as a joke. Similarly, during the 'Bitcoin vs. Bitcoin Cash' fork in 2017, community tribalism led to coordinated campaigns and wild price swings as each side claimed to represent the 'true Bitcoin'.",
-    summary: "Successful crypto investors recognize and manage both individual psychology and community dynamics. They develop emotional discipline to avoid buying during euphoria and selling during despair, focusing on fundamentals rather than price fluctuations. They also remain objective about projects they support, recognizing when community enthusiasm crosses into irrational exuberance and maintaining healthy skepticism even toward their favored investments. Both skills require going against powerful psychological and social currents.",
+    summary: "Even as an observer, you've witnessed how crypto markets are driven by powerful psychological and social forces. Successful crypto investors recognize and manage both individual psychology and community dynamics, developing emotional discipline and maintaining objectivity despite the powerful social currents that drive these markets.",
     outcome: {
       wellBeingChange: 2,
       ageChange: 0.1
     },
-    nextSceneId: 'l5_s5_event_recovery',
+    nextSceneId: 'l5_ending_selector',
   } as InsightScene,
 
   // Recovery Event
@@ -584,7 +630,7 @@ const level5Data: GameScene[] = [
     type: 'event',
     title: '📈 The Crypto Cycle Turns Again',
     description: "After 18 months of crypto winter, with prices down 70-90% from all-time highs and public interest at a low point, the cycle begins to turn. Institutional adoption increases, technological developments continue despite the price decline, and gradually, Bitcoin and Ethereum start showing strength again. Those who maintained positions or accumulated during the bear market are positioned to benefit from the recovery.",
-    background: 'level5/s5_recovery.mp4',
+    background: 'level5/happy trading.mp4',
     outcome: {
       portfolioValueChange: "+120%",
       portfolioGrowthRate: "80%",
@@ -595,13 +641,30 @@ const level5Data: GameScene[] = [
     nextSceneId: 'l5_s5_decision_reflection',
   } as EventScene,
 
+  // Recovery Event for DCA investors - with better results
+  {
+    id: 'l5_s5_event_recovery_dca',
+    type: 'event',
+    title: '📈 The Crypto Cycle Turns Again: DCA Strategy Pays Off',
+    description: "After 18 months of crypto winter, the market begins to recover. Your dollar-cost averaging strategy during the bear market has positioned you exceptionally well. Not only do you own significantly more coins than before the crash, but your average purchase price is now well below current market prices. Your portfolio recovers much faster than those who merely held through the downturn.",
+    background: 'level5/happy trading.mp4',
+    outcome: {
+      portfolioValueChange: "+200%",
+      portfolioGrowthRate: "120%",
+      wellBeingChange: 5,
+      ageChange: 1.5,
+      qualitativeNote: "Your contrarian strategy of systematically buying during the bear market is now paying significant dividends as the cycle turns. This illustrates one of the most powerful wealth-building approaches in volatile, cyclical markets."
+    },
+    nextSceneId: 'l5_s5_decision_reflection',
+  } as EventScene,
+
   // Final Reflection Decision
   {
     id: 'l5_s5_decision_reflection',
     type: 'decision',
     title: '🤔 Crypto Journey: Lessons Learned',
     description: "Looking back on your entire cryptocurrency investment experience - from initial entry through bull market euphoria, bear market despair, and the beginning of recovery - what's your most important takeaway?",
-    background: 'level5/s5_reflection.mp4',
+    background: 'level5/1_crypto insights.mp4',
     choices: [
       {
         text: '📊 Crypto is too volatile for serious investing',
@@ -651,7 +714,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '⚖️ Risk Assessment: Crypto\'s Volatility',
     description: "You've concluded that while cryptocurrency may have potential, its extreme volatility makes it unsuitable for a significant portion of your investment portfolio. You decide to maintain only a small position (if any) as a speculative allocation, focusing primarily on more established asset classes that align with your risk tolerance.",
-    background: 'level5/s5_volatile.mp4',
+    background: 'level5/1_crypto insights.mp4',
     outcome: {
       wellBeingChange: 1,
       ageChange: 0.1,
@@ -665,7 +728,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '🧠 The Mental Game of Investing',
     description: "Your crypto journey has taught you that successful investing is primarily about managing your own psychology. The investors who succeed aren't necessarily the ones with the best technical analysis or most information, but those who can remain rational when markets are emotional, patient when others are impatient, and disciplined in their approach regardless of market conditions.",
-    background: 'level5/s5_discipline.mp4',
+    background: 'level5/1_crypto insights.mp4',
     outcome: {
       wellBeingChange: 2,
       ageChange: 0.1,
@@ -679,7 +742,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '🔄 Mastering Market Cycles',
     description: "Your experience has shown you that crypto markets move in dramatic cycles of boom and bust. Rather than being discouraged by this volatility, you've learned to see it as an opportunity - accumulating during bear markets when assets are undervalued and taking profits during bull markets when euphoria dominates. This contrarian approach requires patience and conviction but can be highly rewarding.",
-    background: 'level5/s5_cycles.mp4',
+    background: 'level5/1_crypto insights.mp4',
     outcome: {
       wellBeingChange: 2,
       ageChange: 0.1,
@@ -694,7 +757,7 @@ const level5Data: GameScene[] = [
     type: 'outcome',
     title: '🏁 Reflecting on the Crypto Frontier',
     description: "Your journey through the cryptocurrency landscape has concluded. You faced volatile markets, tempting opportunities, and significant psychological challenges. Your decisions have shaped your financial standing and your understanding of this complex and evolving asset class.",
-    background: 'level5/ending_selector.mp4',
+    background: 'level5/1_crypto insights.mp4',
     outcome: {
       ageChange: 0.1,
       wellBeingChange: 1,
@@ -708,7 +771,7 @@ const level5Data: GameScene[] = [
     type: 'ending',
     title: '🏆 Level 5 Cleared: Crypto Investment Master!',
     description: "Remarkable! You navigated the volatile world of cryptocurrency with exceptional skill. You managed to avoid common pitfalls like FOMO, leverage risks, and ICO scams while making strategic decisions throughout market cycles. Your approach demonstrated both emotional discipline and intelligent risk management in this frontier asset class.",
-    background: 'level5/ending_savvy.mp4',
+    background: 'level5/Ending/investment master.mp4',
     score: 85,
     scoreThreshold: 85,
     qualitativeSummary: "Masterful! You showed exceptional psychological discipline, made well-researched decisions, avoided common traps, and developed a sophisticated understanding of crypto market dynamics.",
@@ -719,7 +782,7 @@ const level5Data: GameScene[] = [
     type: 'ending',
     title: '💪 Level 5 Cleared: Balanced Crypto Investor!',
     description: "Well done! You approached cryptocurrency with a balanced perspective, taking moderate risks while avoiding the most dangerous pitfalls. You experienced the full market cycle and emerged with both financial lessons and psychological insights that will benefit your future investment decisions across all asset classes.",
-    background: 'level5/ending_disciplined.mp4',
+    background: 'level5/Ending/crypto lessons.mp4',
     score: 75,
     scoreThreshold: 65,
     qualitativeSummary: "Solid performance! Maintained reasonable risk management, showed good resilience during market volatility, and developed valuable insights about your own investment psychology.",
@@ -730,7 +793,7 @@ const level5Data: GameScene[] = [
     type: 'ending',
     title: '📚 Level 5 Cleared: Hard Crypto Lessons',
     description: "Your crypto journey involved some costly mistakes, but you've gained valuable experience. Whether through excessive risk-taking, emotional decision-making, or insufficient research, you learned important lessons about this volatile asset class. The financial 'tuition' you paid for these lessons was significant, but the insights will serve you in future investment decisions.",
-    background: 'level5/ending_lessons.mp4',
+    background: 'level5/Ending/crypto lessons.mp4',
     score: 55,
     scoreThreshold: 40,
     qualitativeSummary: "Mixed results with valuable lessons. Encountered some typical pitfalls of crypto investing but gained important insights about market psychology and your own behavioral biases.",
@@ -741,7 +804,7 @@ const level5Data: GameScene[] = [
     type: 'ending',
     title: '⚠️ Level 5 Cleared: Crypto Skeptic',
     description: "You approached cryptocurrency with extreme caution or avoidance, minimizing your exposure to this volatile asset class. While this meant missing potential gains during bull markets, it also protected you from devastating losses during crashes. Your conservative approach reflected a clear-eyed assessment of your own risk tolerance and skepticism about speculative manias.",
-    background: 'level5/ending_cautious.mp4',
+    background: 'level5/Ending/crypto skeptic.mp4',
     score: 40,
     scoreThreshold: 0,
     qualitativeSummary: "Conservative approach that prioritized capital preservation over speculative gains. Missed potential opportunities but also avoided significant risks in an emerging and volatile asset class.",

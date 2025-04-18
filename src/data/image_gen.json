@@ -1,0 +1,1114 @@
+[
+  {
+    "level": "level3",
+    "sceneId": "l3_s0_intro",
+    "sceneType": "insight",
+    "background": "level3/intro_concepts.png",
+    "description": "Before we begin, let's understand the two key investment approaches you'll choose between: **Lump Sum Investment** means investing the entire amount of money at once. You're fully exposed to the market's fluctuations right away, and your returns depend on the price at the time of your investment. **Dollar-Cost Averaging (DCA)** involves investing a fixed amount at regular intervals, regardless of price. This helps reduce the impact of market volatility by spreading your investment over time.",
+    "title": "💡 Investment Strategy Basics"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s1_start",
+    "sceneType": "event",
+    "background": "level3/s1_bonus.mp4",
+    "description": "Amazing news! Your hard work has been recognized with a significant $50,000 bonus! It just landed in your checking account. With inflation running at 4% annually, letting it sit idle means losing purchasing power each year. You've been researching investment options and have been particularly interested in Apple (AAPL) - one of the most popular and established tech companies, known for both growth and stability. How will you put this substantial sum to work?",
+    "title": "💰 Substantial Windfall!"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s1_decision_invest",
+    "sceneType": "decision",
+    "background": "level3/s1_decision.mp4",
+    "description": "You have $50,000 extra in your account from your bonus. Your emergency fund is already solid, and your debts are under control. Financial news has been mixed lately - some analysts predict continued tech sector growth while others warn about potential market volatility. You're considering Apple stock which has shown impressive long-term growth despite periodic volatility. It's currently trading at $150 per share. What's your investment strategy?",
+    "title": "💰 Bonus Investment: Cash, Lump Sum, or DCA?"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s1_outcome_lumpsum",
+    "sceneType": "outcome",
+    "background": "level3/s2_lumpsum_done.mp4",
+    "description": "You've invested the full $50,000 into Apple stock at once, purchasing 333 shares at $150. You own a substantial position in one of the world's most valuable companies! Now the market rollercoaster begins - the stock moves up and down daily, and you track these movements closely, feeling each fluctuation.",
+    "title": "🚀 All In on Apple!"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s1_outcome_dca_start",
+    "sceneType": "outcome",
+    "background": "level3/s2_dca_start.mp4",
+    "description": "You invest your first $5,000 in Apple stock at $150 per share, buying approximately 33 shares. You've committed to investing $5,000 each month for the next 9 months, regardless of price fluctuations. This disciplined approach will help smooth out your average purchase price and reduce the impact of short-term volatility.",
+    "title": "🌱 Monthly Apple Purchases Begin"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s2_insight_lumpsum",
+    "sceneType": "insight",
+    "background": "level3/insight_lumpsum.png",
+    "description": "You chose Lump Sum investing! Getting your money into Apple stock quickly maximizes time for potential growth. Historically, about two-thirds of the time, lump sum investing has outperformed DCA because markets tend to go up more often than down over the long term.",
+    "title": "🧠 Bias Check: Lump Sum & Timing Risk"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s2_insight_dca",
+    "sceneType": "insight",
+    "background": "level3/insight_dca.png",
+    "description": "You chose Dollar-Cost Averaging with Apple stock! Spreading investments over 10 months reduces the risk of investing everything at a market peak. It smooths out your average purchase price - buying more shares when Apple is low and fewer when it's high.",
+    "title": "🧠 Bias Check: DCA & Regret Aversion"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s2_decision_dca_volatility",
+    "sceneType": "decision",
+    "background": "level3/s2_dca_volatility.mp4",
+    "description": "You're 5 months into your DCA plan, having invested $25,000 so far. Apple's stock price has fluctuated—sometimes rising, sometimes falling. The second month, Apple dropped to $145, so you bought more shares for a lower price. Now, you're starting to wonder if you're losing out on potential gains by not investing the remaining $25,000 all at once, especially as some analysts predict strong performance ahead.",
+    "title": "📊 Market Volatility Mid-DCA"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s2_outcome_stick_dca",
+    "sceneType": "outcome",
+    "background": "level3/s2_stick_dca.mp4",
+    "description": "You maintain your disciplined approach, continuing to invest $5,000 monthly in Apple stock. Over the next few months, the market goes through both ups and downs, but your systematic buying helps smooth out the impact, giving you a more consistent average purchase price.",
+    "title": "📆 Staying the Course"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s2_outcome_switch_lumpsum",
+    "sceneType": "outcome",
+    "background": "level3/s2_switch_lumpsum.mp4",
+    "description": "You decide to invest your remaining $25,000 all at once, switching from DCA to lump sum midway. Apple's stock fluctuates in the short term, and you feel these movements more intensely now that you're fully invested. The volatility affects your emotions more than you expected.",
+    "title": "💸 Accelerating Your Investment"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s3_event_downturn",
+    "sceneType": "event",
+    "background": "level3/s3_downturn.mp4",
+    "description": "Red alert! 🚨 A major market correction hits and Apple stock isn't immune. Widespread tech pessimism takes hold as inflation remains high and central banks aggressively raise interest rates. News headlines scream about recession fears and reduced consumer spending on premium electronics. Apple shares plunge 20% from your entry point! Your investment app shows alarming red figures.",
+    "title": "📉 Apple Stock Plummets!"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s3_event_downturn_dca",
+    "sceneType": "event",
+    "background": "level3/s3_downturn.mp4",
+    "description": "Red alert! 🚨 A major market correction hits while you're still in your DCA process. Apple stock plunges 10% amid broader market fears about tech valuations and interest rates. Your invested portion is down, but you still have cash scheduled to buy more shares at these lower prices. Is this a disaster or an opportunity to acquire Apple at a discount?",
+    "title": "📉 Apple Drops Mid-DCA!"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s3_decision_react_downturn",
+    "sceneType": "decision",
+    "background": "level3/s3_decision_react.mp4",
+    "description": "Apple shares have dropped sharply! Just like during the COVID crash of 2020 when Apple fell 30% in weeks, fear and doubt are everywhere. CNBC is running special reports questioning Apple's growth prospects, and social media is flooded with doom predictions about tech stocks. What's your gut reaction to seeing your Apple investment deeply in the red?",
+    "title": "😨 Pain Point: Reacting to the Red!"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s3_outcome_sell",
+    "sceneType": "outcome",
+    "background": "level3/s3_sold.mp4",
+    "description": "Panic won. You hit 'sell' on your entire Apple position, converting your paper loss into a real one. You're out of the market, sitting on cash, watching Apple's stock price movements from the sidelines and second-guessing your decision with each price movement.",
+    "title": "💸 Sold Apple at a Loss"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s3_outcome_hold",
+    "sceneType": "outcome",
+    "background": "level3/s3_hold.mp4",
+    "description": "Despite the fear swirling around Apple's future, you held onto your shares, trusting both the company's long-term prospects and your investment strategy. It's nerve-wracking to see the red numbers in your account, but you haven't locked in any losses. Apple has weathered downturns before and emerged stronger.",
+    "title": "🧘 Holding Apple Through the Storm"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s3_outcome_buy_more",
+    "sceneType": "outcome",
+    "background": "level3/s3_buy_more.mp4",
+    "description": "You saw the Apple stock downturn as a potential sale! Channeling your inner Warren Buffett, you invested more when others were fearful. This counter-intuitive move felt uncomfortable but potentially brilliant. You've lowered your average cost per share and increased your potential returns when (if) Apple recovers.",
+    "title": "🚀 Buying More Apple on the Dip!"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s4_insight_panic_selling",
+    "sceneType": "insight",
+    "background": "level3/insight_panic_selling.png",
+    "description": "Selling investments during market downturns is one of the most common and costly investor mistakes. This behavior is driven by **Loss Aversion** (losses hurt psychologically about twice as much as gains feel good) and **Recency Bias** (overweighting recent events when making decisions). When combined with the emotional stress of seeing account values drop, these biases can trigger a fight-or-flight response that leads to panic selling.",
+    "title": "🧠 Bias Deep Dive: Panic Selling & The Behavior Gap"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s4_insight_loss_aversion",
+    "sceneType": "insight",
+    "background": "level3/insight_loss_aversion.png",
+    "description": "Market downturns trigger powerful emotions. The **Loss Aversion** bias means losses hurt psychologically about twice as much as equivalent gains feel good. This intense feeling often leads to **Panic Selling** – ditching investments during a downturn out of fear, usually at the worst possible time, locking in losses and missing the recovery.",
+    "title": "🧠 Bias Deep Dive: Loss Aversion & Panic"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s4_insight_present_bias",
+    "sceneType": "insight",
+    "background": "level3/insight_present_bias.png",
+    "description": "**Present Bias** is our tendency to overvalue immediate rewards (or avoid immediate pain) at the expense of long-term benefits. In investing, it often manifests as cashing out too early when seeing some gains or cutting losses too quickly when markets drop.",
+    "title": "⏰ Bias Alert: Present Bias & Long-Term Investing"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s4_insight_present_bias_regret",
+    "sceneType": "insight",
+    "background": "level3/insight_present_bias.png",
+    "description": "**Present Bias** is our tendency to overvalue immediate rewards (or avoid immediate pain) at the expense of long-term benefits. In investing, it often manifests as cashing out too early when seeing some gains or cutting losses too quickly when markets drop.",
+    "title": "⏰ Bias Alert: Present Bias & Long-Term Investing"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s5_event_recovery_regret",
+    "sceneType": "event",
+    "background": "level3/s5_recovery.mp4",
+    "description": "Watching from the sidelines is agonizing! Over the following months, Apple announces strong earnings, new product lines, and expanded services. The doom-and-gloom headlines fade away as the stock not only recovers its losses but surges to new heights. One year later, Apple shares are up 30% from your initial entry point! Your decision to sell at the bottom cost you significantly. Had you held your original investment, it would be worth substantially more than the cash you're sitting on. Each time you check Apple's stock price, you feel a pang of regret.",
+    "title": "📈 Apple Roars Back - Without You!"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s5_insight_missed_recovery",
+    "sceneType": "insight",
+    "background": "level3/insight_missed_recovery.png",
+    "description": "Watching Apple recover after selling at a loss triggers powerful feelings of regret. Research shows that **regret aversion** is one of the most painful emotional experiences in investing. We feel worse about actions we took (selling) than actions we didn't take (simply holding), and missed opportunities often hurt more than outright losses.",
+    "title": "🧩 The Psychology of Missed Opportunity"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s5_decision_reenter",
+    "sceneType": "decision",
+    "background": "level3/s5_decision_reenter.mp4",
+    "description": "Apple shares have fully recovered and are now trading 30% higher than your initial entry point. You've been watching from the sidelines since selling at a loss. The company continues to show strong fundamentals and has several new products in the pipeline. Despite the higher price, many analysts remain bullish on Apple's long-term prospects. Do you get back into Apple stock now?",
+    "title": "🤔 Get Back In?"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s5_outcome_reenter_yes",
+    "sceneType": "outcome",
+    "background": "level3/s5_reenter_yes.mp4",
+    "description": "Though it's difficult to buy Apple at a higher price than where you sold, you decide to re-enter the market. You invest your $40,000 from the previous sale, purchasing fewer shares than you originally had due to the higher price. It feels uncomfortable, but you're determined to participate in Apple's future growth rather than watch from the sidelines.",
+    "title": "🔄 Back in the Apple Game"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s5_outcome_reenter_no",
+    "sceneType": "outcome",
+    "background": "level3/s5_reenter_no.mp4",
+    "description": "The emotional scar from your previous Apple investment runs too deep. Despite seeing the recovery and continued growth, you decide to stay out. Your $40,000 remains in cash, losing purchasing power to inflation while Apple continues its upward trajectory without you.",
+    "title": "🚶 Remaining on the Sidelines"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s5_insight_disposition_effect",
+    "sceneType": "insight",
+    "background": "level3/insight_disposition.png",
+    "description": "Your reluctance to re-enter Apple stock illustrates the **Disposition Effect** - the tendency to avoid investments that previously caused pain, even when circumstances have changed. This bias often leads investors to avoid re-purchasing stocks they previously sold at a loss, missing potential recoveries.",
+    "title": "🧠 Bias Alert: The Disposition Effect"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s5_event_recovery",
+    "sceneType": "event",
+    "background": "level3/s5_recovery.mp4",
+    "description": "Patience pays off spectacularly! Over the following months, Apple announces strong earnings, new product lines, and expanded services. The doom-and-gloom headlines fade away as the stock not only recovers its losses but surges to new heights. One year later, your Apple investment is up 30% from your initial entry point! Those who panic-sold are now faced with the difficult decision of when to get back in, while you're counting your gains.",
+    "title": "📈 Apple Roars Back!"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s5_insight_resilience",
+    "sceneType": "insight",
+    "background": "level3/insight_resilience.png",
+    "description": "Your ability to withstand the temporary drop in Apple stock demonstrates **emotional resilience** - a critical trait of successful investors. By staying the course (or even buying more) during market turmoil, you've experienced firsthand how restraining emotional reactions to volatility can lead to substantial rewards.",
+    "title": "💪 Emotional Resilience & Investment Success"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s5_insight_compounding",
+    "sceneType": "insight",
+    "background": "level3/insight_compounding.png",
+    "description": "Apple's recovery illustrates a powerful investment principle: **compounding**. When investments grow, the gains themselves start generating additional returns. This exponential effect accelerates over time, which is why long-term investors often significantly outperform short-term traders.",
+    "title": "📈 The Magic of Compounding & Patience"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s6_event_five_years",
+    "sceneType": "event",
+    "background": "level3/s6_five_years.mp4",
+    "description": "Time flies! It's been five years since your initial Apple investment decision. Looking back at the charts, Apple stock has grown by an impressive 60% over this period despite several periods of volatility along the way. Your initial $50,000 investment decision has had significant financial implications over these years.",
+    "title": "⏳ Five Years Later..."
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s6_event_five_years_regret",
+    "sceneType": "event",
+    "background": "level3/s6_five_years.mp4",
+    "description": "Time flies! It's been five years since you decided against investing in Apple. Looking back at the charts, Apple stock has grown by an impressive 60% over this period despite several periods of volatility along the way. Had you invested that $50,000, it would now be worth $80,000. Instead, your money remained in a savings account earning minimal interest.",
+    "title": "⏳ Five Years Later... The Road Not Taken"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s6_insight_tech_giants",
+    "sceneType": "insight",
+    "background": "level3/insight_tech.png",
+    "description": "Consider Apple—a company many investors follow closely. If you had invested $10,000 in Apple stock in 2010, despite multiple 20-30% drops along the way, your investment would have grown to over $120,000 by 2023. This illustrates how short-term volatility looks minimal in a long-term chart.",
+    "title": "📱 Case Study: Tech Giants & Long-Term Investing"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s6_decision_reflection",
+    "sceneType": "decision",
+    "background": "level3/s6_reflection.mp4",
+    "description": "Looking back over 5 years of investing in Apple, you reflect on your strategy and choices. The journey had its ups and downs, with periods of doubt and confidence. What's your conclusion about the approach you took?",
+    "title": "🤔 Investment Strategy Reflection"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s6_outcome_dca_reflection",
+    "sceneType": "outcome",
+    "background": "level3/s6_dca_reflection.mp4",
+    "description": "You feel confident that your more measured approach to investing in Apple was the right choice for you. By spreading out purchases, you weathered volatility with less stress and made more rational decisions during market fluctuations. The journey was as important as the destination.",
+    "title": "🌱 The Steady Approach Worked"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_s6_outcome_lump_reflection",
+    "sceneType": "outcome",
+    "background": "level3/s6_lump_reflection.mp4",
+    "description": "You recognize that while lump sum investing in Apple would have mathematically maximized returns over these 5 years, the psychological journey matters too. The statistical advantage of getting money working immediately is clear, even if the emotional ride would have been bumpier.",
+    "title": "🚀 Maximizing Time in the Market"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_ending_savvy",
+    "sceneType": "ending",
+    "background": "level3/ending_savvy.mp4",
+    "description": "Incredible! Over 5 years, you navigated Apple stock ownership with savvy and courage, possibly even buying more when others feared. Your initial $50,000 bonus has grown substantially, and you've developed the psychological fortitude that separates successful investors from the crowd. You turned market volatility into opportunity!",
+    "title": "🏆 Level 3 Cleared: Apple Investment Master!"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_ending_disciplined",
+    "sceneType": "ending",
+    "background": "level3/ending_disciplined.mp4",
+    "description": "Well done! Over 5 years, you invested your bonus in Apple stock wisely and, crucially, held your nerve during market storms. By sticking to your plan through the ups and downs of Apple's stock price, you weathered the dips and fully participated in the recovery and growth. Patience with quality companies pays off!",
+    "title": "💪 Level 3 Cleared: Disciplined Apple Investor!"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_ending_panic",
+    "sceneType": "ending",
+    "background": "level3/ending_panic.mp4",
+    "description": "Ouch. The market downturn triggered your loss aversion, causing you to sell Apple shares near the bottom. While understandable, this locked in real losses and meant you missed the powerful recovery that followed. Looking back over 5 years, this costly lesson in emotional control has significant implications for your financial future.",
+    "title": "😥 Level 3 Cleared: Panic Seller Lesson"
+  },
+  {
+    "level": "level3",
+    "sceneId": "l3_ending_inactive",
+    "sceneType": "ending",
+    "background": "level3/ending_inactive.mp4",
+    "description": "You panic when market drops and sell Apple shares at the bottom while not investing at all when it recovers. Five years later, while you avoided the stress of Apple's stock price fluctuations, inflation has eroded your money's value by over 20%, and you missed out entirely on Apple's 60% growth during this period. Looking at the opportunity cost over 5 years reveals that inaction carried its own substantial risk.",
+    "title": "⏳ Level 3 Cleared: Sidelined Observer"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s1_start",
+    "sceneType": "decision",
+    "background": "level4/s1_start.mp4",
+    "description": "Anthropic, an AI safety and research company, announces its IPO. Analysts compare it to OpenAI's potential with a $20-30 billion valuation despite limited revenue. Meanwhile, you discover Intel (INTC), trading at a P/E of 13 with a 2% dividend, as semiconductor demand rises. You have $50,000 to invest and need to decide where to allocate your money.",
+    "title": "🚀 The Hot Tech IPO Frenzy"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s1_ipo_outcome",
+    "sceneType": "outcome",
+    "background": "level4/s1_ipo_outcome.mp4",
+    "description": "Anthropic prices at $58/share, surges to $92 on day one (up 58%), then crashes to $47 over the next two weeks as early investors cash out. Your $30,000 investment ($517 per share) drops to $24,300 (-19%). The stock swings 8-15% daily as analysts debate the company's true value versus competitors like OpenAI and Microsoft.",
+    "title": "📈 The IPO Rollercoaster"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s1_value_outcome",
+    "sceneType": "outcome",
+    "background": "level4/s1_value_outcome.mp4",
+    "description": "Intel announces a major AI chip breakthrough and secures a partnership with Amazon for data center chips. The stock rises 21% over four months while paying a 2% dividend. Your $30,000 investment grows to $36,300, plus you've collected $200 in quarterly dividends. The steady growth comes with minimal volatility.",
+    "title": "🏭 Value Growth Catalyst"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s1_fomo_insight",
+    "sceneType": "insight",
+    "background": "level4/s1_fomo_insight.png",
+    "description": "Fear of Missing Out (FOMO) is a powerful psychological bias that drives investors to chase hot trends and IPOs. This emotional reaction is further fueled by the positive skewness of IPO returns — the small chance of extraordinary gains that capture our imagination despite the statistically poor average outcomes.",
+    "title": "🧠 FOMO and IPO Positive Skewness Trap"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s1_contrarian_insight",
+    "sceneType": "insight",
+    "background": "level4/s1_contrarian_insight.png",
+    "description": "Contrarian investing involves deliberately going against prevailing market sentiment by buying undervalued assets others are ignoring or selling. This approach requires patience and conviction but often produces superior long-term results.",
+    "title": "🧠 Contrarian Investing: Value in the Unloved"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s2_start",
+    "sceneType": "decision",
+    "background": "level4/s2_start.mp4",
+    "description": "The FTC announces investigation into AI ethics and big tech monopoly power. Anthropic (if chosen) faces scrutiny over data usage and competitive practices. Intel (if chosen) sees minimal impact, with potential upside from competitors' distraction. Regulatory uncertainty creates market volatility.",
+    "title": "⚖️ Regulatory Scrutiny Hits Tech Sector"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s2_double_down_outcome",
+    "sceneType": "outcome",
+    "background": "level4/s2_double_down_outcome.mp4",
+    "description": "Your decision to double down plays out differently based on your initial choice. If you chose Anthropic, the stock drops another 24% as the FTC investigation intensifies, amplifying your losses. If you chose Intel, shares rise 18% as the company secures major government contracts for secure AI chips, boosting your overall position.",
+    "title": "⚓ Doubling Down: Contrasting Outcomes"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s2_diversify_outcome",
+    "sceneType": "outcome",
+    "background": "level4/s2_diversify_outcome.mp4",
+    "description": "You invest $15,000 in ICLN which gains 18% following the passage of the Inflation Reduction Act with its clean energy incentives. Your original investment performs according to its unique path (Anthropic down, Intel up), but your portfolio now has reduced volatility and more balanced exposure across sectors.",
+    "title": "🌿 Strategic Diversification"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s2_anchoring_insight",
+    "sceneType": "insight",
+    "background": "level4/s2_anchoring_insight.png",
+    "description": "Anchoring bias causes investors to rely too heavily on their initial investment thesis, even when new information suggests they should reconsider. This often leads to doubling down when objective analysis would suggest diversifying or pivoting.",
+    "title": "🧠 Anchoring Bias in Investment Decisions"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s2_diversification_insight",
+    "sceneType": "insight",
+    "background": "level4/s2_diversification_insight.png",
+    "description": "Strategic diversification involves intentionally allocating capital across uncorrelated assets to reduce overall portfolio risk while maintaining return potential. It's especially valuable during periods of sector-specific uncertainty.",
+    "title": "🧠 Strategic Diversification"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s3_start",
+    "sceneType": "decision",
+    "background": "level4/s3_start.mp4",
+    "description": "Electric vehicle stocks surge to incredible valuations. Tesla (TSLA) trades at P/E of 350, while Rivian (RIVN) reaches $120 billion market cap with minimal production. Your portfolio includes either Anthropic (struggling with regulations) or Intel (steady with improving AI chips) plus clean energy investments if you diversified.",
+    "title": "🔋 EV Stock Mania"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s3_bubble_outcome",
+    "sceneType": "outcome",
+    "background": "level4/s3_bubble_outcome.mp4",
+    "description": "You sell your holdings and invest in Rivian at $103/share. The stock climbs briefly to $127, but then production delays, component shortages, and rising interest rates cause it to crash to $24 over six months. Your portfolio suffers a 76% loss as the EV bubble deflates violently across the sector.",
+    "title": "💥 Caught in the EV Bubble"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s3_research_outcome",
+    "sceneType": "outcome",
+    "background": "level4/s3_research_outcome.mp4",
+    "description": "After thorough research, you invest moderately in Albemarle, the world's largest lithium producer. As EV production scales globally, lithium demand surges, and ALB's profits triple. While EV manufacturers struggle with production and crash 70%, Albemarle rises 85% on record earnings and announces a dividend increase.",
+    "title": "⛏️ The Lithium Advantage"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s3_bubble_insight",
+    "sceneType": "insight",
+    "background": "level4/s3_bubble_insight.png",
+    "description": "Market bubbles occur when asset prices become detached from fundamental valuation metrics due to speculation and narrative-driven investing. This creates a dangerous situation where even good companies become bad investments at extreme prices.",
+    "title": "🧠 Market Bubbles and Valuation Disconnect"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s3_research_insight",
+    "sceneType": "insight",
+    "background": "level4/s3_research_insight.png",
+    "description": "Second-order thinking involves looking beyond obvious investments to identify less crowded opportunities connected to the same trend. This approach often finds better risk-reward scenarios in companies essential to a growing industry.",
+    "title": "🧠 Second-Order Thinking in Investing"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s4_start",
+    "sceneType": "decision",
+    "background": "level4/s4_start.mp4",
+    "description": "A severe semiconductor shortage halts production across industries. Intel (if held) faces manufacturing constraints; Anthropic (if held) delays new AI models; Albemarle (if researched) benefits as EV makers pre-order more components. News headlines warn of 'Tech Winter' and 'Supply Chain Collapse.'",
+    "title": "🔌 Global Chip Crisis"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s4_cash_outcome",
+    "sceneType": "outcome",
+    "background": "level4/s4_cash_outcome.mp4",
+    "description": "You liquidate your portfolio to cash, feeling immediate relief as markets remain volatile. Three months later, the Biden administration announces the $52 billion CHIPS Act to boost domestic semiconductor production. The sector surges 45% in two months while you remain in cash, paralyzed by uncertainty about when to reinvest as inflation erodes your buying power.",
+    "title": "💵 Sidelined During the Recovery"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s4_chipmaker_outcome",
+    "sceneType": "outcome",
+    "background": "level4/s4_chipmaker_outcome.mp4",
+    "description": "You invest in Taiwan Semiconductor (TSM) at $90/share during peak shortage fears. When TSMC announces $44 billion in capacity expansion and the CHIPS Act passes, the stock surges to $142. Your existing holdings also benefit as the chip shortage begins to ease, with semiconductor stocks rising sector-wide on improved supply chain visibility.",
+    "title": "💻 Semiconductor Supply Chain Mastery"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s4_loss_aversion_insight",
+    "sceneType": "insight",
+    "background": "level4/s4_loss_aversion_insight.png",
+    "description": "Loss aversion—feeling losses about twice as intensely as equivalent gains—often leads investors to make fear-based decisions during market turbulence. This frequently results in selling near market bottoms and missing subsequent recoveries.",
+    "title": "🧠 Loss Aversion and Decision Quality"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s4_countercyclical_insight",
+    "sceneType": "insight",
+    "background": "level4/s4_countercyclical_insight.png",
+    "description": "Countercyclical investing—deliberately buying essential businesses during crises or shortages—takes advantage of market inefficiency during periods of maximum pessimism. This approach requires conviction and a long-term perspective.",
+    "title": "🧠 Countercyclical Investing: Crisis as Opportunity"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s5_start",
+    "sceneType": "decision",
+    "background": "level4/s5_start.mp4",
+    "description": "ESG funds see record $120B inflows as sustainable investing dominates headlines. Your portfolio (containing various combinations of Intel, Anthropic, Albemarle, ICLN, or TSMC) faces social pressure for not being 'green enough' compared to popular ESG names like Beyond Meat (BYND) and Oatly (OTLY).",
+    "title": "🌿 The ESG Investment Wave"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s5_esg_outcome",
+    "sceneType": "outcome",
+    "background": "level4/s5_esg_outcome.mp4",
+    "description": "You pivot heavily into trending ESG stocks—Beyond Meat at $120, Oatly at $22, and electric truck maker Workhorse at $41. When interest rates rise and Beyond Meat reports slowing growth and widening losses, the stock crashes 78%. Your other ESG picks suffer similar fates, with Oatly falling 86% and Workhorse collapsing 92% as the market begins prioritizing profitability over stories.",
+    "title": "📉 The ESG Valuation Reckoning"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s5_advocate_outcome",
+    "sceneType": "outcome",
+    "background": "level4/s5_advocate_outcome.mp4",
+    "description": "You maintain your fundamentally sound portfolio while engaging with companies on sustainability improvements. TSMC announces breakthrough energy efficiency in chip manufacturing. Albemarle implements industry-leading water recycling in lithium production. When the ESG bubble bursts amid rising rates, your portfolio significantly outperforms by focusing on profitable businesses making authentic sustainability progress.",
+    "title": "📈 Values-Aware Investing Triumph"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s5_esg_trend_insight",
+    "sceneType": "insight",
+    "background": "level4/s5_esg_trend_insight.png",
+    "description": "ESG investing combines ethical considerations with financial analysis. However, excessive enthusiasm for ESG themes can create valuation bubbles when investors prioritize stories and labels over business fundamentals.",
+    "title": "🧠 When Values Meet Valuations"
+  },
+  {
+    "level": "level4",
+    "sceneId": "s5_sustainable_insight",
+    "sceneType": "insight",
+    "background": "level4/s5_sustainable_insight.png",
+    "description": "Authentic corporate sustainability initiatives focus on material improvements to environmental and social impacts that align with business models and create long-term value. This contrasts with 'greenwashing'—superficial marketing efforts that lack meaningful impact.",
+    "title": "🧠 Authentic Sustainability vs. Greenwashing"
+  },
+  {
+    "level": "level4",
+    "sceneId": "ending_disciplined",
+    "sceneType": "ending",
+    "background": "level4/ending_disciplined.mp4",
+    "description": "Your methodical approach—choosing Intel over Anthropic, researching Albemarle during the EV bubble, buying TSMC during the chip shortage, and avoiding ESG hype stocks—resulted in 127% portfolio growth over five years. Your focus on fundamentals and valuation consistently identified opportunities others missed due to emotional decision-making.",
+    "title": "🏆 The Disciplined Value Investor"
+  },
+  {
+    "level": "level4",
+    "sceneId": "ending_chaser",
+    "sceneType": "ending",
+    "background": "level4/ending_chaser.mp4",
+    "description": "Your investment journey was marked by following excitement—from the Anthropic IPO to Rivian during the EV bubble to Beyond Meat during the ESG wave. While each move initially felt validating, your portfolio lost 62% over five years as each trend collapsed. The stress of constant losses and uncertainty took a significant toll on your wellbeing.",
+    "title": "📉 The Trend Follower"
+  },
+  {
+    "level": "level4",
+    "sceneId": "ending_pragmatist",
+    "sceneType": "ending",
+    "background": "level4/ending_pragmatist.mp4",
+    "description": "Your mixed approach—making some fundamentally-driven choices while occasionally following trends or reacting to fear—resulted in 43% portfolio growth over five years with moderate volatility. While not maximizing returns, you balanced performance with psychological comfort and learned valuable lessons about your risk tolerance and decision-making patterns.",
+    "title": "⚖️ The Balanced Investor"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s0_intro",
+    "sceneType": "insight",
+    "background": "level5/intro_concepts.png",
+    "description": "**Cryptocurrencies** are digital assets that use cryptography for security and operate on decentralized networks called blockchains. Unlike traditional investments, crypto markets operate 24/7, experience extreme volatility, and are heavily influenced by sentiment, technology developments, and regulatory news. Understanding both the technology and the psychological biases that affect crypto investors is crucial for navigating this frontier market.",
+    "title": "💡 Crypto Investing: Fundamentals & Psychology"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s1_start",
+    "sceneType": "outcome",
+    "background": "level5/s1_friend_convo.mp4",
+    "description": "Your friend Alex can't stop talking about how much money they've made in cryptocurrency. 'I put $2,000 into Ethereum last year and it's worth $8,000 now! Everyone's getting rich from crypto!' They show you price charts on their phone - all trending dramatically upward. The conversation leaves you wondering if you're missing out on a once-in-a-lifetime opportunity.",
+    "title": "🚀 The Crypto Conversation"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s1_decision_entry",
+    "sceneType": "decision",
+    "background": "level5/s1_research.mp4",
+    "description": "After researching cryptocurrencies for a few weeks, you understand the basics but feel overwhelmed by the options. Bitcoin and Ethereum are the established leaders, but there are thousands of 'altcoins' promising revolutionary technology and higher returns. You have $15,000 in savings that you could potentially invest. What's your approach to entering the crypto market?",
+    "title": "🤔 Your Crypto Entry Strategy"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s1_outcome_avoid",
+    "sceneType": "outcome",
+    "background": "level5/s1_avoid.mp4",
+    "description": "You decide that cryptocurrency is too speculative for your risk tolerance. While friends excitedly discuss their crypto holdings at social gatherings, you maintain your traditional investment approach. You occasionally wonder 'what if' when you see headlines about Bitcoin price surges, but you sleep well knowing your money isn't exposed to the wild price swings.",
+    "title": "🛑 Staying on the Sidelines"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s1_outcome_bluechip",
+    "sceneType": "outcome",
+    "background": "level5/s1_bluechip.mp4",
+    "description": "You allocate $3,000 to the crypto market, splitting it equally between Bitcoin and Ethereum. This gives you skin in the game while keeping the majority of your savings secure. You've taken a moderate approach, focusing on the two cryptocurrencies with the largest market caps and most established ecosystems.",
+    "title": "🔵 Blue Chip Crypto Strategy"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s1_outcome_altcoins",
+    "sceneType": "outcome",
+    "background": "level5/s1_altcoins.mp4",
+    "description": "You've gone big on crypto, investing $10,000 across several promising altcoin projects. You spent hours researching tokenomics, development teams, and use cases, spreading your investment across coins like Solana, Polkadot, Cardano, and several smaller projects. Your portfolio is now significantly exposed to crypto market movements.",
+    "title": "🎯 Altcoin Portfolio Strategy"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s2_event_bull_market_observer",
+    "sceneType": "event",
+    "background": "level5/s2_bull_market_observer.mp4",
+    "description": "Six months later, Bitcoin breaks its previous all-time high, Ethereum doubles in value, and many altcoins are up 300% or more. Your friends who invested can't stop talking about their gains. Social media is filled with crypto success stories, and mainstream news covers the 'crypto revolution' daily. You experience a mix of relief at avoiding the stress but also wonder about the missed opportunity.",
+    "title": "👀 Watching the Crypto Bull Market from the Sidelines"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s4_event_bear_market_observer",
+    "sceneType": "event",
+    "background": "level5/s4_bear_market_observer.mp4",
+    "description": "The euphoria in crypto markets has dramatically reversed. Bitcoin has crashed 65% from its peak, and most altcoins are down 80-90%. Many of your friends who were boasting about gains are now dealing with significant losses. Media headlines have shifted from 'Crypto Millionaires' to 'Crypto Collapse.' Your decision to stay out of crypto has been validated, though some die-hard believers insist 'this is just another cycle.'",
+    "title": "📉 Vindication: Crypto Market Crashes"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s2_event_bull_market",
+    "sceneType": "event",
+    "background": "level5/s2_bull_market.mp4",
+    "description": "Six months after your initial crypto decision, the entire market enters a dramatic bull run! Bitcoin breaks its previous all-time high, Ethereum doubles in value, and many altcoins are up 300% or more. Mainstream media is covering crypto daily, celebrities are promoting coins, and it seems like everyone is making money. Your social media feeds are filled with friends showing off their crypto gains.",
+    "title": "📈 Crypto Bull Market Surge!"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s2_insight_market_dynamics",
+    "sceneType": "insight",
+    "background": "level5/insight_market_dynamics.png",
+    "description": "Two critical aspects of crypto markets are their **extreme volatility** and **cyclical nature**. Price swings of 10-20% in a single day are common, and the markets move through dramatic boom-and-bust cycles that test investors' psychological resilience.",
+    "title": "📊 Crypto Market Dynamics: Volatility and Cycles"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_decision_leverage",
+    "sceneType": "decision",
+    "background": "level5/s3_leverage_tempt.mp4",
+    "description": "As the bull market continues, you start hearing about traders using leverage to amplify their gains. **Leverage** allows you to control a larger position than your capital would normally allow by borrowing funds from an exchange. For example, with 10x leverage, $1,000 can control $10,000 worth of crypto. This magnifies both potential profits and losses and can result in complete liquidation of your position. Your friend shares screenshots of making $20,000 in a day from a leveraged position. 'It's free money in this market!' they claim.",
+    "title": "⚠️ The Leverage Temptation"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_outcome_avoid_leverage",
+    "sceneType": "outcome",
+    "background": "level5/s3_avoid_leverage.mp4",
+    "description": "You decide that leverage is too risky for your investment style. This decision gets tested immediately as you see social media posts about overnight crypto millionaires using leverage. However, your conviction in avoiding leverage is reinforced when you hear about a friend who lost their entire crypto holdings in a leveraged position when the market dropped just 10% in an hour - a common occurrence in crypto.",
+    "title": "🛡️ Safe Harbor: Avoiding the Leverage Trap"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_outcome_small_leverage",
+    "sceneType": "outcome",
+    "background": "level5/s3_small_leverage.mp4",
+    "description": "You decide to experiment with leverage, but cautiously - using only 5% of your portfolio with modest 2x leverage. The experience is eye-opening. Even with such limited exposure, you find yourself checking prices constantly, feeling extreme stress with every price movement. When a sudden 15% market drop occurs, your leveraged position loses 30% of its value in hours, giving you a visceral education in how leverage amplifies both gains and losses.",
+    "title": "⚖️ Dipping a Toe: Limited Leverage"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_outcome_high_leverage",
+    "sceneType": "outcome",
+    "background": "level5/s3_high_leverage.mp4",
+    "description": "You take a major leveraged position with 10x leverage on 25% of your crypto holdings. Initially, the position moves in your favor, creating a rush of excitement. But crypto markets are notoriously volatile - a sudden 12% drop in prices triggers an automatic liquidation of your entire leveraged position because the loss exceeded your margin. In just hours, a quarter of your crypto portfolio disappears completely.",
+    "title": "💥 Liquidation: The Leverage Disaster"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_insight_leverage_liquidations",
+    "sceneType": "insight",
+    "background": "level5/insight_leverage_liquidations.png",
+    "description": "**Leverage liquidations** occur when the market moves against a leveraged position, and the exchange automatically sells the collateral to cover losses. In crypto markets, these can happen at extraordinary scale due to the prevalence of high leverage (up to 100x or more) combined with extreme volatility.",
+    "title": "💣 Leverage Liquidations: The Crypto Wipeouts"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_event_ico",
+    "sceneType": "event",
+    "background": "level5/s3_ico_opportunity.mp4",
+    "description": "Your crypto-savvy colleague excitedly tells you about an upcoming ICO (Initial Coin Offering) called NextGenChain. 'This could be the next Ethereum! The team is promising 100x faster transactions and revolutionary smart contracts. Early investors will get tokens at a huge discount before they hit exchanges.' When you ask about the team and technology, they admit they haven't researched deeply but 'the website looks really professional and they have 50,000 Twitter followers already.'",
+    "title": "💰 ICO Opportunity: NextGenChain"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_decision_ico",
+    "sceneType": "decision",
+    "background": "level5/s3_ico_decision.mp4",
+    "description": "You're intrigued by the NextGenChain ICO but wary of potential scams. ICOs have produced both spectacular returns and total losses. Before making any decision, you need to assess this opportunity. How will you approach evaluating this ICO?",
+    "title": "🔍 Evaluating the ICO: Opportunity or Scam?"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_outcome_pass_ico",
+    "sceneType": "outcome",
+    "background": "level5/s3_pass_ico.mp4",
+    "description": "You decide to skip the NextGenChain ICO, preferring to stick with established cryptocurrencies. Your caution proves warranted when, two months later, you read that NextGenChain has been exposed as a fraudulent project. The founders disappeared with millions in investor funds, and the tokens are worthless. Your colleague who invested is devastated.",
+    "title": "🛑 Avoiding the ICO Gamble"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_outcome_fomo_ico",
+    "sceneType": "outcome",
+    "background": "level5/s3_fomo_ico.mp4",
+    "description": "You hastily invest $1,000 in the NextGenChain ICO without proper research, hoping to get in early on the next big thing. After some initial hype and token distribution, communication from the team becomes sporadic. Development milestones are missed, and eventually, the project's social media goes silent. Your $1,000 investment is now effectively worthless.",
+    "title": "💔 ICO Disappointment: Money Gone"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_outcome_diligence_ico",
+    "sceneType": "outcome",
+    "background": "level5/s3_diligence_ico.mp4",
+    "description": "You spend several days researching NextGenChain thoroughly. Your investigation reveals concerning issues: team members with fake credentials, whitepaper sections plagiarized from other projects, technical claims that don't withstand scrutiny, and a suspicious token distribution model heavily favoring the founders. Based on this research, you decide not to invest and share your findings with your interested colleagues.",
+    "title": "🔎 ICO Investigation Reveals Red Flags"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s3_insight_crypto_risks",
+    "sceneType": "insight",
+    "background": "level5/insight_crypto_risks.png",
+    "description": "Beyond market volatility, crypto investors face two major risk categories: **project/scam risk** (especially with new tokens and ICOs) and **regulatory risk** as governments worldwide develop frameworks for this emerging asset class.",
+    "title": "⚠️ Navigating Crypto Risks: Scams and Regulations"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s4_event_bear_market",
+    "sceneType": "event",
+    "background": "level5/s4_bear_market.mp4",
+    "description": "The euphoria of the bull market has dramatically reversed. Bitcoin has crashed 65% from its peak, and most altcoins are down 80-90%. Media headlines have shifted from 'Crypto Millionaires' to 'Crypto Collapse.' Social media influencers who loudly promoted coins have gone quiet or deleted their accounts. The crypto winter has arrived - a prolonged bear market that tests conviction and patience.",
+    "title": "📉 Crypto Winter Arrives"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s4_decision_bear_market",
+    "sceneType": "decision",
+    "background": "level5/s4_bear_decision.mp4",
+    "description": "Your crypto investments have plummeted in value during this brutal bear market. The excitement and bullish sentiment are gone, replaced by doom and gloom. Many former crypto enthusiasts are now declaring it 'dead' and 'a failed experiment.' As the bear market continues, what's your strategy?",
+    "title": "❄️ Navigating Crypto Winter"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s4_outcome_exit_crypto",
+    "sceneType": "outcome",
+    "background": "level5/s4_exit_crypto.mp4",
+    "description": "You decide to cut your losses and exit crypto completely. While it's painful to sell at such depressed prices, the emotional relief of no longer watching the continuing volatility provides some comfort. You've learned valuable lessons about market cycles, risk management, and your own psychological responses to extreme market conditions.",
+    "title": "👋 Crypto Exit: Selling in the Bear Market"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s4_insight_crypto_psychology_exit",
+    "sceneType": "insight",
+    "background": "level5/insight_crypto_psychology_exit.png",
+    "description": "Your experience with cryptocurrency has shown firsthand how extreme volatility can test an investor's psychological resilience. The emotional rollercoaster from euphoria during bull markets to despair during crashes often drives poor decision-making.",
+    "title": "🧠 The Emotional Impact of Crypto Investing"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s4_outcome_hold_bear",
+    "sceneType": "outcome",
+    "background": "level5/s4_hold_bear.mp4",
+    "description": "You decide to hold your remaining crypto assets through the bear market. It's not easy watching your investment remain deeply in the red month after month, but you maintain belief in the long-term potential of blockchain technology. You disengage from daily price checking and focus on the fundamentals of the projects you've invested in.",
+    "title": "⏱️ Weathering the Storm: Holding Through the Bear Market"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s4_insight_crypto_psychology_hold",
+    "sceneType": "insight",
+    "background": "level5/insight_crypto_psychology_hold.png",
+    "description": "Holding through a severe market downturn is one of the most psychologically challenging aspects of investing. It requires conviction in your original thesis despite market sentiment turning strongly negative.",
+    "title": "🧠 The Psychology of Holding Through Downturns"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s4_outcome_dca_bear",
+    "sceneType": "outcome",
+    "background": "level5/s4_dca_bear.mp4",
+    "description": "Taking a contrarian approach, you methodically invest small amounts into Bitcoin and Ethereum each month during the bear market. While friends and media declare crypto 'dead,' you're quietly accumulating at prices 70-80% below the all-time highs. This disciplined strategy significantly lowers your average purchase price.",
+    "title": "🌱 Buying the Dip: Dollar-Cost Averaging in the Bear Market"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s4_insight_crypto_psychology_dca",
+    "sceneType": "insight",
+    "background": "level5/insight_crypto_psychology_dca.png",
+    "description": "Systematically buying during a bear market represents one of the most psychologically difficult but potentially rewarding investing strategies. It requires going directly against market sentiment and the social pressure of friends, media, and the broader culture.",
+    "title": "🧠 The Contrarian Psychology of Buying During Fear"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s4_insight_crypto_psychology",
+    "sceneType": "insight",
+    "background": "level5/insight_crypto_psychology.png",
+    "description": "Crypto investing is as much a psychological challenge as a financial one. Two critical psychological factors are **emotional discipline** during extreme volatility and awareness of **community dynamics** that influence markets through social sentiment and tribal behavior.",
+    "title": "🧠 The Psychology of Crypto Markets: Emotions and Communities"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s5_event_recovery",
+    "sceneType": "event",
+    "background": "level5/s5_recovery.mp4",
+    "description": "After 18 months of crypto winter, with prices down 70-90% from all-time highs and public interest at a low point, the cycle begins to turn. Institutional adoption increases, technological developments continue despite the price decline, and gradually, Bitcoin and Ethereum start showing strength again. Those who maintained positions or accumulated during the bear market are positioned to benefit from the recovery.",
+    "title": "📈 The Crypto Cycle Turns Again"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s5_event_recovery_dca",
+    "sceneType": "event",
+    "background": "level5/s5_recovery_dca.mp4",
+    "description": "After 18 months of crypto winter, the market begins to recover. Your dollar-cost averaging strategy during the bear market has positioned you exceptionally well. Not only do you own significantly more coins than before the crash, but your average purchase price is now well below current market prices. Your portfolio recovers much faster than those who merely held through the downturn.",
+    "title": "📈 The Crypto Cycle Turns Again: DCA Strategy Pays Off"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s5_decision_reflection",
+    "sceneType": "decision",
+    "background": "level5/s5_reflection.mp4",
+    "description": "Looking back on your entire cryptocurrency investment experience - from initial entry through bull market euphoria, bear market despair, and the beginning of recovery - what's your most important takeaway?",
+    "title": "🤔 Crypto Journey: Lessons Learned"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s5_outcome_too_volatile",
+    "sceneType": "outcome",
+    "background": "level5/s5_volatile.mp4",
+    "description": "You've concluded that while cryptocurrency may have potential, its extreme volatility makes it unsuitable for a significant portion of your investment portfolio. You decide to maintain only a small position (if any) as a speculative allocation, focusing primarily on more established asset classes that align with your risk tolerance.",
+    "title": "⚖️ Risk Assessment: Crypto's Volatility"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s5_outcome_discipline",
+    "sceneType": "outcome",
+    "background": "level5/s5_discipline.mp4",
+    "description": "Your crypto journey has taught you that successful investing is primarily about managing your own psychology. The investors who succeed aren't necessarily the ones with the best technical analysis or most information, but those who can remain rational when markets are emotional, patient when others are impatient, and disciplined in their approach regardless of market conditions.",
+    "title": "🧠 The Mental Game of Investing"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_s5_outcome_cycles",
+    "sceneType": "outcome",
+    "background": "level5/s5_cycles.mp4",
+    "description": "Your experience has shown you that crypto markets move in dramatic cycles of boom and bust. Rather than being discouraged by this volatility, you've learned to see it as an opportunity - accumulating during bear markets when assets are undervalued and taking profits during bull markets when euphoria dominates. This contrarian approach requires patience and conviction but can be highly rewarding.",
+    "title": "🔄 Mastering Market Cycles"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_ending_selector",
+    "sceneType": "outcome",
+    "background": "level5/ending_selector.mp4",
+    "description": "Your journey through the cryptocurrency landscape has concluded. You faced volatile markets, tempting opportunities, and significant psychological challenges. Your decisions have shaped your financial standing and your understanding of this complex and evolving asset class.",
+    "title": "🏁 Reflecting on the Crypto Frontier"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_ending_savvy",
+    "sceneType": "ending",
+    "background": "level5/ending_savvy.mp4",
+    "description": "Remarkable! You navigated the volatile world of cryptocurrency with exceptional skill. You managed to avoid common pitfalls like FOMO, leverage risks, and ICO scams while making strategic decisions throughout market cycles. Your approach demonstrated both emotional discipline and intelligent risk management in this frontier asset class.",
+    "title": "🏆 Level 5 Cleared: Crypto Investment Master!"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_ending_disciplined",
+    "sceneType": "ending",
+    "background": "level5/ending_disciplined.mp4",
+    "description": "Well done! You approached cryptocurrency with a balanced perspective, taking moderate risks while avoiding the most dangerous pitfalls. You experienced the full market cycle and emerged with both financial lessons and psychological insights that will benefit your future investment decisions across all asset classes.",
+    "title": "💪 Level 5 Cleared: Balanced Crypto Investor!"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_ending_lessons",
+    "sceneType": "ending",
+    "background": "level5/ending_lessons.mp4",
+    "description": "Your crypto journey involved some costly mistakes, but you've gained valuable experience. Whether through excessive risk-taking, emotional decision-making, or insufficient research, you learned important lessons about this volatile asset class. The financial 'tuition' you paid for these lessons was significant, but the insights will serve you in future investment decisions.",
+    "title": "📚 Level 5 Cleared: Hard Crypto Lessons"
+  },
+  {
+    "level": "level5",
+    "sceneId": "l5_ending_cautious",
+    "sceneType": "ending",
+    "background": "level5/ending_cautious.mp4",
+    "description": "You approached cryptocurrency with extreme caution or avoidance, minimizing your exposure to this volatile asset class. While this meant missing potential gains during bull markets, it also protected you from devastating losses during crashes. Your conservative approach reflected a clear-eyed assessment of your own risk tolerance and skepticism about speculative manias.",
+    "title": "⚠️ Level 5 Cleared: Crypto Skeptic"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s1_start",
+    "sceneType": "decision",
+    "background": "level6/s1_start.mp4",
+    "description": "Rising tensions between the US and China trigger global tech supply chain disruption. The U.S. administration enacts export controls on semiconductor technology to China, while China threatens rare earth mineral restrictions. Apple (AAPL) stock plummets 15% due to production delays at TSMC, their main chip supplier. You've held $50,000 in AAPL stock for years, and now face a test as shares drop to $127 after trading near $150 for months.",
+    "title": "🌍 US-China Tensions & Chip Supply Chain Crisis"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s1_panic_outcome",
+    "sceneType": "outcome",
+    "background": "level6/s1_panic_outcome.mp4",
+    "description": "You sell all your AAPL shares at $127, locking in a $7,500 loss. Three months later, Apple announces a new chip partnership with Samsung and Intel's fabrication services as backup suppliers. The Biden administration also brokers temporary exemptions for Apple components. AAPL rebounds 20% to $152. Had you held, your portfolio would be nearly back to even.",
+    "title": "😨 Panic Selling"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s1_diversify_outcome",
+    "sceneType": "outcome",
+    "background": "level6/s1_diversify_outcome.mp4",
+    "description": "You hold your AAPL shares and invest an additional $10,000 in Taiwan Semiconductor (TSM) and $5,000 in ASML Holding, the critical equipment supplier for chip manufacturing. Over the next three months, Apple recovers 12% as they announce supply chain adaptations. Meanwhile, Taiwan Semiconductor jumps 18% and ASML rises 15% due to the Biden administration's $53 billion CHIPS Act increasing domestic production. Your portfolio is now worth $59,500, more than recouping the initial paper loss.",
+    "title": "🧠 Strategic Diversification"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s1_loss_aversion_insight",
+    "sceneType": "insight",
+    "background": "level6/s1_loss_aversion_insight.png",
+    "description": "Most investors feel the pain of losses twice as strongly as the pleasure of equivalent gains. This evolutionary bias leads to panic selling during market declines, which can severely impact long-term returns.",
+    "title": "🧠 Loss Aversion Bias"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s1_diversification_insight",
+    "sceneType": "insight",
+    "background": "level6/s1_diversification_insight.png",
+    "description": "Diversification is one of the few 'free lunches' in investing. By spreading risk across related but distinct assets, investors can reduce portfolio volatility without necessarily sacrificing returns.",
+    "title": "🧠 The Power of Diversification"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s2_start",
+    "sceneType": "decision",
+    "background": "level6/s2_start.mp4",
+    "description": "A new COVID variant (Omicron) triggers global alarm. The Dow drops 905 points (2.5%) in its worst day in months. Tech stocks initially crash, but biotech companies like Moderna (MRNA) and Pfizer soar 20% on booster potential. Your portfolio includes AAPL (down 10%) and Tesla (surprisingly up 3% on EV momentum). CNBC runs special reports titled 'Omicron: The Next Market Killer?' and your investment group chat is buzzing with friends rushing to buy biotech.",
+    "title": "🦠 Omicron Variant & Market Panic"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s2_fomo_outcome",
+    "sceneType": "outcome",
+    "background": "level6/s2_fomo_outcome.mp4",
+    "description": "You sell Tesla at $1,100/share and buy Moderna at $368/share (its pandemic high). Within weeks, studies show Omicron is more contagious but less deadly than feared. Moderna drops 45% to $204 as urgent booster demand fades. Meanwhile, Tesla announces record quarterly deliveries and climbs another 12% before its eventual split. The double whammy devastates your portfolio value.",
+    "title": "🧨 FOMO Investing"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s2_balanced_outcome",
+    "sceneType": "outcome",
+    "background": "level6/s2_balanced_outcome.mp4",
+    "description": "You hold both stocks and add the iShares 7-10 Year Treasury Bond ETF (IEF). When Omicron news proves less severe than initially feared, your Tesla position continues its rise while your bonds provide stability during the brief volatility. By January 2022, the market has largely recovered, and your balanced approach has preserved capital while maintaining growth exposure.",
+    "title": "⚖️ Balanced Approach"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s2_herd_mentality_insight",
+    "sceneType": "insight",
+    "background": "level6/s2_herd_mentality_insight.png",
+    "description": "Humans evolved to follow the crowd for safety, but in investing, this instinct often leads to buying high and selling low. During health crises, this bias becomes especially pronounced as fear dominates rational analysis.",
+    "title": "🧠 Herd Mentality in Pandemic Investing"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s2_mental_accounting_insight",
+    "sceneType": "insight",
+    "background": "level6/s2_mental_accounting_insight.png",
+    "description": "Mental accounting—treating different assets as separate buckets—can become useful during health crises. Creating a 'safety bucket' of treasury bonds or high-quality fixed income provides both financial and psychological benefits during pandemic-induced volatility.",
+    "title": "🧠 Mental Accounting & Flight to Safety"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s3_start",
+    "sceneType": "decision",
+    "background": "level6/s3_start.mp4",
+    "description": "The Department of Justice files a major antitrust lawsuit against Apple, alleging iPhone ecosystem monopoly practices. Simultaneously, the EU imposes a €8.25 billion fine on Google over ad market dominance, and Congress advances the American Innovation and Choice Online Act targeting tech giants. AAPL drops 12% on the news, with analysts warning about forced App Store changes potentially cutting revenue by billions annually. Tesla also faces FTC scrutiny over Autopilot safety claims.",
+    "title": "⚖️ DOJ Antitrust Lawsuit & Tech Regulation Wave"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s3_flight_outcome",
+    "sceneType": "outcome",
+    "background": "level6/s3_flight_outcome.mp4",
+    "description": "You exit all tech stocks and move to the Vanguard Value ETF (VTV) and infrastructure companies. Six months later, the DOJ case against Apple settles with manageable terms: a $500M fine and minor App Store changes. Similarly, Google's appeal reduces the EU fine, and the tech regulation bill stalls in Congress. Tech stocks rebound 20% while your value investments gain just 3%.",
+    "title": "🏃‍♂️ Flight from Big Tech"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s3_shift_outcome",
+    "sceneType": "outcome",
+    "background": "level6/s3_shift_outcome.mp4",
+    "description": "You pivot from Apple and Google to companies like MongoDB, Cloudflare, and Palantir. When the DOJ settlements prove less severe than feared, the entire tech sector benefits. Your smaller tech holdings gain 35%, outperforming even the rebounding giants, as their government contracts and less dominant market positions make them less vulnerable to antitrust scrutiny.",
+    "title": "🔄 Strategic Shift to Smaller Tech"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s3_anchoring_insight",
+    "sceneType": "insight",
+    "background": "level6/s3_anchoring_insight.png",
+    "description": "Investors often become 'anchored' to dramatic regulatory headlines, causing them to overestimate their long-term impact on company values. This frequently leads to overreaction and selling quality companies at depressed prices.",
+    "title": "🧠 Anchoring Bias in Regulatory Reactions"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s3_optimism_insight",
+    "sceneType": "insight",
+    "background": "level6/s3_optimism_insight.png",
+    "description": "While optimism bias can lead investors to underestimate regulatory risks, controlled optimism is actually essential for successful tech investing. The key is balancing regulatory awareness with recognition of tech companies' adaptability.",
+    "title": "🧠 Optimism Bias: Risk and Reward in Tech Regulation"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s4_start",
+    "sceneType": "decision",
+    "background": "level6/s4_start.mp4",
+    "description": "Hurricane Ida slams the Gulf Coast, becoming the second-most damaging hurricane to hit Louisiana. The Category 4 storm shuts down 95% of oil production in the Gulf of Mexico and damages key refineries. Oil jumps to $75/barrel, a three-year high. Gasoline shortages hit the East Coast, and tech manufacturing faces higher costs. AAPL drops 8% on supply chain concerns, while solar stocks like First Solar and Enphase Energy surge 15% as climate crisis awareness grows.",
+    "title": "🌪️ Hurricane Ida & Energy Infrastructure Crisis"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s4_green_outcome",
+    "sceneType": "outcome",
+    "background": "level6/s4_green_outcome.mp4",
+    "description": "You sell some AAPL to buy the Invesco Solar ETF (TAN), which jumps 20% initially as hurricane damage highlights fossil fuel vulnerability. However, rising interest rates and normalized oil production later cause solar stocks to correct 35% from their peaks. Despite the volatility, the passage of new legislation with substantial funding for climate initiatives helps the sector recover some losses.",
+    "title": "🌱 Clean Energy Investment"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s4_oil_outcome",
+    "sceneType": "outcome",
+    "background": "level6/s4_oil_outcome.mp4",
+    "description": "You buy the United States Oil Fund (USO) as oil prices spike during the hurricane. The ETF initially rises 10% as expected, but then faces issues with 'contango'—where futures contracts cost more than the spot price. When you sell after three months, despite oil prices remaining elevated, your ETF gained only 3% due to these structural issues, while also triggering short-term capital gains taxes.",
+    "title": "📊 Oil ETF Trade"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s4_recency_insight",
+    "sceneType": "insight",
+    "background": "level6/s4_recency_insight.png",
+    "description": "Recency bias causes investors to overweight recent climate disasters in their decision-making, leading to performance chasing in clean energy stocks and buying thematic ETFs near their peaks after major climate events.",
+    "title": "🧠 Recency Bias in Climate Investing"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s4_moral_licensing_insight",
+    "sceneType": "insight",
+    "background": "level6/s4_moral_licensing_insight.png",
+    "description": "Moral licensing is a cognitive bias where people use their good deeds to justify ethically questionable choices. In investing, this often appears when trading commodities during crises, justifying potential profits from disruptions by promising to use gains ethically.",
+    "title": "🧠 Moral Licensing in Commodity Trading"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s5_start",
+    "sceneType": "decision",
+    "background": "level6/s5_start.mp4",
+    "description": "The stunning collapse of crypto exchange FTX sends shockwaves through financial markets. Bitcoin crashes 25% in days, while Ethereum plummets 33%. The contagion spreads to public companies with crypto exposure—Coinbase drops 50%, while Tesla (which holds Bitcoin on its balance sheet) falls 15%. NVIDIA declines 20% as crypto mining demand evaporates. Your tech-heavy portfolio faces significant turbulence as Bloomberg runs hourly coverage of what they're calling 'Crypto's Lehman Moment.'",
+    "title": "💰 FTX Collapse & Crypto Contagion"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s5_cash_outcome",
+    "sceneType": "outcome",
+    "background": "level6/s5_cash_outcome.mp4",
+    "description": "You liquidate all semiconductor and crypto-adjacent stocks, moving to cash at the depths of the selloff. Over the following months, NVIDIA surges over 300% as AI demand completely overshadows the lost crypto mining business. AMD rises 150% as data center growth and Microsoft's AI initiatives drive chip demand to record levels. Meanwhile, inflation erodes your cash position by 9% over the same period.",
+    "title": "💵 Cash Retreat"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s5_blue_chip_outcome",
+    "sceneType": "outcome",
+    "background": "level6/s5_blue_chip_outcome.mp4",
+    "description": "You recognize that NVIDIA and AMD's temporary crypto mining setback masks their true value in AI, data centers, and gaming. You buy aggressively during the FTX-triggered selloff. When ChatGPT launches shortly after, it showcases the immense AI demand for these chips. In the months that follow, NVIDIA becomes the star of the AI boom, surging over 200%, while AMD gains 100% on similar tailwinds.",
+    "title": "💎 Semiconductor Visionary"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s5_hyperbolic_insight",
+    "sceneType": "insight",
+    "background": "level6/s5_hyperbolic_insight.png",
+    "description": "Hyperbolic discounting—valuing immediate emotional relief over future financial outcomes—becomes particularly powerful during crypto market meltdowns, which tend to be more dramatic and media-amplified than traditional market corrections.",
+    "title": "🧠 Hyperbolic Discounting in Crypto Contagion"
+  },
+  {
+    "level": "level6",
+    "sceneId": "s5_time_horizon_insight",
+    "sceneType": "insight",
+    "background": "level6/s5_time_horizon_insight.png",
+    "description": "Investment time horizon becomes most valuable during periods of maximum pessimism. The longer your time horizon, the more you can view dramatic sell-offs as opportunities rather than threats.",
+    "title": "🧠 The Power of Time Horizon in Tech Investing"
+  },
+  {
+    "level": "level6",
+    "sceneId": "ending_selector",
+    "sceneType": "outcome",
+    "background": "level6/ending_selector.mp4",
+    "description": "Your decisions through multiple market crises—from Taiwan tensions to the FTX collapse—have shaped your investment outcomes. Your portfolio has weathered geopolitical, pandemic, regulatory, climate, and crypto challenges, with each decision compounding to determine your financial future.",
+    "title": "📊 Investment Journey Review"
+  },
+  {
+    "level": "level6",
+    "sceneId": "ending_master",
+    "sceneType": "ending",
+    "background": "level6/ending_master.mp4",
+    "description": "Through multiple market crises, you consistently bought quality assets when others panicked. You diversified intelligently during the Taiwan chip crisis, maintained balance during the Omicron scare, strategically navigated tech regulation, made thoughtful climate investments, and brilliantly identified AI chip opportunities during the crypto collapse. Your portfolio has not only survived but thrived, outperforming benchmarks by a significant margin.",
+    "title": "🏆 Contrarian Investor"
+  },
+  {
+    "level": "level6",
+    "sceneId": "ending_optimist",
+    "sceneType": "ending",
+    "background": "level6/ending_optimist.mp4",
+    "description": "You navigated market disruptions by making thoughtful adjustments—pivoting from large to small tech during regulatory threats, diversifying across semiconductor supply chains during geopolitical tensions, and maintaining core positions through volatility. Your balanced approach delivered solid returns while avoiding major mistakes during various crises.",
+    "title": "📈 Strategic Adapter"
+  },
+  {
+    "level": "level6",
+    "sceneId": "ending_survivor",
+    "sceneType": "ending",
+    "background": "level6/ending_survivor.mp4",
+    "description": "Market disruptions frequently triggered emotional reactions in your decision-making. While you made some good moves—like diversifying during the chip crisis—you also made timing errors, such as chasing pandemic stocks or reacting too strongly to regulatory headlines. Your portfolio performance was inconsistent, with some wins offset by behavioral mistakes.",
+    "title": "⚖️ Mixed Results Investor"
+  },
+  {
+    "level": "level6",
+    "sceneId": "ending_gambler",
+    "sceneType": "ending",
+    "background": "level6/ending_gambler.mp4",
+    "description": "Your investing approach featured significant emotional reactions to market events—panic selling Apple during supply chain issues, chasing Moderna at its peak during Omicron, fleeing tech during regulatory concerns, and making speculative commodity trades during climate crises. These reactionary decisions created a pattern of buying high and selling low that significantly impaired long-term returns.",
+    "title": "🎲 Reactive Trader"
+  },
+  {
+    "level": "level6",
+    "sceneId": "ending_hoarder",
+    "sceneType": "ending",
+    "background": "level6/ending_hoarder.mp4",
+    "description": "Fear dominated your investment strategy across multiple disruptions. You sold Apple during supply chain issues, fled to cash during the crypto collapse, and generally tried to avoid market volatility rather than navigate it strategically. While this reduced short-term stress, it created substantial opportunity costs—particularly missing the AI semiconductor boom that followed the crypto crash.",
+    "title": "💵 Crisis Avoider"
+  }
+]

@@ -36,7 +36,7 @@ const LEVELS: LevelInfo[] = [
     id: 3,
     title: "Long-Term Investment Strategy",
     description: "Build emotional resilience during market declines and make rational investment decisions under pressure.",
-    background: "/level3/l3_intro.mp4",
+    background: "/level3/1.mp4",
     available: true,
     icon: <FaChartLine className="text-2xl" />
   },
@@ -44,7 +44,7 @@ const LEVELS: LevelInfo[] = [
     id: 4,
     title: "The Hot IPO Decision",
     description: "Resist hype and FOMO while evaluating IPO investments, learning about lock-up periods and anchoring bias.",
-    background: "/level4/l4_intro.mp4",
+    background: "/level4/Scene1.mp4",
     available: true,
     icon: <GiReceiveMoney className="text-2xl" />
   },
@@ -52,7 +52,7 @@ const LEVELS: LevelInfo[] = [
     id: 5,
     title: "The Crypto Frontier",
     description: "Navigate cryptocurrency investing with its extreme volatility, FOMO, and market cycles while avoiding common psychological traps.",
-    background: "/level5/s1_start.mp4",
+    background: "/level5/3_crypto research.mp4",
     available: true,
     icon: <FaCoins className="text-2xl" />
   },
@@ -60,7 +60,7 @@ const LEVELS: LevelInfo[] = [
     id: 6,
     title: "Investor in Market Turbulence",
     description: "Navigate complex global markets and geopolitical risks as an established investor with a diversified portfolio.",
-    background: "/level6/s1_start.mp4",
+    background: "/level6/taiwan tension and chip supply chain crisis.mp4",
     available: true,
     icon: <FaGlobe className="text-2xl" />
   }
