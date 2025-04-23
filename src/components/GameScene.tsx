@@ -21,7 +21,6 @@ const GameSceneComponent: React.FC<GameSceneProps> = ({
   scene, 
   onChoice, 
   onNext, 
-  playerStats,
   onRestart 
 }) => {
   // Add state to track if this specific scene's assets are ready

@@ -2,7 +2,7 @@
 // Focus: Navigating complex global markets and geopolitical risks
 // Key Biases: Home country bias, recency bias, confirmation bias, narrative fallacy, complexity bias
 
-import { GameScene, DecisionScene, OutcomeScene, InsightScene, EndingScene, EventScene, LevelInitialStats } from "../types/games";
+import { GameScene, DecisionScene, OutcomeScene, InsightScene, EndingScene, LevelInitialStats } from "../types/games";
 
 // Initial stats for Level 6 - Mid-career investor with established portfolio
 export const initialStats: LevelInitialStats = {

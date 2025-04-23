@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode, useEffect, useCallback, useRef } from 'react';
+import { createContext, useContext, useState, ReactNode, useEffect, useCallback } from 'react';
 import { GameScene, StatUpdate, DecisionScene, OutcomeScene, InsightScene, EventScene, EndingScene, LevelInitialStats } from '../types/games'; // Import specific scene types and LevelInitialStats
 import level1Data, { initialStats as level1InitialStats } from '../data/level1'; // Import level data and initial stats
 import level2Data, { initialStats as level2InitialStats } from '../data/level2';
@@ -147,21 +147,6 @@ const getLevelData = (level: number): { scenes: GameScene[], initialStats: Level
 
 // Create context
 const GameContext = createContext<GameContextType | undefined>(undefined);
-
-// Add utility function to extract asset URLs from level data
-const extractAssetUrls = (scenes: GameScene[]): string[] => {
-  const urls: string[] = [];
-  
-  scenes.forEach(scene => {
-    // Extract background image if present (update property name as needed)
-    if ('background' in scene && scene.background) {
-      urls.push(scene.background);
-    }
-  });
-  
-  // Filter out duplicates and return
-  return [...new Set(urls)];
-};
 
 // Add preloading utilities
 const preloadImage = (url: string): Promise<void> => {
