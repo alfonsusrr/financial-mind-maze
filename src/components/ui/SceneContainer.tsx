@@ -1,4 +1,4 @@
-import React, { useState, ReactNode, useEffect, useRef } from 'react';
+import React, { useState, ReactNode, useEffect, useMemo, useRef } from 'react';
 
 interface SceneContainerProps {
   children: ReactNode;
@@ -14,22 +14,28 @@ const SceneContainer: React.FC<SceneContainerProps> = ({
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Debug the background props
-  useEffect(() => {
-    console.log('SceneContainer props:', { background, videoBackground });
-  }, [background, videoBackground]);
+  // Generate a cache-busting URL for the background image
+  const cacheBustedBackground = useMemo(() => {
+    if (!background) return '';
+    // Add a timestamp to the URL to prevent caching
+    return `${background}?t=${Date.now()}`;
+  }, [background]);
 
-  // Remove the cache-busting logic - we want to use exactly the same URLs that were preloaded
-  // This ensures the browser uses the cached/preloaded version
-  
+  // Generate a cache-busting URL for the video background
+  const cacheBustedVideo = useMemo(() => {
+    if (!videoBackground) return '';
+    // Add a timestamp to the URL to prevent caching
+    return `${videoBackground}?t=${Date.now()}`;
+  }, [videoBackground]);
+
   // Reset video loaded state when video source changes
   useEffect(() => {
     setVideoLoaded(false);
     
     // Force video to load by creating a new video element
-    if (videoBackground) {
+    if (cacheBustedVideo) {
       const video = document.createElement('video');
-      video.src = videoBackground;
+      video.src = cacheBustedVideo;
       video.load();
     }
     
@@ -37,29 +43,20 @@ const SceneContainer: React.FC<SceneContainerProps> = ({
     if (videoRef.current) {
       videoRef.current.load();
     }
-  }, [videoBackground]);
+  }, [videoBackground, cacheBustedVideo]);
 
   const handleVideoLoaded = () => {
     setVideoLoaded(true);
-    console.log('Video loaded:', videoBackground);
   };
 
-  // Create the background style object properly - using the exact same URL as preloaded
-  const backgroundStyle = background ? {
-    backgroundImage: `url(${background})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  } : {};
-
   return (
-    <div 
-      className={`
-        relative border border-gray-300 mx-auto
-        w-full h-full rounded-lg shadow-md 
-        overflow-hidden
-      `}
-      style={!videoBackground && background ? backgroundStyle : {}}
-    >
+    <div className={`
+      relative border border-gray-300 mx-auto
+      w-full h-full rounded-lg shadow-md 
+      overflow-hidden
+      ${!videoBackground && background ? `bg-[url(${cacheBustedBackground})]` : ''}
+      bg-cover bg-center
+    `}>
       {/* Video background */}
       {videoBackground && (
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -77,21 +74,21 @@ const SceneContainer: React.FC<SceneContainerProps> = ({
             `}
             style={{ transition: 'opacity 0.5s ease' }}
           >
-            <source src={videoBackground} type="video/mp4" />
+            <source src={cacheBustedVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Fallback to image background if video is still loading */}
           {!videoLoaded && background && (
             <div 
               className="absolute inset-0 z-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${background})` }}
+              style={{ backgroundImage: `url(${cacheBustedBackground})` }}
             />
           )}
         </div>
       )}
       
       {/* Content overlay */}
-      <div className="relative z-10 h-full rounded-lg">
+      <div className="fixed inset-0 z-10 rounded-lg">
         {children}
       </div>
     </div>

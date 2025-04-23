@@ -52,9 +52,6 @@ export type GameState = {
   // Track decision scores for ending selection
   decisionScores: number[];
   averageScore: number;
-  // Add asset loading tracking
-  isLoading: boolean;
-  loadingProgress: number;
 };
 
 type GameContextType = {
@@ -64,7 +61,6 @@ type GameContextType = {
   makeChoice: (nextSceneId: string) => void; // Simplified choice handler
   handleNext: () => void; // For progressing from outcome/insight scenes
   resetGame: () => void; // Allow passing level data
-  preloadLevelAssets: (level: number) => Promise<void>; // Add preloading function
 };
 
 // Get the initial scene ID from level data
@@ -148,143 +144,7 @@ const getLevelData = (level: number): { scenes: GameScene[], initialStats: Level
 // Create context
 const GameContext = createContext<GameContextType | undefined>(undefined);
 
-// Add a global declaration for the preloadedImages array
-declare global {
-  interface Window {
-    preloadedImages: HTMLImageElement[];
-  }
-}
-
-// Update the preloadImage function to ensure the browser properly caches the image
-const preloadImage = (url: string): Promise<void> => {
-  return new Promise((resolve, reject) => {
-    if (!url || typeof url !== 'string') {
-      console.warn(`Invalid image URL: ${url}`);
-      resolve();
-      return;
-    }
-
-    console.log(`Starting preload for image: ${url}`);
-    const img = new Image();
-    let resolved = false;
-
-    // Set a timeout to avoid hanging indefinitely
-    const timeout = setTimeout(() => {
-      if (!resolved) {
-        console.warn(`Image preload timed out: ${url}`);
-        resolved = true;
-        resolve(); // Resolve anyway to continue loading other assets
-      }
-    }, 10000); // 10 second timeout
-
-    img.onload = () => {
-      if (!resolved) {
-        clearTimeout(timeout);
-        // Force the browser to cache this image by keeping a reference
-        // to it in a global array that won't be garbage collected
-        if (!window.preloadedImages) {
-          window.preloadedImages = [];
-        }
-        window.preloadedImages.push(img);
-        
-        console.log(`Successfully preloaded image: ${url}`);
-        resolved = true;
-        resolve();
-      }
-    };
-
-    img.onerror = (err) => {
-      if (!resolved) {
-        clearTimeout(timeout);
-        console.warn(`Failed to preload image: ${url}`, err);
-        resolved = true;
-        resolve(); // Resolve anyway to continue loading other assets
-      }
-    };
-
-    // Set crossOrigin to anonymous to avoid CORS issues with image caching
-    img.crossOrigin = "anonymous";
-    
-    // Start loading the image
-    img.src = url;
-
-    // For some browsers, if the image is cached, onload might not trigger
-    // so we check if it's already complete
-    if (img.complete) {
-      clearTimeout(timeout);
-      console.log(`Image was already cached: ${url}`);
-      // Still add to preloaded images array
-      if (!window.preloadedImages) {
-        window.preloadedImages = [];
-      }
-      window.preloadedImages.push(img);
-      
-      resolved = true;
-      resolve();
-    }
-  });
-};
-
-const preloadVideo = (url: string): Promise<void> => {
-  return new Promise((resolve, reject) => {
-    if (!url) {
-      resolve();
-      return;
-    }
-
-    console.log(`Starting preload for video: ${url}`);
-    const video = document.createElement('video');
-    let resolved = false;
-
-    // Set a timeout to avoid hanging indefinitely
-    const timeout = setTimeout(() => {
-      if (!resolved) {
-        console.warn(`Video preload timed out: ${url}`);
-        resolved = true;
-        resolve(); // Resolve anyway to continue loading other assets
-      }
-    }, 15000); // 15 second timeout for video (longer than images)
-
-    video.preload = 'auto';
-    
-    video.oncanplaythrough = () => {
-      if (!resolved) {
-        clearTimeout(timeout);
-        console.log(`Successfully preloaded video: ${url}`);
-        resolved = true;
-        resolve();
-      }
-    };
-
-    video.onerror = (err) => {
-      if (!resolved) {
-        clearTimeout(timeout);
-        console.warn(`Failed to preload video: ${url}`, err);
-        resolved = true;
-        resolve(); // Resolve anyway to continue loading other assets
-      }
-    };
-
-    // Start loading the video
-    video.src = url;
-    video.load();
-  });
-};
-
-const preloadAsset = (url: string): Promise<void> => {
-  if (!url) return Promise.resolve();
-  
-  const fileExtension = url.split('.').pop()?.toLowerCase();
-  if (['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(fileExtension || '')) {
-    return preloadImage(url);
-  } else if (['mp4', 'webm', 'ogg'].includes(fileExtension || '')) {
-    return preloadVideo(url);
-  }
-  
-  return Promise.resolve();
-};
-
-// Update the GameProvider component to declare preloadLevelAssets as a named function first before it's used
+// Provider component
 export function GameProvider({ children }: { children: ReactNode }) {
   const [levelData, setLevelData] = useState<GameScene[]>([]); // Store current level data
   const [gameState, setGameState] = useState<GameState>(() => {
@@ -329,8 +189,6 @@ export function GameProvider({ children }: { children: ReactNode }) {
         financialHistory: getInitialFinancialHistory(initialStats, initialSceneId || ''),
         decisionScores: [], // Initialize empty scores array
         averageScore: 0,
-        isLoading: false,
-        loadingProgress: 0,
      };
      return initialState; // Return initial state if no valid saved state
   });
@@ -341,115 +199,6 @@ export function GameProvider({ children }: { children: ReactNode }) {
       localStorage.setItem('financialMindMazeGameState', JSON.stringify(gameState));
     }
   }, [gameState]);
-
-  // Derive current scene data
-  const currentSceneData = levelData.find(scene => scene.id === gameState.currentSceneId) || null;
-
-  // Define preloadLevelAssets function before it's used
-  function preloadLevelAssets(level: number): Promise<void> {
-    return new Promise(async (resolve) => {
-      const { scenes } = getLevelData(level);
-      const assetUrls: string[] = [];
-      
-      console.log(`Preloading assets for level ${level} with ${scenes.length} scenes`);
-      
-      // Extract assets directly in this function to avoid type issues
-      scenes.forEach(scene => {
-        // For background images - handle all formats
-        if ((scene as any).background) {
-          assetUrls.push((scene as any).background);
-        } else if ((scene as any).backgroundImage) {
-          assetUrls.push((scene as any).backgroundImage);
-        }
-        
-        // Extract video URLs if present
-        if ((scene as any).video) {
-          assetUrls.push((scene as any).video);
-        } else if ((scene as any).videoUrl) {
-          assetUrls.push((scene as any).videoUrl);
-        }
-        
-        // Process decision choices for images (if applicable)
-        if (scene.type === 'decision') {
-          try {
-            const decisionScene = scene as any;
-            if (decisionScene.choices && Array.isArray(decisionScene.choices)) {
-              decisionScene.choices.forEach((choice: any) => {
-                if (choice && choice.image) {
-                  assetUrls.push(choice.image);
-                }
-              });
-            }
-          } catch (err) {
-            console.warn("Error processing decision scene choice images:", err);
-          }
-        }
-      });
-      
-      // Filter out duplicates and invalid entries
-      const uniqueUrls = [...new Set(assetUrls)].filter(url => url && typeof url === 'string');
-      
-      // Debug info
-      console.log(`Found ${uniqueUrls.length} unique assets to preload for level ${level}:`, uniqueUrls);
-      
-      if (uniqueUrls.length === 0) {
-        setGameState(prev => ({ ...prev, isLoading: false, loadingProgress: 100 }));
-        resolve();
-        return;
-      }
-      
-      // Set loading state to true
-      setGameState(prev => ({ ...prev, isLoading: true, loadingProgress: 0 }));
-      
-      // Load all background images first
-      const imageUrls = uniqueUrls.filter(url => {
-        const ext = url.split('.').pop()?.toLowerCase();
-        return ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(ext || '');
-      });
-      
-      // Load videos second
-      const videoUrls = uniqueUrls.filter(url => {
-        const ext = url.split('.').pop()?.toLowerCase();
-        return ['mp4', 'webm', 'ogg'].includes(ext || '');
-      });
-      
-      console.log(`Processing ${imageUrls.length} images and ${videoUrls.length} videos`);
-      
-      let loadedCount = 0;
-      const totalAssets = uniqueUrls.length;
-      
-      // First load all images
-      for (const url of imageUrls) {
-        try {
-          await preloadImage(url);
-        } catch (error) {
-          console.warn(`Error preloading image: ${url}`, error);
-        }
-        
-        loadedCount++;
-        const progress = Math.round((loadedCount / totalAssets) * 100);
-        setGameState(prev => ({ ...prev, loadingProgress: progress }));
-      }
-      
-      // Then load all videos
-      for (const url of videoUrls) {
-        try {
-          await preloadVideo(url);
-        } catch (error) {
-          console.warn(`Error preloading video: ${url}`, error);
-        }
-        
-        loadedCount++;
-        const progress = Math.round((loadedCount / totalAssets) * 100);
-        setGameState(prev => ({ ...prev, loadingProgress: progress }));
-      }
-      
-      // Set loading complete
-      setGameState(prev => ({ ...prev, isLoading: false, loadingProgress: 100 }));
-      console.log(`Completed preloading ${loadedCount} assets for level ${level}`);
-      resolve();
-    });
-  }
 
   // Add a function to select the appropriate ending based on averageScore
   const selectEndingBasedOnScore = useCallback((endingScenes: EndingScene[]): string | undefined => {
@@ -468,6 +217,9 @@ export function GameProvider({ children }: { children: ReactNode }) {
     // If no thresholds are met, return the ending with the lowest threshold
     return sortedEndings[sortedEndings.length - 1]?.id;
   }, [gameState.averageScore]);
+
+  // Derive current scene data
+  const currentSceneData = levelData.find(scene => scene.id === gameState.currentSceneId) || null;
 
   // --- State Update Logic ---
   const applyStatUpdate = useCallback((update: StatUpdate | undefined) => {
@@ -891,9 +643,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
               
               return {
                 ...prev,
-                averageScore: avgScore,
-                isLoading: true, // Set loading to true before level transition
-                loadingProgress: 0
+                averageScore: avgScore
               };
             });
             
@@ -920,12 +670,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
                   financialHistory: getInitialFinancialHistory(resetInitialStats),
                   decisionScores: [],
                   averageScore: 0,
-                  isLoading: true,
-                  loadingProgress: 0
                 }));
-                
-                // Preload level 1 assets
-                preloadLevelAssets(1);
                 return;
             }
             break;
@@ -955,12 +700,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
                    // Reset decision scores for new level
                    decisionScores: [],
                    averageScore: 0,
-                   isLoading: true, // Set loading to true for level transition
-                   loadingProgress: 0
                }));
-               
-               // Preload assets for the next level
-               preloadLevelAssets(nextLevel);
           } else {
                // --- Same Level Scene Transition ---
                // Use advanceToScene for transitions within the same level.
@@ -972,7 +712,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
           // Potential issue: An outcome/insight/event scene doesn't link anywhere.
       }
 
-  }, [currentSceneData, gameState.currentLevel, advanceToScene, preloadLevelAssets]);
+  }, [currentSceneData, gameState.currentLevel, advanceToScene]); // Remove resetGame dependency
 
 
   // Modify startGame to use level-specific initial stats
@@ -1034,22 +774,18 @@ export function GameProvider({ children }: { children: ReactNode }) {
         }],
         decisionScores: [], // Initialize empty scores array for new game
         averageScore: 0,
-        isLoading: true, // Set loading to true initially
-        loadingProgress: 0,
     });
-
-    // Start preloading assets for the level
-    preloadLevelAssets(level);
 
     // The useEffect watching gameState.currentLevel will automatically
     // call setLevelData(initialLevelData) when the gameState is updated above.
-  }, [preloadLevelAssets]);
+  }, []);
 
 
   const resetGame = useCallback((): void => {
     console.log("Resetting game...");
     startGame(0); // Reset is starting the game again at level 0
   }, [startGame]);
+
 
   // Context Value
   const contextValue: GameContextType = {
@@ -1059,7 +795,6 @@ export function GameProvider({ children }: { children: ReactNode }) {
     makeChoice,
     handleNext,
     resetGame,
-    preloadLevelAssets, // Add the preloading function to context
   };
 
   // Effect to synchronize levelData when gameState.currentLevel changes
