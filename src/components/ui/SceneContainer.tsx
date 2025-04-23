@@ -14,6 +14,11 @@ const SceneContainer: React.FC<SceneContainerProps> = ({
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  // Debug the background props
+  useEffect(() => {
+    console.log('SceneContainer props:', { background, videoBackground });
+  }, [background, videoBackground]);
+
   // Generate a cache-busting URL for the background image
   const cacheBustedBackground = useMemo(() => {
     if (!background) return '';
@@ -47,16 +52,25 @@ const SceneContainer: React.FC<SceneContainerProps> = ({
 
   const handleVideoLoaded = () => {
     setVideoLoaded(true);
+    console.log('Video loaded:', videoBackground);
   };
 
+  // Create the background style object properly
+  const backgroundStyle = background ? {
+    backgroundImage: `url(${cacheBustedBackground})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  } : {};
+
   return (
-    <div className={`
-      relative border border-gray-300 mx-auto
-      w-full h-full rounded-lg shadow-md 
-      overflow-hidden
-      ${!videoBackground && background ? `bg-[url(${cacheBustedBackground})]` : ''}
-      bg-cover bg-center
-    `}>
+    <div 
+      className={`
+        relative border border-gray-300 mx-auto
+        w-full h-full rounded-lg shadow-md 
+        overflow-hidden
+      `}
+      style={!videoBackground && background ? backgroundStyle : {}}
+    >
       {/* Video background */}
       {videoBackground && (
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -88,7 +102,7 @@ const SceneContainer: React.FC<SceneContainerProps> = ({
       )}
       
       {/* Content overlay */}
-      <div className="fixed inset-0 z-10 rounded-lg">
+      <div className="relative z-10 h-full rounded-lg">
         {children}
       </div>
     </div>

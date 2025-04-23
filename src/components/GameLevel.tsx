@@ -6,13 +6,50 @@ import { GameComplete } from './GameComplete';
 import GameSceneComponent from './GameScene';
 import LevelSelect from './LevelSelect';
 
+// Loading Component with Progress Bar
+function LoadingScreen({ progress }: { progress: number }) {
+  return (
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 bg-opacity-90 z-50 text-white">
+      <h2 className="text-2xl font-bold mb-6">Loading</h2>
+      <div className="w-64 h-4 bg-gray-700 rounded-full overflow-hidden mb-2">
+        <div 
+          className="h-full bg-blue-500 transition-all duration-300 ease-out"
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+      <p className="text-sm">{progress}% Complete</p>
+    </div>
+  );
+}
+
 // Main Level Component
 export function GameLevel() {
   const { gameState, currentSceneData, makeChoice, handleNext, resetGame } = useGame();
-  const { currentLevel, gameCompleted, playerStats, showLevelSelect } = gameState;
+  const { currentLevel, gameCompleted, playerStats, showLevelSelect, isLoading, loadingProgress } = gameState;
 
   // Debug statement to check the value of showLevelSelect
-  console.log("GameLevel render state:", { showLevelSelect, currentLevel, gameCompleted });
+  console.log("GameLevel render state:", { showLevelSelect, currentLevel, gameCompleted, isLoading, loadingProgress });
+
+  // Show loading screen if assets are being loaded
+  if (isLoading) {
+    return (
+      <>
+        {/* Show content behind the loader for smoother transitions */}
+        {currentSceneData && (
+          <div className="opacity-30">
+            <GameSceneComponent
+              scene={currentSceneData}
+              playerStats={playerStats}
+              onChoice={makeChoice}
+              onNext={handleNext}
+              onRestart={resetGame}
+            />
+          </div>
+        )}
+        <LoadingScreen progress={loadingProgress} />
+      </>
+    );
+  }
 
   // First check if level selection should be shown
   if (showLevelSelect) {
