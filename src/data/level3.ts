@@ -230,7 +230,7 @@ const level3Data: GameScene[] = [
     type: 'event',
     title: '📉 Apple Stock Plummets!',
     description: "Red alert! 🚨 A major market correction hits and Apple stock isn't immune. Widespread tech pessimism takes hold as inflation remains high and central banks aggressively raise interest rates. News headlines scream about recession fears and reduced consumer spending on premium electronics. Apple shares plunge 20% from your entry point! Your investment app shows alarming red figures.",
-    background: 'level3/5.mp4',
+    background: 'level3/4.mp4',
     outcome: {
       portfolioValueChange: "-20%", // Consistent with description
       portfolioGrowthRate: "-5%", // Temporary negative growth
@@ -246,7 +246,7 @@ const level3Data: GameScene[] = [
     type: 'event',
     title: '📉 Apple Drops Mid-DCA!',
     description: "Red alert! 🚨 A major market correction hits while you're still in your DCA process. Apple stock plunges 10% amid broader market fears about tech valuations and interest rates. Your invested portion is down, but you still have cash scheduled to buy more shares at these lower prices. Is this a disaster or an opportunity to acquire Apple at a discount?",
-    background: 'level3/5.mp4',
+    background: 'level3/4.mp4',
     outcome: {
       portfolioValueChange: "-20%", // DCA provides some protection from volatility
       portfolioGrowthRate: "-5%", // Less severe temporary negative growth due to DCA protection
@@ -314,7 +314,7 @@ const level3Data: GameScene[] = [
     type: 'outcome',
     title: '💸 Sold Apple at a Loss',
     description: "Panic won. You hit 'sell' on your entire Apple position, converting your paper loss into a real one. You're out of the market, sitting on cash, watching Apple's stock price movements from the sidelines and second-guessing your decision with each price movement.",
-    background: 'level3/5.mp4',
+    background: 'level3/4.mp4',
     outcome: {
       cashChange: "portfolioValueChange", // Special value that triggers portfolio liquidation
       portfolioValueChange: "-100%", // Complete liquidation of portfolio
@@ -548,7 +548,7 @@ const level3Data: GameScene[] = [
     type: 'event',
     title: '📈 Apple Roars Back!',
     description: "Patience pays off spectacularly! Over the following months, Apple announces strong earnings, new product lines, and expanded services. The doom-and-gloom headlines fade away as the stock not only recovers its losses but surges to new heights. One year later, your Apple investment is up 30% from your initial entry point! Those who panic-sold are now faced with the difficult decision of when to get back in, while you're counting your gains.",
-    background: 'level3/4.mp4',
+    background: 'level3/5.mp4',
     outcome: {
       wellBeingChange: 5,
       portfolioValueChange: "+62.5%", // To reach 30% above initial price from 20% below requires 62.5% growth
@@ -597,12 +597,12 @@ const level3Data: GameScene[] = [
     type: 'event',
     title: '⏳ Five Years Later...',
     description: "Time flies! It's been five years since your initial Apple investment decision. Looking back at the charts, Apple stock has grown by an impressive 60% over this period despite several periods of volatility along the way. Your initial $50,000 investment decision has had significant financial implications over these years.",
-    background: 'level3/4.mp4',
+    background: 'level3/5.mp4',
     outcome: {
       wellBeingChange: 3,
       ageChange: 5.0,
       portfolioValueChange: "+60%", // From initial investment
-      portfolioGrowthRate: "10%", // Normalized to Apple's long-term growth average
+      portfolioGrowthRate: "8%", // Normalized to Apple's long-term growth average
       qualitativeNote: "The long-term picture becomes clear. Short-term volatility appears as mere blips on a steadily rising chart."
     },
     nextSceneId: 'l3_s6_insight_tech_giants',

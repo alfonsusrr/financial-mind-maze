@@ -13,7 +13,7 @@ export const initialStats: LevelInitialStats = {
   age: 38, // Mid-career investor
   portfolioValue: 50000, // Existing diversified portfolio
   portfolioContribution: 0, // Annual contribution before decisions
-  portfolioGrowthRate: -0.15, // 8% average historical growth
+  portfolioGrowthRate: 0.08, // 8% average historical growth
 };
 
 const level6Data: GameScene[] = [
@@ -90,9 +90,10 @@ const level6Data: GameScene[] = [
     description: "You sell all your AAPL shares at $127, locking in a $7,500 loss. Three months later, Apple announces a new chip partnership with Samsung and Intel's fabrication services as backup suppliers. The Biden administration also brokers temporary exemptions for Apple components. AAPL rebounds 20% to $152. Had you held, your portfolio would be nearly back to even.",
     background: 'level6/panic selling.mp4',
     outcome: {
-      cashChange: "portfolioValueChange", // $50,000 - 15% loss = $42,500 cash from sale
-      portfolioValueChange: "-100%", // No longer own any AAPL
-      portfolioGrowthRate: -0.01, // Reduced expected return due to exiting growth stock
+      // Sell 100% of the portfolio (which was only AAPL) for its current value ($42.5k)
+      cashChange: "portfolioValueChange:50%", 
+      // Portfolio value becomes 0 after liquidation, growth rate irrelevant until reinvestment.
+      portfolioGrowthRate: -0.15, 
       wellBeingChange: -3,
       ageChange: 1,
       qualitativeNote: "Loss aversion drove you to sell at the bottom. You prioritized avoiding further losses over long-term potential, missing the recovery."
@@ -104,12 +105,14 @@ const level6Data: GameScene[] = [
     id: 's1_diversify_outcome',
     type: 'outcome',
     title: '🧠 Strategic Diversification',
-    description: "You hold your AAPL shares and invest an additional $10,000 in Taiwan Semiconductor (TSM) and $5,000 in ASML Holding, the critical equipment supplier for chip manufacturing. Over the next three months, Apple recovers 12% as they announce supply chain adaptations. Meanwhile, Taiwan Semiconductor jumps 18% and ASML rises 15% due to the Biden administration's $53 billion CHIPS Act increasing domestic production. Your portfolio is now worth $59,500, more than recouping the initial paper loss.",
+    description: "You hold your AAPL shares (currently worth $42,500 after the initial drop) and invest an additional $10,000 cash in Taiwan Semiconductor (TSM) and $5,000 cash in ASML Holding. Over the next three months, Apple recovers 12% ($5,100 gain), TSM jumps 18% ($1,800 gain), and ASML rises 15% ($750 gain).",
     background: 'level6/happy.mp4',
     outcome: {
       cashChange: -15000, // Used $15,000 to buy semiconductor stocks
-      portfolioValueChange: 17300, // AAPL recovers $4,200 (12% of $35K) + TSM gains $1,800 (18% of $10K) + ASML gains $750 (15% of $5K)
-      portfolioGrowthRate: 0.10, // Increased expected growth due to strategic semiconductor exposure
+      // Total market gain = $5100 (AAPL) + $1800 (TSM) + $750 (ASML) = $7650
+      portfolioValueChange: 7650, 
+      // Slightly increased future growth expectation due to broader tech exposure
+      portfolioGrowthRate: 0.09, 
       wellBeingChange: 3,
       ageChange: 1,
       qualitativeNote: "Your strategic patience paid off. By diversifying into the semiconductor supply chain while holding AAPL, you emerged stronger from the geopolitical turbulence."
@@ -218,11 +221,14 @@ const level6Data: GameScene[] = [
     id: 's2_fomo_outcome',
     type: 'outcome',
     title: '🧨 FOMO Investing',
-    description: "You sell Tesla at $1,100/share and buy Moderna at $368/share (its pandemic high). Within weeks, studies show Omicron is more contagious but less deadly than feared. Moderna drops 45% to $204 as urgent booster demand fades. Meanwhile, Tesla announces record quarterly deliveries and climbs another 12% before its eventual split. The double whammy devastates your portfolio value.",
+    description: "You swap your Tesla holding for Moderna at its peak price. Within weeks, studies show Omicron is more contagious but less deadly. Moderna drops 45%. Meanwhile, Tesla (which you no longer own) gains 12%. Assuming Tesla was 40% of your portfolio, the net impact is a ~22.8% loss relative to holding, significantly damaging your portfolio value.",
     background: 'level6/fomo.mp4',
     outcome: {
-      portfolioValueChange: "-40%", // Net percentage loss from the bad timing
-      portfolioGrowthRate: -0.02, // Lower expected returns due to poor investment timing
+      // The swap itself is portfolio neutral initially. The subsequent divergence causes the loss.
+      // Representing the net impact as a percentage change on the total portfolio.
+      portfolioValueChange: "-22.8%", 
+      // Lower future growth expectation due to holding MRNA post-peak vs TSLA.
+      portfolioGrowthRate: 0.05, 
       wellBeingChange: -4,
       qualitativeNote: "FOMO and herd mentality led you to chase Moderna at its peak, buying high and missing further gains on Tesla, highlighting the danger of panic trades during health crises."
     },
@@ -345,13 +351,14 @@ const level6Data: GameScene[] = [
     id: 's3_flight_outcome',
     type: 'outcome',
     title: '🏃‍♂️ Flight from Big Tech',
-    description: "You exit all tech stocks and move to the Vanguard Value ETF (VTV) and infrastructure companies. Six months later, the DOJ case against Apple settles with manageable terms: a $500M fine and minor App Store changes. Similarly, Google's appeal reduces the EU fine, and the tech regulation bill stalls in Congress. Tech stocks rebound 20% while your value investments gain just 3%.",
+    description: "You exit all tech stocks, moving the proceeds to the Vanguard Value ETF (VTV) and infrastructure companies. Six months later, regulatory fears subside, and tech stocks rebound 20%. Your new value/infrastructure portfolio gains only 3% during the same period, representing a significant opportunity cost.",
     background: 'level6/sad.mp4',
     outcome: {
-      portfolioValueChange: "-17%", // Opportunity cost compared to holding tech
-      portfolioGrowthRate: 0.06, // Lower growth rate with value stocks vs tech stocks
+      // Assuming an instant swap for simplicity. The portfolio value changes by the performance of the new assets.
+      cashChange: "portfolioValueChange:30%",
+      portfolioGrowthRate: -0.15, // Lower growth rate with value stocks vs tech stocks
       wellBeingChange: -3,
-      qualitativeNote: "Anchoring bias caused you to fixate on regulatory headlines rather than valuing tech companies' adaptability, missing the recovery as fears proved overblown."
+      qualitativeNote: "Anchoring bias caused you to fixate on regulatory headlines. While your new portfolio gained 3%, you missed a 20% tech recovery, highlighting the opportunity cost."
     },
     nextSceneId: 's3_anchoring_insight',
   } as OutcomeScene,
@@ -364,7 +371,7 @@ const level6Data: GameScene[] = [
     background: 'level6/happy.mp4',
     outcome: {
       portfolioValueChange: "35%", // Strong gains from small-cap tech
-      portfolioGrowthRate: 0.12, // Higher expected growth from smaller tech companies
+      portfolioGrowthRate: 0.1, // Higher expected growth from smaller tech companies
       wellBeingChange: 4,
       qualitativeNote: "Your strategic pivot maintained tech exposure while reducing regulatory risk, resulting in strong gains as both the sector sentiment improved and your smaller companies outperformed."
     },
@@ -600,12 +607,13 @@ const level6Data: GameScene[] = [
     id: 's5_cash_outcome',
     type: 'outcome',
     title: '💵 Cash Retreat',
-    description: "You liquidate all semiconductor and crypto-adjacent stocks, moving to cash at the depths of the selloff. Over the following months, NVIDIA surges over 300% as AI demand completely overshadows the lost crypto mining business. AMD rises 150% as data center growth and Microsoft's AI initiatives drive chip demand to record levels. Meanwhile, inflation erodes your cash position by 9% over the same period.",
+    description: "You liquidate all semiconductor and crypto-adjacent stocks, moving to cash at the depths of the selloff. Over the following months, NVIDIA surges over 200% and AMD rises over 100% as AI demand explodes. Meanwhile, inflation erodes your cash position.",
     background: 'level6/happy.mp4',
     outcome: {
-      cashChange: "portfolioValueChange", // All portfolio converted to cash
-      portfolioValueChange: "-100%", // No market exposure
-      portfolioGrowthRate: 0.01, // Nearly zero growth in cash, barely keeping up with some bank interest
+      // Liquidate 100% of the portfolio value to cash.
+      cashChange: "portfolioValueChange:100%", 
+      // Portfolio value becomes 0 relative to market assets. Future growth is minimal (cash interest).
+      portfolioGrowthRate: -0.15, 
       wellBeingChange: -5,
       qualitativeNote: "Hyperbolic discounting led you to completely miss one of the greatest semiconductor rallies in history due to temporary crypto fears."
     },
@@ -662,7 +670,7 @@ const level6Data: GameScene[] = [
   {
     id: 'ending_selector',
     type: 'outcome',
-    title: '📊 Investment Journey Review',
+    title: 'Investment Journey Review',
     description: "Your decisions through multiple market crises—from Taiwan tensions to the FTX collapse—have shaped your investment outcomes. Your portfolio has weathered geopolitical, pandemic, regulatory, climate, and crypto challenges, with each decision compounding to determine your financial future.",
     background: 'level6/happy.mp4',
     outcome: {
@@ -729,17 +737,5 @@ const level6Data: GameScene[] = [
     qualitativeSummary: "Hyperbolic discounting and loss aversion dominated decision-making. Prioritized short-term emotional comfort over long-term financial outcomes, missing several generational buying opportunities.",
   } as EndingScene,
 ];
-
-// Connect relevant scenes to ending selector
-for (const scene of level6Data) {
-  if (
-    scene.id === 's5_hyperbolic_insight' || 
-    scene.id === 's5_time_horizon_insight'
-  ) {
-    if (scene.type === 'outcome' || scene.type === 'event' || scene.type === 'insight') {
-      (scene as OutcomeScene | EventScene | InsightScene).nextSceneId = 'ending_selector';
-    }
-  }
-}
 
 export default level6Data; 

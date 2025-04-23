@@ -24,7 +24,7 @@ export function GameLevel() {
     return <Introduction />;
   }
 
-  if (gameCompleted && currentLevel === 5) {
+  if (gameCompleted && currentLevel === 7) {
     return <GameComplete />;
   }
 

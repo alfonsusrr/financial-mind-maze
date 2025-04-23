@@ -24,6 +24,7 @@ export interface PlayerStats {
   portfolioInvestedAmount: number; // Total amount invested in portfolio (excluding growth)
   realizedGain: number; // Total realized gain/loss from selling investments
   unrealizedGain: number; // Current unrealized gain/loss (portfolioValue - portfolioInvestedAmount)
+  totalInvestedCapital: number; // Total cash ever invested into the portfolio
   totalReturnPercentage: number; // Total percentage return across realized and unrealized gains
   totalValueRealized: number; // Total value of all investments that have been realized/sold
 }
@@ -46,6 +47,7 @@ export type GameState = {
     unrealizedGain: number;
     totalReturnPercentage: number;
     totalValueRealized: number;
+    totalInvestedCapital: number;
   }[];
   // Track decision scores for ending selection
   decisionScores: number[];
@@ -82,6 +84,7 @@ const defaultInitialPlayerStats: PlayerStats = {
   portfolioInvestedAmount: 0,
   realizedGain: 0,
   unrealizedGain: 0,
+  totalInvestedCapital: 0,
   totalReturnPercentage: 0,
   totalValueRealized: 0,
 };
@@ -98,7 +101,8 @@ const getInitialFinancialHistory = (stats: LevelInitialStats, sceneId: string = 
     realizedGain: 0,
     unrealizedGain: 0,
     totalReturnPercentage: 0,
-    totalValueRealized: 0
+    totalValueRealized: 0,
+    totalInvestedCapital: stats.portfolioValue,
   }
 ];
 
@@ -111,6 +115,7 @@ const initializePlayerStats = (stats: LevelInitialStats): PlayerStats => {
     portfolioInvestedAmount: stats.portfolioValue, // Initially, invested amount equals portfolio value
     realizedGain: 0, // Start with no realized gain/loss
     unrealizedGain: 0, // Start with no unrealized gain/loss
+    totalInvestedCapital: stats.portfolioValue, // Initially, total invested equals initial value
     totalReturnPercentage: 0, // Start with 0% return
     totalValueRealized: 0, // Start with no realized value
   };
@@ -223,19 +228,13 @@ export function GameProvider({ children }: { children: ReactNode }) {
       setGameState(prev => {
           // Calculate income earned during the age change period
           const ageChange = update.ageChange ?? 0;
-          // Initialize new stats based on previous state
+
+          // Initialize new stats based on previous state, copying necessary arrays
           const newStats: PlayerStats = {
               ...prev.playerStats,
-              cash: prev.playerStats.cash,
-              debt: prev.playerStats.debt,
-              netWorth: prev.playerStats.netWorth,
-              qualitativeNotes: [...prev.playerStats.qualitativeNotes], // Ensure array is copied
-              realizedGain: prev.playerStats.realizedGain,
-              unrealizedGain: prev.playerStats.unrealizedGain,
-              totalReturnPercentage: prev.playerStats.totalReturnPercentage
+              qualitativeNotes: [...prev.playerStats.qualitativeNotes],
+              // We will calculate cash, debt, portfolio values etc. based on changes
           };
-
-          // const earnedIncome = newStats.income * ageChange; // Assumes income is per year and ageChange is in years
 
           // Helper function to parse change value (number or percentage string)
           const parseChange = (changeValue: number | string | undefined, currentValue: number): number => {
@@ -251,44 +250,27 @@ export function GameProvider({ children }: { children: ReactNode }) {
             return 0; // Default to 0 if invalid format or undefined
           };
 
-          // Apply portfolio contribution changes FIRST (before income changes)
-          // This ensures contributions are calculated based on current income
+          // --- Pre-calculate potential changes to base stats like income, contribution rate, growth rate ---
+          // Apply income changes first as they might affect percentage-based contributions
+          if (update.incomeChange !== undefined) {
+            const incomeDelta = parseChange(update.incomeChange, prev.playerStats.income);
+            newStats.income += incomeDelta;
+          }
+
+          // Apply portfolio contribution changes (absolute amount or based on *new* income if percentage)
           if (update.portfolioContribution !== undefined) {
-            // Handle percentage-based contributions (calculate from income)
             if (typeof update.portfolioContribution === 'string' && update.portfolioContribution.endsWith('%')) {
               const percentageStr = update.portfolioContribution.slice(0, -1);
               const percentage = parseFloat(percentageStr);
               if (!isNaN(percentage)) {
-                // Set to absolute amount based on current income
-                newStats.portfolioContribution = (percentage / 100) * prev.playerStats.income;
+                // Set absolute amount based on potentially updated income
+                newStats.portfolioContribution = (percentage / 100) * newStats.income;
               }
             } else {
-              // Handle absolute contribution amounts or delta changes
+              // Handle absolute contribution amounts or delta changes relative to previous contribution rate
               const contributionDelta = parseChange(update.portfolioContribution, prev.playerStats.portfolioContribution);
               newStats.portfolioContribution += contributionDelta;
             }
-          }
-
-          // Calculate financial changes if age changes
-          if (ageChange > 0) {
-            // For each year that passes add income and 
-            newStats.cash += newStats.income * ageChange;
-              
-            // Add contribution to portfolio value
-            const contributionAmount = newStats.portfolioContribution * ageChange;
-            newStats.portfolioValue += contributionAmount;
-            
-            // Also track the contribution in the invested amount
-            newStats.portfolioInvestedAmount += contributionAmount;
-
-            // Add growth
-            newStats.portfolioValue *= (1 + newStats.portfolioGrowthRate) ** ageChange;
-          }
-
-          // Apply income changes AFTER portfolio contribution calculation
-          if (update.incomeChange !== undefined) {
-            const incomeDelta = parseChange(update.incomeChange, prev.playerStats.income);
-            newStats.income += incomeDelta;
           }
 
           // Apply portfolio growth rate changes
@@ -303,17 +285,50 @@ export function GameProvider({ children }: { children: ReactNode }) {
             }
           }
 
-          // Store the initial portfolio value before any changes
-          // const initialPortfolioValue = newStats.portfolioValue;
-          // const initialInvestedAmount = newStats.portfolioInvestedAmount;
+          // --- Initialize working values for stats affected by multiple factors ---
+          let currentCash = prev.playerStats.cash;
+          let currentDebt = prev.playerStats.debt;
+          let currentPortfolioValue = prev.playerStats.portfolioValue;
+          let currentInvestedAmount = prev.playerStats.portfolioInvestedAmount;
+          let currentRealizedGain = prev.playerStats.realizedGain;
+          let currentTotalValueRealized = prev.playerStats.totalValueRealized;
+          let currentWellBeing = prev.playerStats.wellBeing;
+          let currentTotalInvestedCapital = prev.playerStats.totalInvestedCapital;
 
-          // Apply cash changes - handle special portfolioValueChange case when portfolio is liquidated
-          if (update.cashChange !== undefined) {
-            if (typeof update.cashChange === "string" && update.cashChange.startsWith("portfolioValueChange")) {
-              // Portfolio liquidation case - check if partial liquidation is specified
-              let liquidationPercentage = 100; // Default to 100% (full liquidation)
-              
-              // Check if a specific percentage is specified (e.g., "portfolioValueChange:50%")
+          // --- Apply age-related changes (income addition, contributions, growth) ---
+          if (ageChange > 0) {
+            // 1. Add income earned over the period to cash
+            currentCash += newStats.income * ageChange; // Use updated income rate
+
+            // 2. Add contributions to portfolio
+            const contributionAmount = newStats.portfolioContribution * ageChange; // Use updated contribution rate
+            if (contributionAmount > 0) {
+                 currentPortfolioValue += contributionAmount;
+                 currentInvestedAmount += contributionAmount; // Contributions increase invested amount
+                 currentTotalInvestedCapital += contributionAmount; // Contributions also increase total capital invested
+                 newStats.qualitativeNotes.push(`Contributed $${(contributionAmount).toFixed(2)} to portfolio over ${ageChange} year(s).`);
+            }
+
+            // 3. Apply portfolio growth (compounded)
+            if (currentPortfolioValue > 0 && newStats.portfolioGrowthRate !== 0) {
+                const growthFactor = (1 + newStats.portfolioGrowthRate) ** ageChange;
+                const valueBeforeGrowth = currentPortfolioValue;
+                currentPortfolioValue *= growthFactor;
+                const growthAmount = currentPortfolioValue - valueBeforeGrowth;
+                if (Math.abs(growthAmount) > 0.01) { // Only note if there's noticeable growth/loss
+                    newStats.qualitativeNotes.push(`Portfolio value changed by $${growthAmount.toFixed(2)} due to market growth/decline over ${ageChange} year(s).`);
+                }
+            }
+          }
+
+
+          // --- Process Portfolio Liquidation (Sale for Cash) ---
+          let liquidationProcessed = false;
+          if (update.cashChange !== undefined && typeof update.cashChange === "string" && update.cashChange.startsWith("portfolioValueChange")) {
+            liquidationProcessed = true; // Flag that this handles the portfolio value change
+            let liquidationPercentage = 100;
+
+            // Check for partial liquidation specification (e.g., "portfolioValueChange:50%")
               if (update.cashChange.includes(":")) {
                 const percentStr = update.cashChange.split(":")[1].replace("%", "");
                 const parsedPercentage = parseFloat(percentStr);
@@ -322,183 +337,188 @@ export function GameProvider({ children }: { children: ReactNode }) {
                 }
               }
               
-              // Calculate the amount to liquidate based on percentage
-              const liquidationAmount = (newStats.portfolioValue * liquidationPercentage) / 100;
-              
-              if (liquidationAmount <= 0 || newStats.portfolioValue <= 0) {
-                // Nothing to liquidate, skip
-                newStats.qualitativeNotes.push(`No portfolio value to liquidate.`);
-              } else {
-                // 1. Calculate the proportion being sold
-                const proportionSold = liquidationAmount / newStats.portfolioValue;
-                
-                // 2. Calculate how much of the invested amount corresponds to what's sold
-                const investedAmountSold = newStats.portfolioInvestedAmount * proportionSold;
-                
-                // 3. Calculate unrealized gain/loss for this portion
-                const unrealizedGainFromSale = liquidationAmount - investedAmountSold;
-                
-                // 4. Add the liquidated value to realized gain
-                newStats.realizedGain += unrealizedGainFromSale;
-                
-                // 5. Record the total value being realized from the portfolio
-                newStats.totalValueRealized += liquidationAmount;
-                
-                // 6. Add the liquidation amount to cash
-                newStats.cash += liquidationAmount;
-                
-                // 7. Reduce portfolio value by liquidated amount
-                newStats.portfolioValue -= liquidationAmount;
-                
-                // 8. Reduce portfolio invested amount proportionally
-                newStats.portfolioInvestedAmount -= investedAmountSold;
-                
-                // 9. Update qualitative notes to make the change visible to the player
+            const effectivePortfolioValue = currentPortfolioValue; // Value *before* this specific sale
+            const effectiveInvestedAmount = currentInvestedAmount;
+
+            // Ensure we don't try to liquidate more than exists
+            const liquidationAmount = Math.min(effectivePortfolioValue, (effectivePortfolioValue * liquidationPercentage) / 100);
+
+            console.log(`Attempting to liquidate ${liquidationPercentage}% ($${liquidationAmount.toFixed(2)}) from portfolio value $${effectivePortfolioValue.toFixed(2)}`);
+
+            if (liquidationAmount > 0 && effectivePortfolioValue > 0) {
+              // Calculate proportion accurately based on actual amount being liquidated
+              const proportionSold = liquidationAmount / effectivePortfolioValue;
+
+              // Calculate how much of the invested amount corresponds to what's sold
+              const investedAmountSold = effectiveInvestedAmount * proportionSold;
+
+              // Calculate realized gain/loss for this specific sale
+              const realizedGainFromSale = liquidationAmount - investedAmountSold;
+
+              // Update core stats
+              currentRealizedGain += realizedGainFromSale;
+              currentTotalValueRealized += liquidationAmount; // Track total value obtained from sales
+              currentCash += liquidationAmount; // Add proceeds to cash
+              currentPortfolioValue -= liquidationAmount; // Decrease portfolio value
+              currentInvestedAmount -= investedAmountSold; // Decrease invested amount proportionally
+
+              // Add qualitative notes
+              const gainOrLossText = realizedGainFromSale > 0 ? `a gain of $${realizedGainFromSale.toFixed(2)}` :
+                                     realizedGainFromSale < 0 ? `a loss of $${Math.abs(realizedGainFromSale).toFixed(2)}` :
+                                     `breakeven`;
                 if (liquidationPercentage === 100) {
-                  // Full liquidation
-                  if (unrealizedGainFromSale > 0) {
-                    newStats.qualitativeNotes.push(`Liquidated entire portfolio for a gain of $${unrealizedGainFromSale.toFixed(2)}. Funds added to cash.`);
-                  } else if (unrealizedGainFromSale < 0) {
-                    newStats.qualitativeNotes.push(`Liquidated entire portfolio for a loss of $${Math.abs(unrealizedGainFromSale).toFixed(2)}. Remaining funds added to cash.`);
+                 newStats.qualitativeNotes.push(`Liquidated entire portfolio for ${gainOrLossText}. $${liquidationAmount.toFixed(2)} added to cash.`);
                   } else {
-                    newStats.qualitativeNotes.push(`Liquidated entire portfolio at breakeven. Funds added to cash.`);
-                  }
-                } else {
-                  // Partial liquidation
-                  if (unrealizedGainFromSale > 0) {
-                    newStats.qualitativeNotes.push(`Liquidated ${liquidationPercentage}% of portfolio for a gain of $${unrealizedGainFromSale.toFixed(2)}. $${liquidationAmount.toFixed(2)} added to cash.`);
-                  } else if (unrealizedGainFromSale < 0) {
-                    newStats.qualitativeNotes.push(`Liquidated ${liquidationPercentage}% of portfolio for a loss of $${Math.abs(unrealizedGainFromSale).toFixed(2)}. $${liquidationAmount.toFixed(2)} added to cash.`);
-                  } else {
-                    newStats.qualitativeNotes.push(`Liquidated ${liquidationPercentage}% of portfolio at breakeven. $${liquidationAmount.toFixed(2)} added to cash.`);
-                  }
-                }
+                 newStats.qualitativeNotes.push(`Liquidated ${liquidationPercentage}% ($${liquidationAmount.toFixed(2)}) of portfolio for ${gainOrLossText}. Funds added to cash.`);
               }
+
             } else {
-              const cashDelta = parseChange(update.cashChange, prev.playerStats.cash);
-              newStats.cash += cashDelta;
-              
-              // Add a qualitative note about cash changes for visibility
+              newStats.qualitativeNotes.push(`Attempted to liquidate portfolio, but no value was available.`);
+            }
+          }
+
+          // --- Process Other Cash Changes (Non-Liquidation) ---
+          if (update.cashChange !== undefined && !liquidationProcessed) {
+              const cashDelta = parseChange(update.cashChange, prev.playerStats.cash); // Delta based on original cash for percentages
+              currentCash += cashDelta;
+              // Add qualitative note about cash changes
               if (cashDelta > 0) {
-                newStats.qualitativeNotes.push(`Added $${cashDelta.toFixed(2)} to cash.`);
+                newStats.qualitativeNotes.push(`Received $${cashDelta.toFixed(2)} cash.`);
               } else if (cashDelta < 0) {
                 newStats.qualitativeNotes.push(`Spent $${Math.abs(cashDelta).toFixed(2)} from cash.`);
               }
             }
+
+
+          // --- Process Direct Portfolio Value Changes (Investments / Market Adjustments) ---
+          // This block should NOT run if a liquidation occurred in the same step, as that handled value changes.
+          if (update.portfolioValueChange !== undefined && !liquidationProcessed) {
+             // Calculate delta based on the portfolio value *before* this specific change
+             const valueBeforeDirectChange = currentPortfolioValue;
+             const portfolioValueDelta = parseChange(update.portfolioValueChange, valueBeforeDirectChange);
+
+             if (portfolioValueDelta > 0) {
+                 // Positive change: Considered a new Investment
+                 currentPortfolioValue += portfolioValueDelta;
+                 currentInvestedAmount += portfolioValueDelta; // Investment increases the invested amount basis
+                 currentTotalInvestedCapital += portfolioValueDelta; // Investment increases total capital invested
+                 newStats.qualitativeNotes.push(`Invested an additional $${portfolioValueDelta.toFixed(2)} into the portfolio.`);
+             } else if (portfolioValueDelta < 0) {
+                 // Negative change: Considered a Market Fluctuation or write-down (Affects Unrealized Gain)
+                 const newValue = currentPortfolioValue + portfolioValueDelta;
+                 currentPortfolioValue = Math.max(0, newValue); // Don't let market value drop below zero
+                 // NOTE: This does NOT generate cash or realized gain. It reduces the asset's value.
+                 // Invested amount remains the same unless it's a complete write-off (not explicitly handled here).
+                 const actualChange = currentPortfolioValue - valueBeforeDirectChange; // How much it actually changed (due to floor at 0)
+                 if (Math.abs(actualChange) > 0.01) {
+                     newStats.qualitativeNotes.push(`Portfolio market value changed by $${actualChange.toFixed(2)}.`);
+                     if (valueBeforeDirectChange > 0) {
+                         const pctChange = (actualChange / valueBeforeDirectChange) * 100;
+                         newStats.qualitativeNotes.push(`Market value change: ${pctChange.toFixed(1)}%.`);
+                     }
+                 }
+             }
           }
 
-          // Apply direct portfolio value changes (separate from growth)
-          let portfolioValueDelta = 0;
-          if (update.portfolioValueChange !== undefined && update.cashChange !== "portfolioValueChange") {
-            if (typeof update.portfolioValueChange === 'number') {
-              portfolioValueDelta = update.portfolioValueChange;
-              newStats.portfolioValue += portfolioValueDelta;
-              if (portfolioValueDelta > 0) {
-                newStats.portfolioInvestedAmount += portfolioValueDelta;
-                newStats.qualitativeNotes.push(`Invested $${portfolioValueDelta.toFixed(2)} in portfolio.`);
-              } else if (portfolioValueDelta < 0) {
-                // For partial portfolio liquidation
-                // Original portfolio value before this change
-                const originalPortfolioValue = newStats.portfolioValue - portfolioValueDelta;
-                
-                // Calculate proportion of portfolio being sold
-                const proportionSold = Math.abs(portfolioValueDelta) / originalPortfolioValue;
-                
-                // Calculate how much of the invested amount corresponds to what's sold
-                const investedAmountSold = newStats.portfolioInvestedAmount * proportionSold;
-                
-                // Reduce the invested amount by what's sold
-                newStats.portfolioInvestedAmount -= investedAmountSold;
-                
-                // Calculate realized gain/loss for this partial sale
-                const realizedGainFromSale = Math.abs(portfolioValueDelta) - investedAmountSold;
-                
-                // Update the realized gain and total value realized
-                newStats.realizedGain += realizedGainFromSale;
-                newStats.totalValueRealized += Math.abs(portfolioValueDelta);
-                
-                // Add qualitative note about the sale
-                if (realizedGainFromSale > 0) {
-                  newStats.qualitativeNotes.push(`Sold portfolio assets worth $${Math.abs(portfolioValueDelta).toFixed(2)} for a gain of $${realizedGainFromSale.toFixed(2)}.`);
-                } else if (realizedGainFromSale < 0) {
-                  newStats.qualitativeNotes.push(`Sold portfolio assets worth $${Math.abs(portfolioValueDelta).toFixed(2)} for a loss of $${Math.abs(realizedGainFromSale).toFixed(2)}.`);
-                } else {
-                  newStats.qualitativeNotes.push(`Sold portfolio assets worth $${Math.abs(portfolioValueDelta).toFixed(2)} at breakeven.`);
-                }
-              }
-            } else {
-              portfolioValueDelta = parseChange(update.portfolioValueChange, prev.playerStats.portfolioValue);
-              newStats.portfolioValue += portfolioValueDelta;
-              
-              // Make portfolio value changes visible to player
-              if (portfolioValueDelta > 0) {
-                newStats.qualitativeNotes.push(`Portfolio value increased by $${portfolioValueDelta.toFixed(2)} or ${((portfolioValueDelta / (newStats.portfolioValue - portfolioValueDelta)) * 100).toFixed(1)}%.`);
-              } else if (portfolioValueDelta < 0) {
-                newStats.qualitativeNotes.push(`Portfolio value decreased by $${Math.abs(portfolioValueDelta).toFixed(2)} or ${((Math.abs(portfolioValueDelta) / (newStats.portfolioValue - portfolioValueDelta)) * 100).toFixed(1)}%.`);
-              }
-            }
-          }
 
-          // Calculate unrealized gain/loss (for current holdings)
-          newStats.unrealizedGain = newStats.portfolioValue - newStats.portfolioInvestedAmount;
-
-          // Calculate total return percentage using the correct formula
-          // Total gain = realized gain + unrealized gain
-          const totalGain = newStats.realizedGain + newStats.unrealizedGain;
-          
-          // Total investment base = current portfolioInvestedAmount + totalValueRealized
-          const totalInvestmentBase = newStats.portfolioInvestedAmount + newStats.totalValueRealized;
-          
-          console.log(`totalValueRealized: ${newStats.totalValueRealized}`);
-          console.log(`portfolioValue: ${newStats.portfolioValue}`);
-          console.log(`totalInvestmentBase: ${totalInvestmentBase}`);
-          console.log(`totalGain: ${totalGain}`);
-          
-          // Add a note about the current return percentage
-          if (totalInvestmentBase > 0) {
-            const previousReturnPct = prev.playerStats.totalReturnPercentage;
-            newStats.totalReturnPercentage = (totalGain / totalInvestmentBase) * 100;
-            
-            // Only add a note if the return percentage changed significantly
-            const changePct = Math.abs(newStats.totalReturnPercentage - previousReturnPct);
-            if (changePct > 1) {
-              if (newStats.totalReturnPercentage > previousReturnPct) {
-                newStats.qualitativeNotes.push(`Your total investment return increased to ${newStats.totalReturnPercentage.toFixed(1)}%.`);
-              } else if (newStats.totalReturnPercentage < previousReturnPct) {
-                newStats.qualitativeNotes.push(`Your total investment return decreased to ${newStats.totalReturnPercentage.toFixed(1)}%.`);
-              }
-            }
-          } else {
-            newStats.totalReturnPercentage = 0;
-          }
-
-          // Apply debt changes
+          // --- Apply Debt Changes ---
           if (update.debtChange !== undefined) {
             const debtDelta = parseChange(update.debtChange, prev.playerStats.debt);
-            newStats.debt += debtDelta;
+            currentDebt += debtDelta;
+            if (debtDelta > 0) {
+                newStats.qualitativeNotes.push(`Took on $${debtDelta.toFixed(2)} in new debt.`);
+            } else if (debtDelta < 0) {
+                newStats.qualitativeNotes.push(`Paid off $${Math.abs(debtDelta).toFixed(2)} in debt.`);
+            }
           }
 
-          // Update net worth based on new cash, portfolio, and debt values
-          newStats.netWorth = newStats.cash + newStats.portfolioValue - newStats.debt;
-
-          // Apply wellBeing changes
+          // --- Apply WellBeing Changes ---
           if (update.wellBeingChange !== undefined) {
+            const newWellBeing = currentWellBeing + update.wellBeingChange;
             // Ensure wellBeing stays within -10 to 10 range
-            const newWellBeing = newStats.wellBeing + update.wellBeingChange;
-            newStats.wellBeing = Math.max(-10, Math.min(10, newWellBeing));
+            currentWellBeing = Math.max(-10, Math.min(10, newWellBeing));
+            // Note: Could add qualitative note about well-being change if desired
           }
 
-          // Add qualitative notes
+          // --- Add Explicit Qualitative Notes from Update ---
           if (update.qualitativeNote) {
             newStats.qualitativeNotes.push(update.qualitativeNote);
           }
 
-          // Apply age update *last* after calculations based on it are done
-          newStats.age += ageChange;
+          // --- Finalize Primary Stats ---
+          newStats.cash = Math.round(currentCash * 100) / 100; // Round to avoid floating point issues
+          newStats.debt = Math.round(currentDebt * 100) / 100;
+          newStats.portfolioValue = Math.round(currentPortfolioValue * 100) / 100;
+          newStats.portfolioInvestedAmount = Math.round(currentInvestedAmount * 100) / 100;
+          newStats.realizedGain = Math.round(currentRealizedGain * 100) / 100;
+          newStats.totalValueRealized = Math.round(currentTotalValueRealized * 100) / 100;
+          newStats.wellBeing = currentWellBeing;
+          newStats.totalInvestedCapital = Math.round(currentTotalInvestedCapital * 100) / 100;
+
+          // Prevent negative values where they don't make sense
+          newStats.portfolioValue = Math.max(0, newStats.portfolioValue);
+          newStats.portfolioInvestedAmount = Math.max(0, newStats.portfolioInvestedAmount);
+          newStats.cash = Math.max(0, newStats.cash); // Or allow negative cash? Depends on game design. Assuming >= 0 for now.
+          newStats.debt = Math.max(0, newStats.debt);
+
+
+          // --- Calculate Derived Stats ---
+          newStats.netWorth = newStats.cash + newStats.portfolioValue - newStats.debt;
+          newStats.unrealizedGain = newStats.portfolioValue - newStats.portfolioInvestedAmount;
+
+          const totalGain = newStats.realizedGain + newStats.unrealizedGain;
+          // Total investment base = total capital ever put into the portfolio
+          const totalInvestedCapitalBase = newStats.totalInvestedCapital;
+
+          console.log(` --- Stats Update Cycle ---`);
+          console.log(` Age Change: ${ageChange}`);
+          console.log(` Update Payload:`, update);
+          console.log(` Prev Stats:`, prev.playerStats);
+          console.log(` --- Intermediate ---`);
+          console.log(` Income: ${newStats.income}, Contribution: ${newStats.portfolioContribution}, Growth Rate: ${newStats.portfolioGrowthRate}`);
+          console.log(` Liquidation Processed: ${liquidationProcessed}`);
+          console.log(` --- Final Primary ---`);
+          console.log(` Cash: ${newStats.cash}, Debt: ${newStats.debt}, Portfolio Value: ${newStats.portfolioValue}, Invested Amt: ${newStats.portfolioInvestedAmount}`);
+          console.log(` Realized Gain: ${newStats.realizedGain}, Total Value Realized: ${newStats.totalValueRealized}`);
+          console.log(` --- Final Derived ---`);
+          console.log(` Net Worth: ${newStats.netWorth}, Unrealized Gain: ${newStats.unrealizedGain}`);
+          console.log(` Total Gain: ${totalGain}, Total Invested Capital: ${totalInvestedCapitalBase}`);
+
+
+          if (totalInvestedCapitalBase > 0 && Math.abs(totalInvestedCapitalBase) > 0.01) { // Avoid division by zero or near-zero
+            const previousReturnPct = prev.playerStats.totalReturnPercentage;
+            newStats.totalReturnPercentage = (totalGain / totalInvestedCapitalBase) * 100;
+            
+            // Only add a note if the return percentage changed significantly
+            const changePct = Math.abs(newStats.totalReturnPercentage - previousReturnPct);
+            // Add note if it's the first time calculating or if change is significant
+            if (changePct > 1 || prev.playerStats.totalReturnPercentage === 0 && newStats.totalReturnPercentage !== 0) {
+                 const roundedReturn = newStats.totalReturnPercentage.toFixed(1);
+              if (newStats.totalReturnPercentage > previousReturnPct) {
+                     newStats.qualitativeNotes.push(`Your total investment return increased to ${roundedReturn}%.`);
+              } else if (newStats.totalReturnPercentage < previousReturnPct) {
+                     newStats.qualitativeNotes.push(`Your total investment return decreased to ${roundedReturn}%.`);
+                 } else if (prev.playerStats.totalReturnPercentage === 0 && newStats.totalReturnPercentage !== 0) {
+                     newStats.qualitativeNotes.push(`Your total investment return is now ${roundedReturn}%.`);
+              }
+            }
+          } else {
+            // Handle case where no capital was ever invested
+            if (prev.playerStats.totalReturnPercentage !== 0) {
+                newStats.qualitativeNotes.push(`Investment return percentage is reset as no capital is invested.`);
+            }
+            newStats.totalReturnPercentage = 0;
+          }
+
+          // Apply age update *last*
+          newStats.age = prev.playerStats.age + ageChange; // Calculate based on previous age
+
+          console.log(` Final Stats:`, newStats);
+          console.log(` --- End Stats Update Cycle ---`);
 
           return { ...prev, playerStats: newStats };
       });
-  }, []); // No dependencies needed if it only uses its argument and setGameState
+  }, []); // Dependencies removed as we now use `prev` state directly
 
   // --- Game Flow Logic ---
   const advanceToScene = useCallback((sceneId: string | undefined) => {
@@ -556,7 +576,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
                     realizedGain: prev.playerStats.realizedGain,
                     unrealizedGain: prev.playerStats.unrealizedGain,
                     totalReturnPercentage: prev.playerStats.totalReturnPercentage,
-                    totalValueRealized: prev.playerStats.totalValueRealized
+                    totalValueRealized: prev.playerStats.totalValueRealized,
+                    totalInvestedCapital: prev.playerStats.totalInvestedCapital
                 }
             ];
 
@@ -748,7 +769,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
             realizedGain: playerStats.realizedGain,
             unrealizedGain: playerStats.unrealizedGain,
             totalReturnPercentage: playerStats.totalReturnPercentage,
-            totalValueRealized: playerStats.totalValueRealized
+            totalValueRealized: playerStats.totalValueRealized,
+            totalInvestedCapital: playerStats.totalInvestedCapital
         }],
         decisionScores: [], // Initialize empty scores array for new game
         averageScore: 0,
