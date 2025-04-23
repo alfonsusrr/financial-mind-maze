@@ -1,4 +1,4 @@
-import React, { useState, ReactNode, useEffect, useMemo, useRef } from 'react';
+import React, { useState, ReactNode, useEffect, useRef } from 'react';
 
 interface SceneContainerProps {
   children: ReactNode;
@@ -19,28 +19,17 @@ const SceneContainer: React.FC<SceneContainerProps> = ({
     console.log('SceneContainer props:', { background, videoBackground });
   }, [background, videoBackground]);
 
-  // Generate a cache-busting URL for the background image
-  const cacheBustedBackground = useMemo(() => {
-    if (!background) return '';
-    // Add a timestamp to the URL to prevent caching
-    return `${background}?t=${Date.now()}`;
-  }, [background]);
-
-  // Generate a cache-busting URL for the video background
-  const cacheBustedVideo = useMemo(() => {
-    if (!videoBackground) return '';
-    // Add a timestamp to the URL to prevent caching
-    return `${videoBackground}?t=${Date.now()}`;
-  }, [videoBackground]);
-
+  // Remove the cache-busting logic - we want to use exactly the same URLs that were preloaded
+  // This ensures the browser uses the cached/preloaded version
+  
   // Reset video loaded state when video source changes
   useEffect(() => {
     setVideoLoaded(false);
     
     // Force video to load by creating a new video element
-    if (cacheBustedVideo) {
+    if (videoBackground) {
       const video = document.createElement('video');
-      video.src = cacheBustedVideo;
+      video.src = videoBackground;
       video.load();
     }
     
@@ -48,16 +37,16 @@ const SceneContainer: React.FC<SceneContainerProps> = ({
     if (videoRef.current) {
       videoRef.current.load();
     }
-  }, [videoBackground, cacheBustedVideo]);
+  }, [videoBackground]);
 
   const handleVideoLoaded = () => {
     setVideoLoaded(true);
     console.log('Video loaded:', videoBackground);
   };
 
-  // Create the background style object properly
+  // Create the background style object properly - using the exact same URL as preloaded
   const backgroundStyle = background ? {
-    backgroundImage: `url(${cacheBustedBackground})`,
+    backgroundImage: `url(${background})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center'
   } : {};
@@ -88,14 +77,14 @@ const SceneContainer: React.FC<SceneContainerProps> = ({
             `}
             style={{ transition: 'opacity 0.5s ease' }}
           >
-            <source src={cacheBustedVideo} type="video/mp4" />
+            <source src={videoBackground} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Fallback to image background if video is still loading */}
           {!videoLoaded && background && (
             <div 
               className="absolute inset-0 z-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${cacheBustedBackground})` }}
+              style={{ backgroundImage: `url(${background})` }}
             />
           )}
         </div>
